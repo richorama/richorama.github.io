@@ -53,7 +53,7 @@ bar() do
 end
 {% endhighlight %}
 
-Code is just in time compiled, and it feels like a scripting language from a developer's perspective. You supply point `julia.exe` at your source code and you're away.
+Code is just in time compiled, and it feels like a scripting language from a developer's perspective. You just point `julia.exe` at your source code and you're away.
 
 Another oddity is string concatenation:
 
