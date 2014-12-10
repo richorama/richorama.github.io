@@ -22,7 +22,7 @@ The opinions expressed on this site are my own and do not necessarily represent 
 
 [NuGet](http://www.nuget.org/profiles/richorama/)
 
-[NPM](https://npmjs.org/~richard.astbury)
+[npm](https://npmjs.org/~richard.astbury)
 
 ## Tools
 
