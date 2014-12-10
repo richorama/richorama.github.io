@@ -4,7 +4,7 @@ title: About Richard Astbury
 permalink: /about/
 ---
 
-![](images/me.jpg)
+![](/images/me.jpg)
 
 Hi, my name is Richard Astbury, senior consultant at [Two10degrees](http://www.two10degrees.com) – a consultancy specialising in cloud computing.
 
