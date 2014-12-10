@@ -36,7 +36,7 @@ Nice language features including:
 * Coroutines
 * Callback functions have a slightly odd, but nice syntax
 * Optional type system
-* + lots more
+* ...lots more
 
 The callback syntax looks like this:
 
@@ -46,7 +46,8 @@ function bar(callback::Function)
 end
 
 bar() do 
-  # this is the implementation of the callback (which is the first argument)
+  # this is the implementation of the callback
+  # which is the first argument of the bar function
 end
 {% endhighlight %}
 
@@ -60,9 +61,9 @@ Another oddity is string concatenation:
 
 Anyway, any syntax looks odd until you get used to it.
 
-Julia uses libuv (and many other libraries) under the covers.
-
 There are a couple of ways (well there are lots actually) of importing modules. You can use `using` or `import`. This confused me until I read the documentation. `using` will take everything in the module, and add it to the scope. `import` namespaces everything with the modules name. I still prefer the `require` approach in node, but that's just me.
+
+Another things I like is that Julia uses libuv (and many other libraries) under the covers.
 
 ## The Bad
 
@@ -82,7 +83,7 @@ All packages seem to be installed globally (you can tell your program to search 
 
 I haven't quite got my head around how the package versioning works, but it looks like you pick one version of a package for the machine. I think this is a poor choice, when compared to node.js, which is able to support multiple package versions in the same application.
 
-The package repository is a [GitHub repo](https://github.com/JuliaLang/METADATA.jl). This on the face of it is a good idea. It's a public database that you can take a local offline clone of. The problem is that it has a gatekeepers. I found some resistance to contributing. This can be a good thing, maintaining a high level of quality is important, but if there's too much of a barrier to package entry, I'm not interested.
+The package repository is a [GitHub repo](https://github.com/JuliaLang/METADATA.jl). This on the face of it is a good idea. It's a public database that you can take a local offline clone of. My problem with it is that it has gatekeepers (who (may) approve your contribution). I found some resistance to contributing. This can be a good thing, maintaining a high level of quality is important, but if there's too much of a barrier to package entry, I'm not interested thanks.
 
 ## Conclusion
 
