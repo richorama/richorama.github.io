@@ -12,6 +12,8 @@ What surprised me the most was after an afternoon I had submitted two PRs on Git
 
 ## The Good
 
+(Edit) First of all I'd like to say how responsive and supportive the Julia community are. This is probably the most important point.
+
 I like the syntax, for example:
 
 {% highlight julia %}
