@@ -1,10 +1,6 @@
-_site/*
-_theme_packages/*
-
-Thumbs.db
+_site
+.sass-cache
 .DS_Store
 
-!.gitkeep
-
-.rbenv-version
-.rvmrc
+# Ignore the config file that's used for gh-pages.
+_config.gh-pages.yml
