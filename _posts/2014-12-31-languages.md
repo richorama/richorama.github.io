@@ -138,6 +138,6 @@ An interesting language, but rather than taking an opinion about how software sh
 
 # Conclusion
 
-I'm going to spend more time with clojure and elixir. They look interesting candidates for the next language. 
+I'm going to spend more time with Go, Clojure and Elixir. They look like interesting candidates for the next language. 
 
 In the meantime I'm just going to build stuff in node.
