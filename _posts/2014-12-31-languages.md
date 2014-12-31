@@ -40,7 +40,7 @@ I put node down as a maybe.
 
 ## Julia
 
-I've played around with Julia, and was immediately impressed by the ease of use and the pleasant syntax. The community is very responsive, and the language is moving in a sensible and responsible way. But Julia is very young (2 years old) and lacks the features for building the kind of system I'm thinking of (i.e. there's no 'express' / 'rails' / 'MVC' for Julia).
+I've played around with Julia, and was immediately impressed by the ease of use and pleasant syntax. The community is very responsive, and the language is moving in a sensible and responsible way. But Julia is very young (2 years old) and lacks the features for building the kind of system I'm thinking of (i.e. there's no 'express' / 'rails' / 'MVC' for Julia).
 
 Definitely a language to keep an eye on.
 
