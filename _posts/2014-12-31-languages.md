@@ -20,7 +20,7 @@ We're a Microsoft shop, and most of our software is written in C#.
 
 I'm currently doing some updates to a 10 year old .NET project (I accept this is anecdotal evidence) and I can't build the data layer on my machine because some now defunct, closed source, 3rd party component requires MDAC 2.7, which is now obsolete. I have to use a VM of an old dev machine to get that bit of the project done. I can't open the main project solution, and when ASP.NET vNext comes along I doubt it will work at all.
 
-For some reason bit rot in .NET seems to set in very quickly. I like C#, and I'm quite productive in it, and it produces stable software. However the average .NET project seems to draw in lots of packages and controls which don't upgrade nicely. 
+For some reason bit rot in .NET seems to set in very quickly. I like C#, I'm quite productive in it, and it produces stable software. However the average .NET project seems to draw in lots of packages and controls which don't upgrade nicely. 
 
 I know the future might be looking bright for .NET given that it's open source, and ASP.NET vNext seems to be going in the right direction, but I've been burnt too many times before.
 
