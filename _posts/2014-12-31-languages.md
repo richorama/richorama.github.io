@@ -20,7 +20,7 @@ We're a Microsoft shop, and most of our software is written in C#.
 
 I'm currently doing some updates to a 10 year old .NET project (I accept this is anecdotal evidence) and I can't build the data layer on my machine because some now defunct, closed source, 3rd party component requires MDAC 2.7, which is now obsolete. I have to use a VM of an old dev machine to get that bit of the project done. I can't open the main project solution, and when ASP.NET vNext comes along I doubt it will work at all.
 
-For some reason bit rot in .NET seems to set in very quickly. I like C#, and quite productive in it, and it produces stable software. However the average .NET project seems to draw in lots of packages and controls which don't upgrade nicely. 
+For some reason bit rot in .NET seems to set in very quickly. I like C#, and I'm quite productive in it, and it produces stable software. However the average .NET project seems to draw in lots of packages and controls which don't upgrade nicely. 
 
 I know the future might be looking bright for .NET given that it's open source, and ASP.NET vNext seems to be going in the right direction, but I've been burnt too many times before.
 
@@ -30,7 +30,7 @@ I know the future might be looking bright for .NET given that it's open source, 
 
 We use node for spiking out software and building proof of concepts. I'm very productive in node, thanks to npm and the 1st class nature of JSON.
 
-I see quite a few posts on hacker news telling me that the JavaScript world moves too fast, and it's all about fashion, and too many package dependencies will kill me. I call this innovation. You don't have to pull any packages in from npm if you don't want to. The ability to maintain 3rd party packages is possible, whereas in .NET it's not.
+I see quite a few posts on hacker news telling me that the JavaScript world moves too fast, and it's all about fashion, and too many package dependencies will kill me. I call this innovation. You don't have to pull any packages in from npm if you don't want to. The ability to maintain 3rd party packages is possible, whereas in .NET it's not always so easy (in my experience).
 
 Node isn't great at everything. Networking and I/O are it's domain (that's what a web application does?) but it's not the ideal choice for number crunching. Also, with limited compile-time safety (you can lint and unit test), it makes long-term maintainability over a large codebase challenging. Although this can be mitigated by not creating a large codebase!
 
