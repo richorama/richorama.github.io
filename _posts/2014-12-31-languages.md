@@ -120,7 +120,7 @@ Just no.
 
 ## C
 
-You could bet your bottom dollar that your program will compile in 1000 years time, but C doesn't seem to be the right choice for building a modern system. Neither would assembly language.
+You could bet your bottom dollar that your program will compile in 1000 years time, but C doesn't seem to be the right choice for building a modern system. Neither is assembly language.
 
 `not viable`
 
@@ -132,12 +132,12 @@ C++ is a complicated mess.
 
 ## Rust
 
-An interesting language, but rather than taking an opinion about how software should be built, rust just seems to throw everything at you. You can be functional, object-orientated or procedural. As a result it feels like a large and complicated language. It also doesn't feel finished.
+An interesting language, but rather than taking an opinion about how software should be built, Rust just seems to throw everything at you. You can be functional, object-orientated or procedural. As a result it feels like a large and complicated language. It also doesn't feel finished.
 
 `not viable`
 
 # Conclusion
 
-I'm going to spend more time with Go, Clojure and Elixir. They look like interesting candidates for the next language. 
+I'm going to spend more time with Go, Clojure and Elixir. They look like interesting candidates. 
 
 In the meantime I'm just going to build stuff in node.
