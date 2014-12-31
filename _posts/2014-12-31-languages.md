@@ -48,7 +48,7 @@ Definitely a language to keep an eye on.
 
 ## Java
 
-I haven't done much Java, and I'd like to keep it that way. My impression of the language is that too much time is spent doing the boiler plate, and not adding features. It's been slow to catch C# up on language features, and Object orientation doesn't seem to be the right approach anyway.
+I haven't done much Java, and I'd like to keep it that way. My impression of the language is that too much time is spent doing the boiler plate. It's been slow to catch C# up on language features, and Object orientation doesn't seem to be the right approach anyway.
 
 `not viable`
 
@@ -78,7 +78,7 @@ I don't think it has a great long-term future - sorry!
 
 ## Common Lisp
 
-Rob is a keen lisper, and has built many successful software projects in the past using c-lisp. However, the community seems to be small and not particularly embracing/outgoing/interested? It looks all but dead to me - which is a shame.
+[Rob](http://www.robblackwell.org.uk/) is a keen lisper, and has built many successful software projects in the past using c-lisp. However, the community seems to be small and not particularly embracing/outgoing/interested? It looks all but dead to me - which is a shame.
 
 `not viable`
 
