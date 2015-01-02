@@ -8,14 +8,14 @@ categories: blog
 
 The default grain placement behavior in Orleans is to activate grains on a random silo in the cluster.
 
-However, it is possible to change this behavior on a grain-by-grain basis, by adding an attribute from the `Orleans.Placement` namespace to the Grain interface.
+However, it is possible to change this behavior on a grain-type basis, by adding an attribute from the `Orleans.Placement` namespace to the Grain interface.
 
 {% highlight c# %}
 using Orleans.Placement;
 
 namespace MyGrainInterfaces
 {
-	// you should probably just choose one of these!
+    // you should probably just choose one of these!
     [LoadAwarePlacement]
     [LocalPlacement]
     [PreferLocalPlacement]
@@ -51,10 +51,13 @@ _Presumably this only comes into affect when a grain is activated from another g
 
 Placement strategy that indicates that new activations of this grain type should be placed subject to the current load distribution across the deployment. This placement that takes into account CPU/Memory/ActivationCount.
 
+## Observations
 
 After a quick look at the source code, it looks like the `[StatelessWorker]` attribute will override any placement attribute, which makes sense.
 
 Interestingly, there is an another placement attribute (`GraphPartitionPlacement`) which is marked as internal. The summary says it uses a graph partitioning algorithm.
+
+I'm curious that the attribute is applied to the grain interface, and not the grain implementation, as it feels like more of an implementation detail. However, I expect the calling code needs the information.
 
 ## So which should you use?
 
