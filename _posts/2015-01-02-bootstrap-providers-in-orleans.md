@@ -8,7 +8,7 @@ categories: blog
 
 Thanks to [Yevhen Bobrov](https://twitter.com/yevhen) for pointing this out.
 
-The default behavior of an Orleans system is to respond to external signals. Your grains are activated when required, so with no requests coming into the system, nothing happens. The bootstrap provider enables you to hook in some code at silo startup. There are a variety of reasons for doing this, perhaps you want to set some local grains up, or initialize some data. The [Hub](https://github.com/OrleansContrib/DesignPatterns/tree/master/samples/Hub) design pattern makes use of the bootstrap provider create a stateless worker in each Silo.
+The default behavior of an Orleans system is to respond to external signals. Your grains are activated when required, so with no requests coming into the system, nothing happens. The bootstrap provider enables you to hook in some code at silo startup. There are a variety of reasons for doing this, perhaps you want to set some local grains up, or initialize some data. The [Hub](https://github.com/OrleansContrib/DesignPatterns/blob/master/Hub.md) design pattern makes use of the bootstrap provider create a stateless worker in each Silo.
 
 Creating a bootstrap provider is simple, just inherit `IBootstrapProvider` and implement the members. Put your code in `Init`, which is of course asynchronous.
 
