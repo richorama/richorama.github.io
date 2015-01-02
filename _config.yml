@@ -27,6 +27,6 @@ flattr_button:
 # Build settings
 markdown:     kramdown
 permalink:    pretty
-paginate:     3
+paginate:     20
 sass:
   compressed: true
