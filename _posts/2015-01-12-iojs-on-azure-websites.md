@@ -43,13 +43,13 @@ server.listen(process.env.PORT || 8080);
 
 ## Deploy to Azure in the usual way
 
-```
+{% highlight shell %}
 $ git init
 $ git add .
 $ git commit -am "intial commit"
 $ azure site create
 $ git push azure master
-```
+{% endhighlight %}
 
 > Note that your web server will run using this version of node, but npm and other build steps will use the version supplied by Microsoft.
 
