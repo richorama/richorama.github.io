@@ -13,7 +13,7 @@ io.js can be downloaded here : [https://iojs.org/download/](https://iojs.org/dow
 
 You just need the `iojs.exe` file itself which you can get from the nightly builds, for example:
 
-(https://iojs.org/download/nightly/v1.0.0-nightly2015011284fa1f8c46/win-x64/)[https://iojs.org/download/nightly/v1.0.0-nightly2015011284fa1f8c46/win-x64/]
+[https://iojs.org/download/nightly/v1.0.0-nightly2015011284fa1f8c46/win-x64/](https://iojs.org/download/nightly/v1.0.0-nightly2015011284fa1f8c46/win-x64/)
 
 Place this file in a `bin` directory.
 
