@@ -21,7 +21,7 @@ Place this file in a `bin` directory.
 
 To tell Azure Websitest that you want to use this version of node, rather then the version supplied by Microsoft, add a `iisnode.yml` file, with this line:
 
-{% highlight yml %}
+{% highlight yaml %}
 nodeProcessCommandLine: "D:\home\site\wwwroot\bin\iojs.exe" --harmony
 {% endhighlight %}
 
