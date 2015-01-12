@@ -43,7 +43,7 @@ server.listen(process.env.PORT || 8080);
 
 ## Deploy to Azure in the usual way
 
-{% highlight shell %}
+{% highlight text %}
 $ git init
 $ git add .
 $ git commit -am "intial commit"
