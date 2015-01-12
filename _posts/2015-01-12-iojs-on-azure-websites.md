@@ -25,7 +25,7 @@ To tell Azure Websitest that you want to use this version of node, rather then t
 nodeProcessCommandLine: "D:\home\site\wwwroot\bin\iojs.exe" --harmony
 {% endhighlight %}
 
-> note I've added the `--harmony` flag to enable the ES6 language features.
+> note I've added the `--harmony` flag to enable generators.
 
 ## Create a Web Server
 
