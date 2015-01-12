@@ -29,7 +29,7 @@ nodeProcessCommandLine: "D:\home\site\wwwroot\bin\iojs.exe" --harmony
 
 ## Create a Web Server
 
-Now just create your node app in the usual way, to star with you could write out the node version over HTTP:
+Now just create your node app in the usual way, to start with you could write out the node version over HTTP:
 
 {% highlight js %}
 var http = require('http');
