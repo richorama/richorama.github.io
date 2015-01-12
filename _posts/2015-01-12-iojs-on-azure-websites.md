@@ -51,6 +51,8 @@ $ azure site create
 $ git push azure master
 ```
 
+> Note that your web server will run using this version of node, but npm and other build steps will use the version supplied by Microsoft.
+
 ## Next steps
 
 To make it easy, I have publised an [example project](https://github.com/richorama/iojs-azure) on GitHub.
