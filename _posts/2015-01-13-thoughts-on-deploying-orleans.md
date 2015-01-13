@@ -103,7 +103,7 @@ Once installed on the developer's machine, consuming the plugin is simple.
 ## Problems
 
 1. When defining settings in the plugin, they appear as settings in Visual Studio prefixed with the plugin namespace. So in our case the `DataConnectionString` would become `Microsoft.Orleans.DataConnectionString`. Orleans would not recognise the setting, and the silo would fail to start. Some extra logic would be required in Orleans to look for two different settings names.
-1. The plugin would be installed in `e:\plugins\Orleans\`, so the Silo would have to scan the `e:\approot\` directory (or `e:\approot\bin\` for a Web Role) to get the grain libraries and the `OrleansConfiguration.XML` file. This would require some extra logic to scan additional paths on startup. (note that the `e:` drive could also be `f:`)
+1. On the VM, the plugin would be installed in `e:\plugins\Orleans\`, so the Silo would have to scan the `e:\approot\` directory (or `e:\approot\bin\` for a Web Role) to get the grain libraries and the `OrleansConfiguration.XML` file. This would require some extra logic to scan additional paths on startup. (note that the `e:` drive could also be `f:`)
 
 ## Benefits
 
