@@ -98,6 +98,7 @@ Once installed on the developer's machine, consuming the plugin is simple.
 {% endhighlight %}
 
 * Visual Studio then automatically creates a setting in the `ServiceConfiguration.*.cscfg` files called `Microsoft.Orleans.DataConnectionString`. The developer uses the Visual Studio GUI to pick the storage connection string.
+* Add a `OrleansConfiguration.xml` file to the Worker Role project.
 * Publish.
 
 ## Problems
@@ -109,5 +110,13 @@ Once installed on the developer's machine, consuming the plugin is simple.
 
 1. Low friction for the developer.
 1. A plugin has affinity with an SDK version, making DLL versioning easier?
+1. A plugin could be used in conjunction with a Visual Studio template, which could be used to further enhance the developer experience (by automatically including the plugin, and providing a default `OrleansConfiguration.XML` file).
 
+---
 
+## Update
+
+After a twitter exchange with Sergey, I have made some small adjustments to the article. 
+
+* The `OrleansConfiguration.XML` file must be supplied by the developer.
+* A Visual Studio template could further improve the development experience (perhaps this is a better option in the first place?)
