@@ -89,11 +89,11 @@ Once installed on the developer's machine, consuming the plugin is simple.
 <ServiceDefinition name="MyWorkerRole" 
 	xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" 
 	schemaVersion="2014-06.2.4">
-  <WebRole name="MyWorkerRole" vmsize="Medium">
+  <WorkerRole name="MyWorkerRole" vmsize="Medium">
     <Imports>
       <Import moduleName="Orleans" />
     </Imports>
-  </WebRole>
+  </WorkerRole>
 </ServiceDefinition>
 {% endhighlight %}
 
