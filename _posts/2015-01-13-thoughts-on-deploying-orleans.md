@@ -15,11 +15,11 @@ The Azure SDK has a little known feature, which allows you to 'plug' extra featu
 
 The Azure SDK uses these plugins to provide Diagnostics, Caching and Remote Desktop etc...
 
-> The [Azure Plugin Library](http://richorama.github.io/AzurePluginLibrary/) capitalises on this capability to provide a wide range of plugins you can use to bootstrap your Azure Cloud Service Deployments (such as installing nginx, chocolatey, redis ...).
+As a side note, the [Azure Plugin Library](http://richorama.github.io/AzurePluginLibrary/) capitalises on this capability to provide a wide range of plugins you can use to bootstrap your Azure Cloud Service Deployments (such as installing nginx, chocolatey, redis ...).
 
-## How could the plugin work?
+## How could an Orleans plugin work?
 
-The plugin could delivery the binaries and configuration, and start the Orleans Silo on a Web or Worker Role.
+A plugin could delivery the binaries and configuration, and start the Orleans Silo on a Web or Worker Role.
 
 Your Web/Worker Role code would contain the Grain Interface and Collection assemblies, and the plugin would do the work of starting the Silo correctly.
 
@@ -46,7 +46,7 @@ There are a few options for delivering the plugin to the developer's machine:
 
 ## What would the plugin look like?
 
-The plugin itself would contain the Orleans runtime binaries and configuration XML.
+The plugin itself would contain the Orleans runtime binaries.
 
 It would also contain an `Orleans.csplugin` file which would look something like this:
 
@@ -73,15 +73,15 @@ It would also contain an `Orleans.csplugin` file which would look something like
 </RoleModule>
 {% endhighlight %}
 
-Note that the plugin configuration takes care of the internal endpoints (ports), the local storage, defines that a setting must be supplied, and can run a background task (i.e. start the silo). This makes it much easier for the developer.
+Note that the plugin configuration takes care of the internal endpoints (ports), the local storage, declares that a setting must be supplied, and can start a background task (i.e. start the silo). This takes all of these requirements away from the developer.
 
-The plugin does not include the grains, these are contained within the Visual Studio solution, and included with the package deployed to Azure. The plugin discovers the grains on activation in Azure.
+The plugin does not include the grains. They live in the Visual Studio solution, and are packaged up along with the plugin at deployment time. The plugin discovers the grains on activation in Azure.
 
 ## Developer experience
 
 Once installed on the developer's machine, consuming the plugin is simple.
 
-* Create a Cloud Project as normal, with a worker role containing references to the grain interfaces and classes.
+* Create a Cloud Project as normal, with a Worker Role containing references to the grain interfaces and classes.
 * Add `Orleans` as an import in the `ServiceDefinition.csdef` file (this tells cspack to include the plugin in the package):
 
 {% highlight xml %}
@@ -102,8 +102,8 @@ Once installed on the developer's machine, consuming the plugin is simple.
 
 ## Problems
 
-1. When defining settings in the plugin, they appear as settings in Visual Studio prefixed with the plugin name. So in our case the `DataConnectionString` would become `Microsoft.Orleans.DataConnectionString`. Orleans would not recognise the setting, and the silo would fail to start. Some extra logic would be required in Orleans to look for two different settings names.
-1. The plugin would be installed in `e:\plugins\Orleans\`, so the Silo would have to scan the `e:\approot\` directory (or `e:\approot\bin\` for a Web Role) to get the grain libraries and the `OrleansConfiguration.XML` files. This would require some extra logic to scan additional paths on startup. (note that the `e:` drive could also be `f:`)
+1. When defining settings in the plugin, they appear as settings in Visual Studio prefixed with the plugin namespace. So in our case the `DataConnectionString` would become `Microsoft.Orleans.DataConnectionString`. Orleans would not recognise the setting, and the silo would fail to start. Some extra logic would be required in Orleans to look for two different settings names.
+1. The plugin would be installed in `e:\plugins\Orleans\`, so the Silo would have to scan the `e:\approot\` directory (or `e:\approot\bin\` for a Web Role) to get the grain libraries and the `OrleansConfiguration.XML` file. This would require some extra logic to scan additional paths on startup. (note that the `e:` drive could also be `f:`)
 
 ## Benefits
 
