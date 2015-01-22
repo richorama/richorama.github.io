@@ -97,6 +97,8 @@ Note that this implementation would not work if the grain is marked as `[Reentra
 
 If you don't have a grain with a storage provider, an etag could be maintained by the grain instead. An integer, for example, could be incremented for every write. The advantage of the etag from the storage provider of course is that it's built-in, and will survive grain re-activation.
 
+I working implementation of this code is [available on GitHub](https://github.com/richorama/orleans-optimistic-concurrency).
+
 ## Conclusion
 
 It's fairly simple to introduce optimistic concurrency in a grain, thanks to the etag field in the storage provider.
