@@ -11,7 +11,7 @@ Orleans helps the developer with concurrency problems in a distributed system, b
 
 Perhaps you have two users of your system looking at the same item of data (the same piece of grain state). They both retrieve the data at roughly the same time, user 1 updates the value and presses save. Their update is successfully stored by the system. User 2 also updates the value, and presses save. This wipes out user 1's edits. This might be ok in some scenarios, but it would be nice to have the opportunity to react to this situation, and reject user 2's changes.
 
-One possible solution is to have an event sourced approach, whereby all changes are accepted, and the current value is the sum of all changes. This is a near solution, but not always applicable.
+One possible solution is an event sourced approach, whereby all changes are accepted, and the current value is the sum of all changes. This is a neat solution, but not always applicable.
 
 The Storage Provider infrastructure in Orleans exposes an 'Etag' field. This field represents a particular revision of the data in the underlying storage system. We can use this field to implement [optimistic concurrency](https://msdn.microsoft.com/en-us/library/aa0416cz(v=vs.110).aspx).
 
