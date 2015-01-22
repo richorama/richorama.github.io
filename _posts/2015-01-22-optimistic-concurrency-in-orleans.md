@@ -91,13 +91,13 @@ public class ExampleGrain : Orleans.Grain<IExampleGrainState>, IExampleGrain
 }
 {% endhighlight %}
 
-Note that when settings the value of the state, we first compare the eTags to check they match. A mismatch here indicates that the etag supplied is stale, so the write is rejected.
+Note that in `SetValue()`, before we update the state we compare the eTags to check they match. A mismatch here indicates that the etag supplied is stale, so the write is rejected.
 
 Note that this implementation would not work if the grain is marked as `[Reentrant]`, as the etag mutates while the grain is awaiting the storage operation.
 
-If you don't have a grain with a storage provider, an etag could be maintained by the grain instead. An integer, for example, could be incremented for every write. The advantage of the etag from the storage provider of course is that it's built-in, and will survive grain re-activation.
+If you don't have a grain with a storage provider, an etag could be maintained by the grain instead. An integer, for example, could be incremented for every write. The advantage of the etag from the storage provider is that it's built-in, and will survive grain re-activation.
 
-I working implementation of this code is [available on GitHub](https://github.com/richorama/orleans-optimistic-concurrency).
+A working implementation of this code is [available on GitHub](https://github.com/richorama/orleans-optimistic-concurrency).
 
 ## Conclusion
 
