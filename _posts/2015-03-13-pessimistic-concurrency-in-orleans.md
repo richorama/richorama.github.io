@@ -2,7 +2,7 @@
 layout:     post
 title:      Pessimistic Concurrency in Orleans
 date:       2015-03-13 15:21:00
-summary:    XXX.
+summary:    Pessimistic concurrency stops two users from modifying the same record, by one user taking out a lock on that record, preventing any other user from changing it. This is not a feature built into Orleans, but would be simple to build.
 ---
 
 ## Introduction
