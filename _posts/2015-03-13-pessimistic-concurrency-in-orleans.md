@@ -59,7 +59,7 @@ public class Locked<T>
         this.Value = value;
     }
 
-    public Guid? Lock { get; private set; }
+    public Guid Lock { get; private set; }
     public T Value { get; private set; }
 }
 {% endhighlight %}
@@ -134,7 +134,7 @@ var grain = LockGrainFactory<string>.GetGrain(1);
 var result = await grain.GetLock();
 
 // set the value
-await grain.SetValue("foo", result.Lock.Value);
+await grain.SetValue("foo", result.Lock);
 
 // read the value
 await grain.GetValue();
