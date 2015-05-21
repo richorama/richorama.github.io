@@ -25,13 +25,13 @@ You're all set.
 
 ## 3. Start the Hangout
 
-15 minutes or so before the start, go and find the Hangout page. If you're running the Hangout, you must press the `Start` button, simply joining it will not give you the ability to go `live`.
+15 minutes or so before the start, go and find the Hangout page. If you're running the Hangout, you must press the `Start` button, simply joining it will not give you the ability to start the broadcast.
 
 ![](/images/hangout3.png)
 
 ## 4. Invite Guests
 
-When starting the Hangout, you have the opportunity to add guests. I believe these are then able to join in on the conversation. 
+When starting the Hangout, you have the opportunity to add guests. I believe these people are then able to join in on the conversation. 
 
 ![](/images/hangout4.png)
 
@@ -45,4 +45,4 @@ When you've started the hangout, you then have an extra link which people can us
 
 When you're ready to start, press the `Start Broadcast` button, and viewers will be able to watch your live stream. The video will automatically be saved to YouTube when you're done.
 
-
+![](/images/hangout6.png)
