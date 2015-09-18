@@ -2,7 +2,7 @@
 layout:     post
 title:      Setting up Node and Express
 date:       2015-09-18 14:51:00
-summary:    
+summary:    I've been talking to a few people lately about how I build web applications. There's no single right-way of doing it, but here's my workflow, split into small blog posts you can follow. 
 ---
 
 I've been talking to a few people lately about how I build web applications. There's no single right-way of doing it, but here's my workflow, split into small blog posts you can follow. 
