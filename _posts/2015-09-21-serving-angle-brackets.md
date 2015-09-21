@@ -102,7 +102,7 @@ Let's unpack this code line by line:
 1. `app.engine` registers a templating engine. Here we pass in the 'hogan-express' module, and register it as the templating engine for html.
 1. `app.set` sets an application setting. First we set the `views` setting, which is the directory where the views are stored. We use the `path` module again to refer to a sub-directory called `views`.
 1. We set the default view engine to be html (which refers to the one we registered on the first line).
-1. Finally the `layout` variable is the view which is used as the template.
+1. Finally the `layout` variable is the name of the view which is used as the template.
 
 Now let's create a directory for our views;
 
@@ -117,13 +117,13 @@ We can add a `layout.html` file to this directory, which will contain our templa
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{title}}</title>
+    <title>{{{{{{title}}}}}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></style>
   </head>
   <body>
 
-    {{{ yield }}}
+    {{{{{{{{{ yield }}}}}}}}}
 
   </body>
 </html>
@@ -135,7 +135,7 @@ Now let's create a simple view to show the current time.
 
 {% highlight html %}
 <div class="container">
-	The time is : {{ time }}
+	The time is : {{{ time }}}
 </div>
 {% endhighlight  %}
 
