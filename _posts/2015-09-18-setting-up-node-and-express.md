@@ -15,7 +15,7 @@ As a prerequisite, install node.js. You can download the latest version [here](h
 
 You'll also need somewhere on your computer to save the files you're going to create. Using your console, navigate to the correct place, and create a directory:
 
-{% highlight %}
+{% highlight text %}
 > mkdir my-app
 > cd my-app
 {% endhighlight %}
@@ -30,7 +30,7 @@ All the files you need are stored in the [npm repository](https://www.npmjs.com/
 
 To install express, you just need to type:
 
-{% highlight %}
+{% highlight text %}
 > npm install express
 {% endhighlight %}
 
@@ -52,36 +52,36 @@ var app = express();
 // handle GET requests at /
 app.get('/', function(req, res){
 
-	// respond with plain text
-	res.send('hello world');
+  // respond with plain text
+  res.send('hello world');
 });
 
 // start listening on port 8080
 app.listen(8080);
 {% endhighlight %}
 
-Somethings to note about what we've written:
+Some things to note about what we've written:
 
 1. The express package can be used to create multiple web servers listening on different ports, which is why we need to call `express()` to create an instance of an application.
-1. We all `app.get(...)` to register a route that listens to GET requests that match the supplied path. You can also call `app.post()`, `app.put()` etc... or `app.all()`.
-1. When registering a route, you supply a function which get called every time a request is received which matches it. The function should have `req` and `res` arguments, which represent the request and response data respectively.
+1. We call `app.get(...)` to register a route that listens to GET requests that match the supplied path. You can also call `app.post()`, `app.put()` etc... or `app.all()`.
+1. When registering a route, you supply a function which gets called every time a matching request is received. The function should have `req` and `res` arguments, which represent the request and response data respectively.
 1. You must tell the application which port to listen on to start the web server.
 
 Let's fire up the application, and make sure it works. To do this, call node, passing our script file as the first argument:
 
-{% highlight %}
-node server.js
+{% highlight text %}
+> node server.js
 {% endhighlight %}
 
-No point your browser to `http://localhost:8080/` and you should see `hello world`.
+Now point your browser to `http://localhost:8080/` and you should see `hello world`.
 
 ## Package.json
 
-It's a good idea to create a `package.json` file. Its not necessary, but its useful for keeping track of the packages your application uses.
+It is a good idea to create a `package.json` file. Its not necessary, but its useful for keeping track of the packages your application uses.
 
 To create one, run:
 
-{% highlight %}
+{% highlight text %}
 > npm init
 {% endhighlight %}
 
@@ -91,6 +91,10 @@ You can just go with all the default options, or set the values if you want.
 
 This will create a `package.json` file.
 
-When adding further packages, if you add the `--save` option, npm updates the `package.json` file so it keeps it up to date.
+When adding further packages, if you add the `--save` option, npm updates the `package.json` file so it keeps it up to date. i.e.
 
-When you want to run your app on another machine, you can just copy over your JavaScript and your `package.json` file (without copying all the packages in `node_modules`). You can then run `npm install` to restore all the modules on one go.
+{% highlight text %}
+> npm install PACKAGE_NAME --save
+{% endhighlight %}
+
+When you want to run your app on another machine, you can just copy over your JavaScript and your `package.json` file (without copying all the packages in `node_modules` directory). You can then run `npm install` to restore all the modules in one go.
