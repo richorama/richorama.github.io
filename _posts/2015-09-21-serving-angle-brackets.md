@@ -127,6 +127,8 @@ We can add a `layout.html` file to this directory, which will contain our templa
 </html>
 {% endhighlight  %}
 
+_I have had to put spaces between my curly braces, as jekyll got upset when it saw multiple curly braces next to each other. Please remove these spaces in your views_
+
 > Note that we're referring to the bootstrap stylesheet hosted on a [CDN](http://www.bootstrapcdn.com/).
 
 Now let's create a simple view to show the current time.
@@ -173,6 +175,7 @@ app.engine('html', require('hogan-express'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 app.set('layout', 'layout');
+
 // register middleware to serve static pages
 app.use(express.static(path.join(__dirname, 'public')));
 
