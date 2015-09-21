@@ -2,12 +2,12 @@
 layout:     post
 title:      Serving Angle Brackets
 date:       2015-09-21 14:51:00
-summary:    In this series of blog posts, we're looking at how to set up a simple web app in node. In this post we're going to put the plumbing in for serving html, both file and dynamic pages.
+summary:    In this series of blog posts, we're looking at how to set up a simple web app in node. In this post we're going to put the plumbing in for serving html, both static and dynamic pages.
 ---
 
 In this series of blog posts, we're looking at how to set up a simple web app in node.
 
-In the [previous installment](http://richorama.github.io/2015/09/18/node-and-express-from-scratch/) we got the basic set up running. In this post we're going to put the plumbing in for serving html, both file and dynamic pages.
+In the [previous installment](http://richorama.github.io/2015/09/18/node-and-express-from-scratch/) we got the basic set up running. In this post we're going to put the plumbing in for serving html, both static and dynamic pages.
 
 ## Serving static files
 
@@ -15,9 +15,9 @@ We could serve static files using express to match on a given path like this `ap
 
 Hold on, what's middleware?
 
-Middleware is code you can hook in to the pipeline of events which are called during the processing of an HTTP request. For example, you could register some middleware to ensure that requests are authenticated, or to decode specific content types.
+When express processes an incoming HTTP request, you can register your own code to run as part of this pipeline. Middleware is the opportunity to hook into all incoming requests, or just requests to a specific path. For example, you could register some middleware to ensure that requests are authenticated, or to decode specific content types.
 
-We'll register some middleware which will intercept requests which match the name of a static file, and serve it for us.
+We'll register some middleware which will intercept requests matching the name of a static file and serve it for us.
 
 To do this, add this line to `server.js`:
 
