@@ -117,14 +117,12 @@ We can add a `layout.html` file to this directory, which will contain our templa
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title> {% raw %} {{ title }} {% endraw $} </title>
+    <title> {{ title }}  </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></style>
   </head>
   <body>
-  	{% raw %}
     {{{ yield }}}
-    {% endraw $}
   </body>
 </html>
 {% endhighlight  %}
@@ -135,7 +133,7 @@ Now let's create a simple view to show the current time.
 
 {% highlight html %}
 <div class="container">
-	The time is : {% raw %} {{ time }} {% endraw $} 
+	The time is : "{{" time "}}" 
 </div>
 {% endhighlight  %}
 
