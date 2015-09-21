@@ -135,7 +135,7 @@ Now let's create a simple view to show the current time.
 
 {% highlight html %}
 <div class="container">
-	The time is : { { time } }
+  The time is : { { time } }
 </div>
 {% endhighlight  %}
 
@@ -147,9 +147,9 @@ Replace the `app.get('/' ...)` code with this:
 
 {% highlight JavaScript %}
 app.get('/', function(req, res){
-	res.locals.time = new Date();
-	res.locals.title = 'the current time';
-	res.render('time');
+  res.locals.time = new Date();
+  res.locals.title = 'the current time';
+  res.render('time');
 });
 {% endhighlight  %}
 
@@ -180,9 +180,9 @@ app.set('layout', 'layout');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
-	res.locals.time = new Date();
-	res.locals.title = 'the current time';
-	res.render('time');
+  res.locals.time = new Date();
+  res.locals.title = 'the current time';
+  res.render('time');
 });
 
 // start listening on port 8080
