@@ -32,11 +32,11 @@ Let's unpack this line of code:
 1. `__dirname` is a variable in node, giving us the name of the directory which contains the script file.
 1. `path.join` will append file system paths together. So here we're appending 'public' to the current directory.
 1. `express.static` is the middleware which serves static files.
-`. `app.use` registers middleware for every request.
+1. `app.use` registers middleware for every request.
 
 So this line instructs the express app to serve static files from the 'public' directory. 
 
-Express is sensitive to the order of middleware being registered, you need to add it above any of your routes, but after the app is created. 
+Express is sensitive to the order middleware is registered, you need to add it above any of your routes, but after the app is created. 
 
 Your `server.js` should now look like this:
 
@@ -68,7 +68,7 @@ Now, lets create a `public` folder:
 
 You can add a file in there, perhaps a favicon (`favicon.ico`).
 
-You'll have to restart your node process, but you should see you file is now being served.
+You'll have to restart your node process, but you should see your file is now being served.
 
 This allows you to serve static assets from your node app, without your application code needing to be concerned about what the files are. Any request that comes in and matches a filename will be automatically served for you.
 
