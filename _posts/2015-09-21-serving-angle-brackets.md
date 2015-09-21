@@ -133,7 +133,7 @@ Now let's create a simple view to show the current time.
 
 {% highlight html %}
 <div class="container">
-	The time is : "{{" time "}}" 
+	The time is : \{\{ time \}\}
 </div>
 {% endhighlight  %}
 
