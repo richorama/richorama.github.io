@@ -23,9 +23,9 @@ We'll call this view `todos.html`:
   <h1>Todo List</h1>
 
   <ul>
-    {{#todos}}    
+    { {#todos} }    
       <li><strong>{ {value} }</strong> <a href="/delete/{ {key} }">delete</a></li>
-    {{/todos}}
+    { {/todos} }
   </ul>
 
   <form method="POST" class="form-inline">
@@ -38,6 +38,7 @@ We'll call this view `todos.html`:
 
 </div>
 {% endhighlight %}
+(please note I've had to put a space between my curly braces which shouldn't be there)
 
 Let's have a quick run through of what's in this view:
 
@@ -47,7 +48,7 @@ Let's have a quick run through of what's in this view:
 
 ## Parsing form posts
 
-This page will post forms to us. Express doesn't handle HTTP bodies any more (it used to!), you need to install some middleware to handle the HTTP body. Let's use the `body-parser` modules. Install it like this:
+This page will post forms to us. Express doesn't handle HTTP bodies any more (it used to!), you need to install some middleware to parse the HTTP body and convert it into an object (`req.body`). Let's use the `body-parser` module. Install it like this:
 
 {% highlight text %}
 > npm install body-parser --save
@@ -60,13 +61,15 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 {% endhighlight %}
 
-You can add the `app.use` line directly after the existing `app.use`.
+You can add the `app.use` line directly after the `app.use` for serving static files, which we added last time.
 
 ## Databases
 
 Node support lots of databases, everything from SQL Server to Mongo DB, but the node way of doing databases is a bit different. Instead of connecting to an external database system, we'll run the database inside the node server!
 
-[LevelDB](https://github.com/google/leveldb) is a key-value store developed by Google, it's a C++ library which you can include within your application to provide basic database support. The node community has fantastic support for level, with a [rich ecosystem](https://github.com/level/levelup/wiki/Modules) of modules around level. There are command line and graphical tools to allow you to view you data. There are libraries which build upon level's interface, to provide more complex data structures. But interestingly, there are modules which replace the guts of the level module with alternative forms of persistence, such as [Redis](https://github.com/hmalphettes/redisdown), or my own, which connects to [Azure's Table Storage](https://github.com/richorama/azureleveldown).
+[LevelDB](https://github.com/google/leveldb) is a key-value store developed by Google, it's a C++ library which you can include within your application to provide basic database features. The node community has fantastic support for level, with a [rich ecosystem](https://github.com/level/levelup/wiki/Modules) of modules around level.
+
+There are command line and graphical tools to allow you to view you data. There are libraries which build upon level's interface, to provide more complex data structures. But interestingly, there are modules which replace the guts of the level module with alternative forms of persistence, such as [Redis](https://github.com/hmalphettes/redisdown), or my own, which connects to [Azure's Table Storage](https://github.com/richorama/azureleveldown).
 
 The advantage with going with level is that it presents a 'lowest common denominator' interface. This allows you to change your mind later about exactly where you data is stored, without you having to refactor your code.
 
@@ -85,7 +88,7 @@ var level = require('level');
 var db = level('todos');
 {% endhighlight %}
 
-> You can create multiple databases within the same application, but it's generally better to have less databases, and create different ranges of keys to store the data.
+> Note: You can create multiple databases within the same application, but it's generally better to have less databases, and create different ranges of keys to store the data.
 
 ## Guid keys
 
@@ -103,7 +106,7 @@ var guid = require('node-uuid').v4;
 
 ## Working with the database
 
-Let's listen to HTTP posts, and insert records into the database. You call the method `put` on the database, passing in your key and value, as well as a callback to fire when the record is saved. Once it's saved, we'll redirect back to the home page:
+Let's listen to HTTP posts, and insert records into the database. Call the method `put` on the database, passing in your key and value as well as a callback to fire when the record is saved. Once saved, we'll redirect back to the home page:
 
 {% highlight javascript %}
 app.post('/', function(req, res){
