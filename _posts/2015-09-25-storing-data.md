@@ -215,3 +215,23 @@ app.listen(8080);
 There are a few lines of code there, but this is a web server and a database, all in one JavaScript file :¬)
 
 Next we'll shift our focus over to the browser, and convert our todo list into a single page application.
+
+__UPDATE__
+
+If you're experiencing problems with LevelDB ([Paul Grenyer](http://paulgrenyer.blogspot.co.uk/) reported that his database wasn't persisting on Heroku) I suggest using Redis to persist the data.
+
+Install a couple of modules:
+
+{% highlight text %}
+> npm install levelup redisdown --save
+{% endhighlight %}
+
+Then create the `db` object like this instead:
+
+{% highlight text %}
+var levelup = require('levelup')
+var redisdown = require('redisdown')
+var db = levelup('todos', { db: redisdown, host: 'localhost', port: 6379 })
+{% endhighlight %}
+
+Now you're running on Redis instead :¬)
