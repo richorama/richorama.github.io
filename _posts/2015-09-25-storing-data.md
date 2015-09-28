@@ -13,6 +13,8 @@ In this post we'll look at persisting data to a database. The node way.
 
 ## A Basic Todo List
 
+![todo app screenshot](/images/todo-screenshot.png)
+
 A simple todo list is a great way to explore persisting data. Let's create a new view to allow users to add/delete a list of todo items.
 
 We'll call this view `todos.html`:
