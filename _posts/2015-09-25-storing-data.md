@@ -230,7 +230,7 @@ Install a couple of modules:
 
 Then create the `db` object like this instead:
 
-{% highlight text %}
+{% highlight javascript %}
 var levelup = require('levelup')
 var redisdown = require('redisdown')
 var db = levelup('todos', { db: redisdown, host: 'localhost', port: 6379 })
