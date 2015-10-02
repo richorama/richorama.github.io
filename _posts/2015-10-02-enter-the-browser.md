@@ -2,7 +2,7 @@
 layout:     post
 title:      Enter the Browser
 date:       2015-10-02 13:18:00
-summary:    xxx
+summary:    In this post we'll look at moving code into the browser, to make a single page application - the node way!
 ---
 
 In this series of blog posts, we're looking at how to set up a simple web app in node.
