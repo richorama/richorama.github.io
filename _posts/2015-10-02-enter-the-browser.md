@@ -106,7 +106,7 @@ var http.get('/api', function(err, todos){
 
 __Hold on!__ This looks like node.js code. We're using the `require` function to load our `http-request` module, which we're loading off the disk. `require` isn't available in the browser (and neither is the `module.exports` variable!), so what's going on?
 
-We're going to use [browserify](http://browserify.org/), which is a useful command line tool for bundling together multiple source files, to build a single bundle we can deploy to the browser. Browserify parses our JavaScript code and finds all the calls to `require` to figure out which files we're using, it then bundles all of the referenced modules together into a single file. 
+We're going to use [browserify](http://browserify.org/), which is a useful command line tool for bundling together multiple source files, to build a single file we can serve to the browser. Browserify parses our JavaScript code and finds all the calls to `require` to figure out which files we're using, it then bundles all of the referenced modules together into a single file. 
 
 Browserify has some fantastic benefits:
 
