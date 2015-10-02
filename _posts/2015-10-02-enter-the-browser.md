@@ -13,7 +13,7 @@ In this post we'll look at moving code into the browser, to make a single page a
 
 ## Creating an API
 
-Let's add some extra routes to our express app, to allow data to be posted and retrieve in JSON format. The code is very simliar to the code we had before, so you can replace the existing routes, or add these as well:
+Let's add some extra routes to our express app, to allow data to be posted and retrieved in JSON format. The code is very simliar to the code we had before, so you can replace the existing routes, or add these as well:
 
 {% highlight javascript %}
 app.post('/api', function(req, res){
@@ -55,7 +55,7 @@ Now let's focus our effort on the browser.
 
 ## Browser side
 
-Let's create a new directory for the source code which will run in the browser (so it doens't get confused with the server-side code). 
+Let's create a new directory for the source code which will run in the browser (so it doesn't get confused with the server-side code). 
 
 {% highlight text %}
 > mkdir client
@@ -68,10 +68,10 @@ I've got a really lightweight JavaScript module I use to do this - which you can
 {% highlight javascript %}
 function makeRequest(method, uri, body, cb){
     var xhr = new XMLHttpRequest();
-    xhr.open(method,uri,true);
+    xhr.open(method, uri, true);
     xhr.onreadystatechange = function(){
-        if(xhr.readyState !== 4) return
-        if(xhr.status < 400) return cb(null, JSON.parse(xhr.responseText));
+      if(xhr.readyState !== 4) return
+      if(xhr.status < 400) return cb(null, JSON.parse(xhr.responseText));
       cb(xhr.status); 
     };
     xhr.setRequestHeader("Content-Type","application/json");
@@ -84,11 +84,11 @@ module.exports.get = function(url, cb){
 }
 
 module.exports.post = function(url, data, cb){
-    makeRequest("POST", url, JSON.stringify(data), cb);
+  makeRequest("POST", url, JSON.stringify(data), cb);
 }
 
 module.exports.del = function(url, cb){
-    makeRequest("DELETE", url, null, cb);
+  makeRequest("DELETE", url, null, cb);
 }
 {% endhighlight %}
 
@@ -106,15 +106,24 @@ var http.get('/api', function(err, todos){
 
 __Hold on!__ This looks like node.js code. We're using the `require` function to load our `http-request` module, which we're loading off the disk. `require` isn't available in the browser, so what's going on?
 
-We're going to use [browserify](http://browserify.org/), which is a useful command line tool for bundling together multiple source files, to build a single bundle we can deploy to the browser. Browserify parses throuhgh out JavaScript code, and finds all the call to `require`, and bundles all of the referenced modules together into a single file. The fantastic thing with browserify is that we can tap into the npm registry, and use node.js modules in the browser.
+We're going to use [browserify](http://browserify.org/), which is a useful command line tool for bundling together multiple source files, to build a single bundle we can deploy to the browser. Browserify parses our JavaScript code and finds all the calls to `require` to figure out which files we're using, it then bundles all of the referenced modules together into a single file. 
 
-Let's install browserify, as well as uglify (which is a JavaScript minifier):
+Browserify has some fantastic benefits:
+
+ * We can split our client-side code into small, testable and reusable modules.
+ * We don't have to worry about polluting the global namespace. All variables will be encapsulated within their own module.
+ * We can tap into the npm registry, and use node.js modules in the browser.
+ * Browserify figures out what which JavaScript files we're using, so we don't have to maintain list.
+
+Put another way, browserify brings the benefits of node to the browser.
+
+Let's install browserify, as well as uglify (a JavaScript minifier). Both of these are node modules, which you can install like this:
 
 {% highlight text %}
 > npm install browserify uglify-js -g
 {% endhighlight %}
 
-> The `-g` option installs the module globally, which registers it as a command line tool
+> The `-g` option installs the module globally, and registers it as a command line tool.
 
 Now we can create the bundle on the command line:
 
@@ -147,3 +156,4 @@ Now let's create an `index.html` in the `public` directory which will load the s
 
 If you fire up the application, you should now see your todos written to the console (open the developer tools with `F12`).
 
+Next we'll look at using [React](https://facebook.github.io/react/) for templating in the browser.
