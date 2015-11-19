@@ -2,14 +2,13 @@
 layout:     post
 title:      Syncing data with SQL Server
 date:       2015-11-19 09:00:00
-summary:    When building occasionally connected apps, we frequently want to synchronize data between client and server. It's common to build REST APIs to
-retrieve records from a database that have changed since we last connected.
+summary:    When building occasionally connected apps, we frequently want to synchronize data between client and server. It's common to build REST APIs to retrieve records from a database that have changed since we last connected.
 ---
 
 When building occasionally connected apps, we frequently want to synchronize data between client and server. It's common to build REST APIs to
 retrieve records from a database that have changed since we last connected.
 
-All to often I've seen dates as way of keeping track of a point in time since changes occurred. I think this is a bad idea 
+All too often I've seen dates as way of keeping track of a point in time since changes occurred. I think this is a bad idea 
 (as Einstein taught us, time is [not reliable](http://www.space.com/17661-theory-general-relativity.html)). 
 
 This post shows how you can use the timestamp variable in a SQL Server database instead.
@@ -53,7 +52,7 @@ public Tuple<Example[],byte[]> GetDelta(byte[] lastTimestamp)
   // The first thing to do is retrieve the current value of the timestamp
   var currentTimestamp = Query("SELECT @@DBTS;");
   
-  // next make a query, selecting every record which has changed since the last timestamp, and the current one
+  // next make a query, selecting every record which has changed between last timestamp and the current one
   var results = Query("SELECT * FROM Example WHERE Version > @lastTimestamp AND Version <= @currentTimestamp");
   
   // return the results, and the current timestamp (which is then passed in on the next call)
