@@ -15,7 +15,7 @@ having to pay anything for a CI service. I don't need all the bells and whistles
 I just want a service to build my code and run the tests (I'm too lazy to run the tests myself).
 
 [Azure Web Apps](https://azure.microsoft.com/en-gb/services/app-service/web/) does half
-of this already. It integrates with BitBucket and GitHub, and will fetch my project on evey commit and build it.
+of this already. It integrates with BitBucket and GitHub, and will fetch my project on every commit and build it.
 It's just missing the last mile of being able to run the tests and notify me of any problems.
 
 The good news, is that you can customise your build script, and get it to do the remaining pieces.
