@@ -17,7 +17,12 @@ green     #859900  operators, other keywords
 */
 
 .highlight,
-.gist-syntax .highlight { background-color: #002b36; color: #93a1a1 }
+.gist-syntax .highlight {
+    background-color: #002b36;
+    color: #93a1a1;
+    border-radius: 4px;
+    padding:0;
+}
 .highlight .c,
 .gist-syntax .highlight .c { color: #586e75 } /* Comment */
 .highlight .err,
