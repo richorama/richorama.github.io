@@ -38,6 +38,8 @@ The opinions expressed on this site are my own and do not necessarily represent 
 
 ## Videos
 
+[The State of the Art - 3 programming languages from 1976](http://www.infoq.com/presentations/3-languages-future)
+
 [Introduction to Microsoft Orleans on Pluralsight](http://www.pluralsight.com/courses/microsoft-orleans-introduction)
 
 [Cut Your Cloud Bill – Techniques for Reducing the Cost of Cloud Computing](http://www.infoq.com/presentations/cloud-infrastructure-cost)
