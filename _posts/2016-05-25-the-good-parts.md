@@ -65,10 +65,13 @@ This dialogue is not exhaustive.
 
 I've come up with a way of classifying language features, something like this:
 
-1. __`Essential`__ - features that you must have to write a program.
-1. __`Advanced`__ - features that you don't need, but will make your program more efficient/elegant/maintainable.
-1. __`Occasional`__ - features that are seldom required, and it's OK to google when you need to use.
-1. __`Avoid`__ - features which you shouldn't use, just forget they exist.
+__`Essential`__ - features that you must have to write a program.
+
+__`Advanced`__ - features that you don't need, but will make your program more efficient/elegant/maintainable.
+
+__`Occasional`__ - features that are seldom required, and it's OK to google when you need to use.
+
+__`Avoid`__ - features which you shouldn't use, just forget they exist.
 
 To help illustrate what I mean, I'll classify some C# features:
 
