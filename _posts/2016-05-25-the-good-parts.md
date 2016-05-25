@@ -91,7 +91,7 @@ This has taken a long time, and it's probably an ongoing process.
 But now I know there are parts of these languages which I know aren't useful, or can cause problems,
 so I don't use them. I can unlearn them.
 
-With F# the canvas blank. I don't know where to put things. Is it really important for me to know how to use
+With F# the canvas is blank. I don't know where to put things. Is it really important for me to know how to use
 discriminated unions for tree structures? Do people use records, or do they just build classes? Should I always
 use a sequence in preference to a list?
 
