@@ -73,7 +73,7 @@ __`Occasional`__ - features that are seldom required, and it's OK to google when
 
 __`Avoid`__ - features which you shouldn't use, just forget they exist.
 
-To help illustrate what I mean, I'll classify some C# features:
+To help illustrate what I mean, I'll classify some C# keywords:
 
 ![C# quadrants](/images/csharpquadrants.png)
 
@@ -95,7 +95,9 @@ With F# the canvas blank. I don't know where to put things. Is it really importa
 discriminated unions for tree structures? Do people use records, or do they just build classes? Should I always
 use a sequence in preference to a list?
 
+## In conclusion
+
 This is why I would like a book that can take someone's experience with the language and records it in a way that
 makes it easier for me to learn. Just like Crockford did.
 Perhaps it starts with the 'Essentials', and finishes with the 'Advanced'.
-I'll just google the 'Occasional' stuff, thanks!
+I'll just google the 'Occasional' stuff, and please leave out the 'Avoid' stuff, thanks!
