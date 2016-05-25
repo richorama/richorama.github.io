@@ -79,8 +79,8 @@ To help illustrate what I mean, I'll classify some C# keywords:
 
 _Yes [C# has `goto`](https://msdn.microsoft.com/en-gb/library/13940fs2.aspx) ;¬)_
 
-People might disagree about where some of the finer points about where keywords might sit,
-but I don't think that many people would argue that `goto` is essential, and you should avoid `namespace`.
+People might disagree on some of the finer points about where keywords might sit,
+but I don't think many people would argue that `goto` is essential, and you should avoid `namespace`.
 
 As a language evolves you can expect these classifications to change. When new features arrive, they might displace older
 features, and relegate them to 'Occasional' or 'Avoid'. We do this to maintain backwards compatibility (although languages
@@ -91,7 +91,7 @@ This has taken a long time, and it's probably an ongoing process.
 But now I know there are parts of these languages which I know aren't useful, or can cause problems,
 so I don't use them. I can unlearn them.
 
-With F# the canvas blank. I don't know where to put things. Is it really important for me to know how to use
+With F# the canvas is blank. I don't know where to put things. Is it really important for me to know how to use
 discriminated unions for tree structures? Do people use records, or do they just build classes? Should I always
 use a sequence in preference to a list?
 
