@@ -79,8 +79,8 @@ To help illustrate what I mean, I'll classify some C# keywords:
 
 _Yes [C# has `goto`](https://msdn.microsoft.com/en-gb/library/13940fs2.aspx) ;¬)_
 
-People might disagree about where some of the finer points about where keywords might sit,
-but I don't think that many people would argue that `goto` is essential, and you should avoid `namespace`.
+People might disagree on some of the finer points about where keywords might sit,
+but I don't think many people would argue that `goto` is essential, and you should avoid `namespace`.
 
 As a language evolves you can expect these classifications to change. When new features arrive, they might displace older
 features, and relegate them to 'Occasional' or 'Avoid'. We do this to maintain backwards compatibility (although languages
