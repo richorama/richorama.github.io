@@ -2,7 +2,7 @@
 layout:     post
 title:      The Good Parts
 date:       2016-05-25 09:00:00
-summary:    ZZZZ
+summary:    Yesterday I was trying to learn F# by reading through the O'Reilly book and trying a few code samples. I then made a flippant remark...
 ---
 
 Yesterday I was trying to learn F# by reading through the O'Reilly book and trying a few code samples.
