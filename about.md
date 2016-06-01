@@ -42,6 +42,8 @@ The opinions expressed on this site are my own and do not necessarily represent 
 
 [Introduction to Microsoft Orleans on Pluralsight](http://www.pluralsight.com/courses/microsoft-orleans-introduction)
 
+[LevelDB + Node.js](https://www.infoq.com/presentations/leveldb-nodejs)
+
 [Cut Your Cloud Bill – Techniques for Reducing the Cost of Cloud Computing](http://www.infoq.com/presentations/cloud-infrastructure-cost)
 
 [Package Management for Windows Azure](http://www.infoq.com/presentations/Package-Management-Windows-Azure)
