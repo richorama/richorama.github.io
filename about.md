@@ -8,7 +8,7 @@ permalink: /about/
 
 Hi, my name is Richard Astbury, senior consultant at [Two10degrees](http://www.two10degrees.com) – a consultancy specialising in cloud computing. I'm a [Puralsight author](http://www.pluralsight.com/courses/microsoft-orleans-introduction) and a [Microsoft MVP for Azure](http://mvp.microsoft.com/en-us/mvp/richard%20astbury-4039939).
 
-I'm interested in programming in JavaScript (node.js), C#, Python, Julia and playing with Clojure. In real life I like running, mountain biking, snowboarding and drum and bass. I don't like marmite.
+I'm interested in programming in JavaScript (node.js), C#, Python and playing with F#, Julia, Elixir, Clojure, etc... In real life I like running, mountain biking, snowboarding and drum and bass. I don't like marmite.
 
 I live in rural Suffolk, in the UK. 
 
@@ -41,6 +41,8 @@ The opinions expressed on this site are my own and do not necessarily represent 
 [The State of the Art - 3 programming languages from 1976](http://www.infoq.com/presentations/3-languages-future)
 
 [Introduction to Microsoft Orleans on Pluralsight](http://www.pluralsight.com/courses/microsoft-orleans-introduction)
+
+[LevelDB + Node.js](https://www.infoq.com/presentations/leveldb-nodejs)
 
 [Cut Your Cloud Bill – Techniques for Reducing the Cost of Cloud Computing](http://www.infoq.com/presentations/cloud-infrastructure-cost)
 
