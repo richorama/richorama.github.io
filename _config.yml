@@ -4,7 +4,7 @@ email:       richard.astbury@gmail.com
 author:      Richard Astbury
 description: "Richard Astbury's Blog"
 baseurl:     ""
-url:         "http://richorama.github.io/"
+url:         "http://richorama.github.io"
 
 # Google analytics
 google_analytics:
