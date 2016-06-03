@@ -30,3 +30,6 @@ permalink:    pretty
 paginate:     20
 sass:
   compressed: true
+
+gems:
+  - jekyll-seo-tag
