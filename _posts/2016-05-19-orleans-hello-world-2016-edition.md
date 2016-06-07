@@ -10,8 +10,16 @@ So the process of getting started is now a little different. Let's walk through 
 
 ## Creating the grains
 
-First of all, open Visual Studio and create a class library which will host our grains. You can now put grain
-interfaces and implementations side-by-side in the same assembly, so let's do that.
+First of all, open Visual Studio and create a class library which will host our grains.
+
+> Note that at the time of writing, the DLLs are all targeting .NET 4.5.1.
+
+You can now put grain interfaces and implementations side-by-side in the same assembly, so let's do that.
+
+> Is it a good idea to put grain interfaces and implementations in the same assembly? The advantages are
+that it can reduce the number of projects you have in you solution, and it could be used for 'internal' grains, which
+you don't want to allow access to from outside the silo. The disadvantages are that you give the client code the implementation
+which you don't want them to execute directly.
 
 Orleans is now delivered by a number of nuget packages, so let's install them:
 
@@ -66,7 +74,7 @@ PM> Install-Package Microsoft.Orleans.Client
 
 ...then add a reference to the project containing the grains.
 
-We can now write a client application which connects to a local silo and call the grain.
+We can now write a client application which connects to a local silo and calls the grain.
 
 I have included some retry logic when attempting to initialise the client, so the application waits until the silo is ready.
 
@@ -109,7 +117,7 @@ class Program
 }
 {% endhighlight %}
 
-Note previously the initialisation required a config file. This is being phased out in favour of programmatic onfiguration (see `ClientConfiguration.LocalhostSilo()`).
+Note previously the initialisation required a config file. This is being phased out in favour of programmatic configuration (see `ClientConfiguration.LocalhostSilo()`).
 
 ## Creating the server
 
