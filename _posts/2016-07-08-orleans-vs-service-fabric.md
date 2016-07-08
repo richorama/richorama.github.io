@@ -50,7 +50,7 @@ This table focuses on where there are variations.
         </td>
         <td>
             Service Fabric uses a deterministic hash of the actor identity to place actors in a partition.
-            Partitions are distributed across the nodes in the Service Fabric.
+            Partitions are distributed across the nodes in the cluster.
         </td>
     </tr>
 
