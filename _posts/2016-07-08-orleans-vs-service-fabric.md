@@ -108,7 +108,7 @@ tr:nth-child(even) {
 
     <tr>
         <th>Stateless Workers</th>
-        <td>Stateless workers grains can have multiple activations to handle high workloads. Activations are always local
+        <td>Stateless Worker grains can have multiple activations to handle high workloads. Activations are always local
         to the calling grain.</td>
         <td>None</td>
     </tr>
