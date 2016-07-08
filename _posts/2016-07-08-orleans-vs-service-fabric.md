@@ -42,6 +42,14 @@ This table focuses on where there are variations.
         <td>Open Source</td>
         <td>Closed Source</td>
     </tr>    
+
+    <tr>
+        <th>Partition Tolerance (CAP)</th>
+        <td>AP - During a network partition Orleans will maintain availability, this may result in some duplicate grain activations which are removed when the network heals. CP can be achieved on a call-by-call basis by deferring to the storage tier.</td>
+        <td>CP - During a network partition or node failure, if a consensus cannot be reached between nodes, actors may fail to activate and persist state.
+        </td>
+    </tr>
+
     <tr>
         <th>Actor Placement</th>
         <td>
@@ -108,6 +116,12 @@ This table focuses on where there are variations.
         <th>Rentrancy</th>
         <td>Grains are not reentrant by default.</td>
         <td>Actors are reentrant by default.</td>
+    </tr>
+
+    <tr>
+        <th>Hosting</th>
+        <td>Orleans is a library which can be hosted by any .NET 4.5.1 process, including on-premesis, Worker Roles in Azure and Service Fabric! It also comes with a host executable to run directly on Windows.</td>
+        <td>Service Fabric can run in a local dev environment or in Azure.</td>
     </tr>
 
 </table>
