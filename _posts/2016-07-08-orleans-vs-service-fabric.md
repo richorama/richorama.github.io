@@ -25,6 +25,8 @@ concept.
 Please note that Service Fabric is a more broad offering than Orleans. It offers replicated storage and service hosting (for example),
 with the actors being just one aspect. I'm limiting my comparison between the actor implementations, and not a full feature comparison.
 
+Please also note that in Orleans, Actors are called 'grains'.
+
 ## The Comparison
 
 The two implementations are very similar, and share more in common than there are differences.
