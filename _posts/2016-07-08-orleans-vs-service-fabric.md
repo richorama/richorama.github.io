@@ -31,15 +31,15 @@ The two implementations are very similar, and share more in common than there ar
 
 This table focuses on where there are variations.
 
-<table>
+<table style="font-size:18px">
     <tr>
-        <th></th>
-        <th>Orleans</th>
-        <th>Service Fabric</th>
+        <th width="20%"></th>
+        <th width="40%">Orleans</th>
+        <th width="40%">Service Fabric</th>
     </tr>
     <tr>
         <th>Source Code</th>
-        <td>[Open Source](https://github.com/dotnet/orleans)</td>
+        <td>Open Source</td>
         <td>Closed Source</td>
     </tr>    
     <tr>
@@ -56,7 +56,7 @@ This table focuses on where there are variations.
 
     <tr>
         <th>Actor Identity</th>
-        <td>Guid, string or long, as well as compound keys (guid + string, long + string), as well as identifying different concrete class implementations. [ref](http://dotnet.github.io/orleans/Step-by-step-Tutorials/Actor-Identity)</td>
+        <td>Guid, string or long, as well as compound keys (guid + string, long + string), as well as identifying different concrete class implementations.</td>
         <td>Guid, string or long.</td>
     </tr>
 
