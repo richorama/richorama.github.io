@@ -31,7 +31,7 @@ The two implementations are very similar, and share more in common than there ar
 
 This table focuses on where there are variations.
 
-<table style="font-size:18px">
+<table style="font-size:18px" cellpadding="8">
     <tr>
         <th width="20%"></th>
         <th width="40%">Orleans</th>
