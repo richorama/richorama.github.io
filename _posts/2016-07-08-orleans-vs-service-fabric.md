@@ -7,9 +7,9 @@ summary:    Never has there been such a good time for C# developers wanting to d
 
 ## Introduction
 
-Never has there been such a good time for C# developers wanting to develop software based on Virtual Actors.
+Never has there been such a good time for C# developers wanting to develop software based on [Virtual Actors](http://dotnet.github.io/orleans/Introduction).
 
-At the moment there are two systems available, Orleans and Service Fabric Actors.
+At the moment there are two systems available, [Orleans](https://github.com/dotnet/orleans) and [Service Fabric Reliable Actors](https://azure.microsoft.com/en-gb/documentation/articles/service-fabric-reliable-actors-introduction/).
 
 Other actor frameworks are available of course. On the JVM there is [Orbit](https://github.com/orbit/orbit), a Virtual Actor implementation,
 and [Akka](http://akka.io/) with more traditional actors.
@@ -30,6 +30,12 @@ with the actors being just one aspect. I'm limiting my comparison between the ac
 The two implementations are very similar, and share more in common than there are differences.
 
 This table focuses on where there are variations.
+
+<style>
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+</style>
 
 <table style="font-size:18px" cellpadding="8">
     <tr>
@@ -100,7 +106,7 @@ This table focuses on where there are variations.
 
     <tr>
         <th>Stateless Workers</th>
-        <td>Stateless workers are grains that can have multiple activations to handle high workloads. Activations are always local
+        <td>Stateless workers grains can have multiple activations to handle high workloads. Activations are always local
         to the calling grain.</td>
         <td>None</td>
     </tr>
@@ -108,12 +114,12 @@ This table focuses on where there are variations.
 
     <tr>
         <th>Controlling Actor Lifecycle</th>
-        <td>Actors can request to defer deactivation, or deactivate immediately.</td>
+        <td>Grains can request to defer deactivation, or request immediate deactivation.</td>
         <td>An actor can be deleted by a client.</td>
     </tr>
 
     <tr>
-        <th>Rentrancy</th>
+        <th>Reentrancy</th>
         <td>Grains are not reentrant by default.</td>
         <td>Actors are reentrant by default.</td>
     </tr>
@@ -125,3 +131,5 @@ This table focuses on where there are variations.
     </tr>
 
 </table>
+
+Features such as Timers, Reminders and Interceptors have no significant difference.
