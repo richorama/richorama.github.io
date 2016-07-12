@@ -122,14 +122,14 @@ tr:nth-child(even) {
 
     <tr>
         <th>Reentrancy</th>
-        <td>Grains are not reentrant by default.</td>
-        <td>Actors are reentrant by default.</td>
+        <td>Full reentrancy is supported. Grains are not reentrant by default.</td>
+        <td>Reentrancy is only enabled within a callchain. This can be disabled.</td>
     </tr>
 
     <tr>
         <th>Hosting</th>
         <td>Orleans is a library which can be hosted by any .NET 4.5.1 process, including on-premesis, Worker Roles in Azure and Service Fabric! It also comes with a host executable to run directly on Windows.</td>
-        <td>Service Fabric can run in a local dev environment or in Azure.</td>
+        <td>Service Fabric Actors can run on Windows or Azure. Service Fabric can run on Linux, but the Actors must be witten in Java.</td>
     </tr>
 
 </table>
