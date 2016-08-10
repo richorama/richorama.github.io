@@ -50,3 +50,48 @@ __High__
 __NearestNeighbor__
 
 ![](/images/NearestNeighbor.png)
+
+## Conclusion
+
+It seems to me that the sweet spot is anything starting with 'High'. These seem to have a good enough quality, and an acceptable performance. The `NearestNeighbor` is really ugly, but if you want pure performance, or you're not making a big difference to the scale, you might get away with it.
+
+## Image scaling source code
+
+{% highlight c# %}
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Thumbnail(InterpolationMode.NearestNeighbor);
+        Thumbnail(InterpolationMode.Bicubic);
+        Thumbnail(InterpolationMode.Bilinear);
+        Thumbnail(InterpolationMode.High);
+        Thumbnail(InterpolationMode.HighQualityBicubic);
+        Thumbnail(InterpolationMode.HighQualityBilinear);
+        Thumbnail(InterpolationMode.Low);
+    }
+
+    private static void Thumbnail(InterpolationMode interpolationMode)
+    {
+        using (var source = Bitmap.FromFile(@"C:\Users\Richard\Desktop\Windows10-wallpaper-img100.jpg"))
+        using (var target = new Bitmap(384, 286, PixelFormat.Format32bppPArgb))
+        using (var graphics = Graphics.FromImage(target))
+        {
+            graphics.CompositingMode = CompositingMode.SourceCopy;
+            graphics.CompositingQuality = CompositingQuality.HighSpeed;
+            graphics.InterpolationMode = interpolationMode;
+
+            graphics.DrawImage(source,
+                new Rectangle(0, 0, target.Width, target.Height),
+                new Rectangle(0, 0, source.Width, source.Height),
+                GraphicsUnit.Pixel);
+
+            target.Save($"{interpolationMode}.png", ImageFormat.Png);
+        }
+    }
+}
+{% endhighlight %}
