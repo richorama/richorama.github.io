@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Benchmarking the Image Interpolation in .NET
+title:      Benchmarking Image Interpolation in .NET
 date:       2016-08-10 09:00:00
 summary:    I am attempting to improve the performance of image resizing in C#.
 ---
