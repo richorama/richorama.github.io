@@ -10,7 +10,7 @@ Hi, my name is Richard Astbury, senior consultant at [Two10degrees](http://www.t
 
 I'm interested in programming in JavaScript (node.js), C#, Python and playing with F#, Julia, Elixir, Clojure, etc... In real life I like running, mountain biking, snowboarding and drum and bass. I don't like marmite.
 
-I live in rural Suffolk, in the UK. 
+I live in rural Suffolk, in the UK.
 
 The opinions expressed on this site are my own and do not necessarily represent those of Two10degrees.
 
@@ -55,3 +55,13 @@ The opinions expressed on this site are my own and do not necessarily represent 
 [A Node.js app to Azure from the Raspberry Pi in 3 minutes](http://www.youtube.com/watch?v=eg4DXSvl2Us)
 
 [Node.js Hello World in Windows Azure Web Sites in 1:30](https://www.youtube.com/watch?v=UlG-mGSqkaI)
+
+## Podcasts
+
+[Hanselminutes - Exploring the Orleans Distributed Virtual Actor Model with Richard Astbury](http://hanselminutes.com/536/exploring-the-orleans-distributed-virtual-actor-model-with-richard-astbury)
+
+[DotNetRocks - Microsoft Orleans with Richard Astbury](https://www.dotnetrocks.com/?show=969)
+
+[DotNetRocks - Richard Astbury Migrates Applications to Azure](https://www.dotnetrocks.com/?show=837)
+
+[Two10degrees Azure Podcast](http://azurecast.blogspot.co.uk/)
