@@ -48,7 +48,9 @@ The opinions expressed on this site are my own and do not necessarily represent 
 
 [Package Management for Windows Azure](http://www.infoq.com/presentations/Package-Management-Windows-Azure)
 
-[Building Internet of Things applications with Azure and Orleans](http://channel9.msdn.com/Events/cloudday/Microsoft-Cloud-Day-2014/Building-Internet-of-Things-applications-with-Azure-and-Orleans)
+[Building Internet of Things applications with Azure and Orleans - Channel 9](http://channel9.msdn.com/Events/cloudday/Microsoft-Cloud-Day-2014/Building-Internet-of-Things-applications-with-Azure-and-Orleans)
+
+[Building Internet of Things applications with Azure and Orleans - NDC London](https://vimeo.com/113730934)
 
 [Meet the Users: Richard Astbury](http://channel9.msdn.com/Events/cloudday/Microsoft-Cloud-Day-2014-Meet-the-Users/Meet-the-Users-Richard-Astbury-Azure-MVP-Sr-Consultant-Two10Degrees)
 
