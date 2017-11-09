@@ -31,5 +31,6 @@ paginate:     20
 sass:
   compressed: true
 
-gems:
+plugins:
   - jekyll-seo-tag
+  - jekyll-paginate

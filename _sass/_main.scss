@@ -14,7 +14,7 @@
 */
 
 body {
-  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "Lato", "PT Serif", Georgia, "Times New Roman", serif;
 }
 
 html, body {
@@ -288,6 +288,7 @@ h6,
 @media screen and (min-width: 48em) {
   .site-header .site-title {
     float: left;
+    font-weight:bold;
   }
 
   .meta,
@@ -391,17 +392,17 @@ h6,
 @media screen and (min-width: 64em) {
   .h1,
   h1 {
-    font-size: 4.498rem;
+    font-size: 2.498rem;
   }
 
   .h2,
   h2 {
-    font-size: 3.18rem;
+    font-size: 2.18rem;
   }
 
   .h3,
   h3 {
-    font-size: 2.249rem;
+    font-size: 2.0rem;
   }
 
   .h4,
