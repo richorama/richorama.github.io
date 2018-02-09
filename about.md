@@ -30,11 +30,11 @@ The opinions expressed on this site are my own and do not necessarily represent 
 
 ## Tools
 
-[Azure Plugin Library](http://richorama.github.io/AzurePluginLibrary/)
+[Nuget Tree](https://github.com/richorama/nuget-tree) - shows nuget package dependencies in a hierarchy
 
-[Azure Speed Test](http://azurespeedtest.azurewebsites.net/)
+[Azure Speed Test](http://azurespeedtest.azurewebsites.net/) - a web page to measure latency to Azure Blob Storage
 
-[Azure Datacenter Lookup](http://azurelookup.azurewebsites.net/)
+[Azure Datacenter Lookup](http://azurelookup.azurewebsites.net/) - looks up which data center is hosting a web site
 
 ## Videos
 
