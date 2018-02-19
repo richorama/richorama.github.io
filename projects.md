@@ -34,6 +34,6 @@ A dashboard for [Microsoft Orleans](https://github.com/dotnet/orleans).
 
 [![Muon Revo Screenshot](images/frac-js.png)](https://richorama.github.io/frac-js)
 
-A [leaflet](http://leafletjs.com/) based Mandlebrot viewer, which renders tiles PNG tiles in a web worker.
+A [leaflet](http://leafletjs.com/) based Mandlebrot viewer, which renders PNG tiles in a web worker.
 
 [Fork](https://github.com/richorama/frac-js) on GitHub.
