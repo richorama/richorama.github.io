@@ -24,8 +24,16 @@ Take notes in markdown, stored in Dropbox.
 
 ### Orleans Dashboard
 
-[![Muon Revo Screenshot](images/orleansdashboard.png)](https://github.com/OrleansContrib/OrleansDashboard)
+[![Orleans Dashboard Screenshot](images/orleansdashboard.png)](https://github.com/OrleansContrib/OrleansDashboard)
 
 A dashboard for [Microsoft Orleans](https://github.com/dotnet/orleans).
 
 [Fork](https://github.com/richorama/OrleansDashboard) on GitHub.
+
+### Frac JS
+
+[![Muon Revo Screenshot](images/frac-js.png)](https://richorama.github.io/frac-js)
+
+A [leaflet](http://leafletjs.com/) based Mandlebrot viewer, which renders tiles PNG tiles in a web worker.
+
+[Fork](https://github.com/richorama/frac-js) on GitHub.
