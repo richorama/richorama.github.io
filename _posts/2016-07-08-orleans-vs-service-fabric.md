@@ -48,7 +48,7 @@ tr:nth-child(even) {
     <tr>
         <th>Source Code</th>
         <td>Open Source</td>
-        <td>Closed Source</td>
+        <td>Going Open Source</td>
     </tr>    
 
     <tr>
@@ -128,10 +128,15 @@ tr:nth-child(even) {
 
     <tr>
         <th>Hosting</th>
-        <td>Orleans is a library which can be hosted by any .NET 4.5.1 process, including on-premesis, Worker Roles in Azure and Service Fabric! It also comes with a host executable to run directly on Windows.</td>
+        <td>Orleans is a library which can be hosted by any .NET 4.5.1 process, including on-premesis, Worker Roles in Azure and Service Fabric! It also comes with a host executable to run directly on Windows. Orleans 2.0 can be hosted by a .NET Core proces on Linux or Windows.</td>
         <td>Service Fabric Actors can run on Windows or Azure. Service Fabric can run on Linux, but the Actors must be witten in Java.</td>
     </tr>
 
 </table>
 
 Features such as Timers, Reminders and Interceptors have no significant difference.
+
+## Updates
+
+* 15/March/2018 - [Service Fabric is going open source](https://blogs.msdn.microsoft.com/azureservicefabric/2018/03/14/service-fabric-is-going-open-source/).
+* 15/March/2018 - Orleans 2.0 runs on Linux.
