@@ -41,9 +41,9 @@ From a technology angle, one room really impressed me. You were encouraged to pi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xq9QTKF2g5w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-The characters all expressed needs (for shops, parks, etc...). When there needs had been met they made a bee-line for a stadium in the middle of the city. When the stadium was full, a concert or football match would start.
+The characters all expressed needs (for shops, parks, etc...). When their needs had been met they made a bee-line for a stadium in the centre of the city. When the stadium was full, a concert or football match would start.
 
-This was sim city with lego. I was watching (whilst busy making my own buildings) children collaborate on their city design, moving green spaces together, building shopping precincts, etc.. My 2yo just delighted in putting the tiles on/off the table.
+This was sim city with lego. I was watching (whilst busy making my own buildings) children collaborate on city design, moving green spaces together, building shopping precincts, etc.. My 2yo just delighted in putting the tiles on/off the table.
 
 More augmented reality was met with ice-exploring robots. You programmed them with a scratch-like interface to rescue people trapped in the ice. When the people were free they would dig up buried mammoths which would walk across the terrain and back to your boat. 
 
