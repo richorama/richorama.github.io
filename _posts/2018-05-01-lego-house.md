@@ -15,7 +15,7 @@ From there you're greeted by dinosaurs and bins full of lego.
 
 ## Initial Impressions
 
-The first thing that struck me is how quiet it was. Lots of busy children were busy concentrating on things they were building. The atmosphere was more like a museum.
+The first thing that struck me is how quiet it was. Children were busy concentrating on things they were building. The atmosphere was more like a museum.
 
 At the huge tray full of Duplo we were confronted by the only rule I saw all day "please take your shoes off before you get in the lego".
 
