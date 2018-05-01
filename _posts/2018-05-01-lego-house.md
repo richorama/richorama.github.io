@@ -7,7 +7,7 @@ summary:    On a recent family trip to Denmark we spent a day at the Lego House 
 
 On a recent family trip to Denmark we spent a day at the [Lego House](https://www.legohouse.com/en-gb) in Billund. It's set back behind the Lego theme park, and has only been open for about a year.
 
-In the large open plan ground floor of the building there's a restaurant and a lego shop, these being the only commercial offerings available, and the ticket barrier, which permits you to walk up a long ramp, winding around a lego tree to the top of the building.
+In the large open plan ground floor there's a restaurant and a lego shop, these being the only commercial offerings available. The ticket barrier greets you by name, and allows you to walk up a long ramp, winding around a huge lego tree to the top of the building.
 
 From there you're greeted by dinosaurs and bins full of lego.
 
