@@ -103,7 +103,7 @@ tr:nth-child(even) {
     <tr>
         <th>Cluster Membership</th>
         <td>Membership is outsourced using a provider model. Providers include table storage, SQL, Consul and Zoo Keeper.</td>
-        <td>Service Fabric provides it's own cluster membership using a replicated log.</td>
+        <td>Service Fabric provides its own cluster membership using a replicated log.</td>
     </tr>
 
     <tr>
@@ -128,7 +128,7 @@ tr:nth-child(even) {
 
     <tr>
         <th>Hosting</th>
-        <td>Orleans is a library which can be hosted by any .NET 4.5.1 process, including on-premesis, Worker Roles in Azure and Service Fabric! It also comes with a host executable to run directly on Windows. Orleans 2.0 can be hosted by a .NET Core proces on Linux or Windows.</td>
+        <td>Orleans is a library which can be hosted by any .NET 4.5.1 process, including on-premises, Worker Roles in Azure and Service Fabric. It also comes with a host executable to run directly on Windows. Orleans 2.0 can be hosted by a .NET Core proces on Linux or Windows.</td>
         <td>Service Fabric Actors can run on Windows or Azure. Service Fabric can run on Linux, but the Actors must be witten in Java.</td>
     </tr>
 
