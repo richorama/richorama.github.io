@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.js"></script>
+        <style>
+        #map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+
+        <script>
+var tileSize = 256
+var minX = -2
+var maxX = 2
+var minY = -2
+var maxY = 2
+
+var map = L.map('map').setView([0, 0], Math.min(2, 48));
+
+L.TileLayer.Mandlebrot = L.TileLayer.extend({
+    getTileUrl: function(coords) {
+        return draw(coords.x, coords.y, coords.z);
+    }
+});
+
+new L.TileLayer.Mandlebrot().addTo(map);
+
+function draw(x,y,z){
+    var canvas = document.createElement("canvas");
+    canvas.width = tileSize;
+    canvas.height = tileSize;
+    var ctx = canvas.getContext("2d");
+    var imageData = ctx.getImageData(0, 0, tileSize, tileSize);
+        
+    var numberOfTiles = Math.pow(2,z)
+    var x1 = (maxX - minX) * (x - (numberOfTiles / 2)) / numberOfTiles;
+    var y1 = (maxY - minY) * (y - (numberOfTiles / 2)) / numberOfTiles;
+    var pixelSize = (maxX - minX) / (numberOfTiles * tileSize);
+
+    for (var i = 0; i < imageData.data.length; i += 4) {
+        var p = i / 4;
+        var dx = p % tileSize;
+        var dy = (p - dx) / tileSize;
+
+        var tx = x1 + (dx * pixelSize);
+        var ty = y1 + (dy * pixelSize);
+
+        value = getColour(tx, ty);
+
+        if (value >= 0) {
+            var sinVal = Math.floor(255 * Math.sin(value * Math.PI/255))
+            imageData.data[i]     = sinVal;     // red
+            imageData.data[i + 1] = value; // green
+            imageData.data[i + 2] = 255 - sinVal; // blue
+            imageData.data[i + 3] = 255; // alpha
+        } else {
+            imageData.data[i + 3] = 255; // alpha
+        }
+    }
+    ctx.putImageData(imageData, 0, 0);
+
+    return canvas.toDataURL();
+}
+
+
+function getColour(re, im) {
+	var zRe = 0;
+	var zIm = 0;
+	var multZre = 0;
+	var multZim = 0;
+	var mandelValue  = 0;
+	while(mandelValue < 255) {
+		if (multZre+multZim >= 4) return mandelValue;
+		var tempRe = multZre - multZim + re;
+		zRe += zRe
+		zIm = zRe*zIm + im
+		zRe = tempRe
+		multZre = zRe * zRe
+		multZim = zIm * zIm
+		mandelValue++
+	}
+	return -1
+}
+        </script>
+
+    </body>
+</html>

@@ -2,8 +2,7 @@
 layout:     post
 title:      The rise of the Virtual Actor
 date:       2016-11-22 09:00:00
-summary:    Pioneered in 2008 by the Extreme Computing Group in Microsoft Research with the Orleans framework, the Virtual Actor concept is
-starting to spread to other ecosystems.
+summary:    Pioneered in 2008 by the Extreme Computing Group in Microsoft Research with the Orleans framework, the Virtual Actor concept is starting to spread to other ecosystems.
 ---
 
 Pioneered in 2008 by the Extreme Computing Group in Microsoft Research with the Orleans framework, the Virtual Actor concept is
