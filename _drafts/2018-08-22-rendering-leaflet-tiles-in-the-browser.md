@@ -5,6 +5,17 @@ date:       2018-08-22 09:00:00
 summary:    TODO
 ---
 
+## TL;DR
+
+I wrote a fractral viewer using Leaflet.js which renders map tiles in the browser using a pool of service workers.
+
+You can [view the app](https://richorama.github.io/frac-js/) and [source code](https://github.com/richorama/frac-js).
+
+
+![](/images/frac-js2.png)
+
+## Introduction
+
 I've used [leaflet.js](https://leafletjs.com/) before to render fractals in [Go](https://github.com/richorama/go-mandlebrot) and [C#](https://github.com/richorama/OrleansMandelbrot), but I thought it would be intersting to see if it was possible to render tiles in the browser without any cooperation from a tile server.
 
 First of all, what is a fractal? A fractal, such as the Mandlebot or Julia plot, is an image drawn using a mathematical formula. 
