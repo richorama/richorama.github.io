@@ -2,7 +2,7 @@
 layout:     post
 title:      Rendering leaflet.js tiles in the browser
 date:       2018-08-22 09:00:00
-summary:    TODO
+summary:    I wrote a fractral viewer using Leaflet.js which renders map tiles in the browser using a pool of service workers.
 ---
 
 ## TL;DR
@@ -30,7 +30,7 @@ Leaflet.js is well suited to exploring fractals, it allows you to browse a 2D su
 In my first attempt I create a tile layer, and override the function that gets the url for the tile (`getTileUrl`).
 
 Rather than supplying a URL to a tile server, I create a canvas, then render the fractal onto that canvas, then 
-convert the canvase to a data url, and set the tile src to that.
+convert the canvas to a data url, and set the tile src to that.
 
 {% highlight js %}
 var map = L.map('map', {crs: L.CRS.Simple}).setView([-128, 128], 2);
@@ -60,7 +60,7 @@ function draw(x, y, z){
 
 [Try it out](/images/mandlebrot1.html)
 
-This technique worked, but there was a problem. The fractal calculation is CPU intensive, and it's running on the single UI thread that the browser is using to render the page. This meant that when leaflet requested tiles, the browser stopped responding to user input, and the app freezes.
+This technique worked, but there was a problem. The fractal calculation is CPU intensive, and it's running on the single UI thread that the browser is also using to render the page. This meant that when leaflet requested tiles, the browser stopped responding to user input, and the app freezes.
 
 ## Attempt 2 - Service Worker
 
@@ -155,11 +155,11 @@ In order to do this we need to maintain queue of requests for work, and then dis
 
 First of all, how many workers should we generate? To try to reach 'mechanical sympathy' we should probably match the number of worker threads to the CPU count. The `navigator.hardwareConcurrency` property will give you this number.
 
-What's the best way to distribute the work? I decided to use a LIFO (last in first out) queue. This means that the tiles most recently asked for will be the next tile to render. As the user navigates around, we may find that we spend time rendering tiles that have since dissapeared off the screen, so processing the most recently asked for should provide the best user experience.
+What's the best way to distribute the work? I decided to use a LIFO (last in first out) queue. This means that the tile most recently asked for will be the next tile to render. As the user navigates around, we may find that we spend time rendering tiles that have since dissapeared off the screen, so LIFO should provide the best user experience.
 
 I attempted to write some generalised work distribution code:
 
-{% highlight hs %}
+{% highlight js %}
 // index.js
 const WorkDistribution = function(options){
     const queue = [];
@@ -242,9 +242,11 @@ Note that because each worker only processes one message a time, we can refactor
 
 ## Attmpt 4 - Ignore removed tiles
 
-When navigating around hte fractal, tiles can be requested by Leaflet but by the tile there is a worker ready to process them, they have already disappeared from the screen.
+When navigating around the fractal, it's often the scenario that tiles are requested by Leaflet but by the tile there is a worker ready to process them, they have already disappeared from the screen.
 
-We'll alter the WorkDistribution to support cancellation. When queueing an item of work we'll return a function which allows you to cancel the item. It then filters out cancelled work items from the queue.
+We'll alter the WorkDistribution to support cancellation. 
+
+When queueing an item of work we'll return a cancellation function. The queue will then remove cancelled items, and not bother to process them.
 
 {% highlight js %}
 const WorkDistribution = function(options){
@@ -283,7 +285,7 @@ const WorkDistribution = function(options){
             const work = {item:item, cb:cb, cancel:false};
             queue.push(work);
             processQueue();
-            return () => work.cancel = true;
+            return () => work.cancel = true; // return a cancellation function
         }
     };
 }
@@ -291,13 +293,13 @@ const WorkDistribution = function(options){
 
 When a tile is removed, the TileLayer gets notified ysing the 'tileunloaded' event.
 
-We can then listen for this event, 
+We can then listen for this event, and call the cancellation function.
 
 {% highlight js %}
 L.TileLayer.Mandlebrot = L.TileLayer.extend({
     initialize:function(){
         // call cancel on the tile when it's unloaded
-        this.on('tileunload', e => e.tile.cancel());
+        this.on('tileunload', e => e.tile.cancel()); // call cancel
     },
     setType:function(value){
         this._type = value;
@@ -325,3 +327,12 @@ L.TileLayer.Mandlebrot = L.TileLayer.extend({
     }
 });
 {% endhighlight %}
+
+
+## Future thoughts
+
+I can't see any further big wins in JavaScript, but I'm curious to see if switching to web assembly could yield a performance boost. Compiled code might be able to perform the fractal calculations quicker than the JavaScript, although there will be a price for interop.
+
+## Access the Code
+
+You can [view the app](https://richorama.github.io/frac-js/) and [source code](https://github.com/richorama/frac-js).
