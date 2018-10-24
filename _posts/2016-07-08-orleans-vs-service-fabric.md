@@ -48,7 +48,7 @@ tr:nth-child(even) {
     <tr>
         <th>Source Code</th>
         <td>Open Source</td>
-        <td>Going Open Source</td>
+        <td>Open Source</td>
     </tr>    
 
     <tr>
@@ -133,10 +133,13 @@ tr:nth-child(even) {
     </tr>
 
 </table>
+* May be configured for CP[1]
 
 Features such as Timers, Reminders and Interceptors have no significant difference.
 
 ## Updates
-
+* 24/October/2018 - [Service Fabric](https://github.com/Microsoft/service-fabric) and [Reliable Actors](https://github.com/Microsoft/service-fabric-services-and-actors-dotnet) and https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/Orleans-MSR-TR-2014-41.pdf
 * 15/March/2018 - [Service Fabric is going open source](https://blogs.msdn.microsoft.com/azureservicefabric/2018/03/14/service-fabric-is-going-open-source/).
 * 15/March/2018 - Orleans 2.0 runs on Linux.
+
+[1]: https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/Orleans-MSR-TR-2014-41.pdf
