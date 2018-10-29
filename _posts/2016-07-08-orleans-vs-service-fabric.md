@@ -133,7 +133,6 @@ tr:nth-child(even) {
     </tr>
 
 </table>
-* May be configured for CP[1]
 
 Features such as Timers, Reminders and Interceptors have no significant difference.
 
