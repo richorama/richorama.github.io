@@ -11,17 +11,17 @@ Vector Tiles are an efficient way of displaying a large amount of data on a mapp
 
 Colleagues of mine have produced an [excellent workshop](https://github.com/geoplex/foss4g-oceania-2018-workshop) with detailed steps on how to build your own vector tile layers using Postgres, PostGIS, Geoserver and React.js. I was curious to find if there was a more 'lightweight' way of achieving the same goal.
 
-In this post, I use three node.js libraries:
+In this post, I use three JavaScript libraries:
 
 * [geojson-vt](https://github.com/mapbox/geojson-vt) calculates the features to render on a vector tile.
 * [vt-pbf](https://github.com/mapbox/vt-pbf) encodes these features in a [MVT](https://docs.mapbox.com/vector-tiles/specification/) protobuf format.
-* [openlayers](https://github.com/openlayers/openlayers) OpenLayers is a browser based mapping component used to display the tiles.
+* [OpenLayers](https://github.com/openlayers/openlayers) is a browser based mapping component used to display the tiles.
 
 We can build a simple vector tile server using node. The server will generate mapping tiles on the fly, and return them to the browser as protobuf encoded vector tiles.
 
 ## Building the Tile Server
 
-The vector data starts off in a GeoJSON format. This is loaded into `geojson-vt`. The `GetTile` method then allows you to extract subsets of the data for any given tile.
+The vector data starts off in a GeoJSON format. This is loaded into `geojson-vt`. The `getTile` method then allows you to extract subsets of the data for any given tile.
 
 {% highlight js %}
 // do this once on startup
