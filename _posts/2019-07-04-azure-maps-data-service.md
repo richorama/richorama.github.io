@@ -57,7 +57,8 @@ After a quick play with the service, there are some interesting things to note:
 
 1. Although I haven't explored much of functionality, the
    [Azure Maps Web Control](https://azuremapscodesamples.azurewebsites.net/)
-   does look promising.
+   does look promising. Although I think it's unfortunate that you need a subscription to use it.
+   It should be released as a free, and open source library.
 
 ## My Own Admin Portal
 
