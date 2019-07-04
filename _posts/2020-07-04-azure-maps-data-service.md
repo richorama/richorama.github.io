@@ -3,8 +3,6 @@ layout: post
 title: Azure Maps Data Service - First Impressions
 date: 2020-07-04 09:00:00
 summary: Azure Maps consists of a set of geospatial REST APIs and a JavaScript web map control. Some of the services (including the data service) are in preview.
-
-What caught my particular interest was a Data Service which allows you to bring your own data in GeoJSON format, upload it, and then perform spatial queries on the data.
 ---
 
 [Azure Maps](https://azure.microsoft.com/en-au/services/azure-maps/) consists of
@@ -55,7 +53,7 @@ After a quick play with the service, there are some interesting things to note:
 
 1. When I uploaded invalid data (my bad) I got an error message like this, which
    didn't help me to identify the cause of the problem
-   ` Upload request failed.\nYour data has been removed as we encountered the following problems with it: System.Threading.Tasks.Task``1[System.String[]] `
+   ` Upload request failed.\nYour data has been removed as we encountered the following problems with it: System.Threading.Tasks.Task'1[System.String[]] `
 
 1. Although I haven't explored much of functionality, the
    [Azure Maps Web Control](https://azuremapscodesamples.azurewebsites.net/)
