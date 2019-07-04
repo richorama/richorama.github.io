@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Azure Maps Data Service - First Impressions
-date: 2020-07-04 09:00:00
+date: 2019-07-04 09:00:00
 summary: Azure Maps consists of a set of geospatial REST APIs and a JavaScript web map control. Some of the services (including the data service) are in preview.
 ---
 
