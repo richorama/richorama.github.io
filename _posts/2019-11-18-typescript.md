@@ -5,16 +5,15 @@ date: 2019-11-18 09:00:00
 summary: On a couple of recent projects at work I've been forced to really use TypeScript. I've emerged from this experience loving the language. I'll attempt to show you what I've discovered.
 ---
 
-I started took to JavaScript seriously in 2012 with node.js. It offered a nice module system, a rich package ecosystem and a fast startup/development cycle.
-However the most compelling thing about JavaScript was that it took me out of the .NET world including the painfully slow Visual Studio
-and the cumbersome static type system of C#. JS gave me a refreshing new world. It felt really flexible, the language felt more expressive and I
+I started to take JavaScript seriously in 2012 with node.js. It offered a nice module system, a rich package ecosystem and a fast startup/development cycle.
+However the most compelling thing about JavaScript was that it took me out of the .NET world, including the painfully slow Visual Studio
+and the cumbersome static type system of C#. JS gave me a refreshing new dynamic world. It felt really flexible, the language felt more expressive and I
 felt happier.
 
 Fast forward 7 years and I still love JavaScript. It must be said that .NET has changed in the meantime and dotnet core has definitely made C# a nicer place to work.
 
-During these last few years I've kept bumping into TypeScript. I've always tried to avoid it. It looked like it attempted to convert JS back into C#,
-not that I hate C#, but I just wanted to develop somewhere different. JavaScript felt like a 'cool hipster language', TypeScript looks like it was
-trying to put a 'corporate' finish on it.
+During these last few years I've kept bumping into TypeScript. I've always tried to avoid it. It looked like an attempt to convert JS back into C#,
+not that I hate C#, but I just wanted to develop somewhere different. JavaScript felt like a 'cool hipster language', TypeScript looked like a 'corporate' finish on it.
 
 On a couple of recent projects at work I've been forced to really use TypeScript. I've emerged from this experience loving the language.
 
@@ -30,13 +29,13 @@ To create a TypeScript app you can just do this:
 $ npx create-react-app my-app --typescript
 {% endhighlight %}
 
-https://create-react-app.dev/docs/adding-typescript/
+[https://create-react-app.dev/docs/adding-typescript/](https://create-react-app.dev/docs/adding-typescript/)
 
 ## 2. Type annotations aren't all that intrusive
 
 In this example we annotate the function parameter as a string.
 
-The function return type is inferred from inspecting the function body.
+The TypeScript compiler infers the return type from inspecting the function body.
 
 {% highlight ts %}
 function sayHello(name: string) {
@@ -56,9 +55,9 @@ C# could learn from this kind of type inference.
 
 I've made good use of the CsToTs package to auto generate TypeScript classes from C# classes.
 
-https://www.nuget.org/packages/CsToTs/
+[https://www.nuget.org/packages/CsToTs/](https://www.nuget.org/packages/CsToTs/)
 
-https://github.com/DogusTeknoloji/cs-to-ts
+[https://github.com/DogusTeknoloji/cs-to-ts](https://github.com/DogusTeknoloji/cs-to-ts)
 
 When dealing with an HTTP API written in C#, the chances are that a good number of the classes in your
 front end code will be returned by the API. Being able to auto generate these saves development time and
@@ -106,12 +105,12 @@ class Foo {
 const foo1 = new Foo()
 
 // or just provide an object that looks the same
-const foo2 = {
+const foo2: Foo = {
   bar: ''
 }
 {% endhighlight %}
 
-## 6. --strictNullChecks
+## 6. `--strictNullChecks`
 
 The `--strictNullChecks` switch stops you from having null values for variables or properties, unless you explicitly allow nulls.
 
@@ -132,7 +131,7 @@ terms of catching bugs at the time of writing/compilation.
 
 # Conclusion
 
-If you're struggling with maintaining a large JavaScript codebase take a look at TypeScript. It's not that bad.
-
 I honestly believe that the extra learning required to use TypeScript, and the overhead in terms of keystrokes to annotate the types
 is quickly regained by the productivity boost and reduced bugfixing.
+
+If you're struggling with maintaining a large JavaScript codebase take a look at TypeScript. It's not that bad.
