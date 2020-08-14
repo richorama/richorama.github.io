@@ -24,7 +24,7 @@ such as panning and zooming:
 
 {% highlight js %}
 map.panTo(new L.LatLng(40.737, -73.923));
-map.on('moveend', () => console.log('the map moved'))
+map.on('moveend', () => console.log('the user moved the map'))
 {% endhighlight %}
 
 There are react component that wrap up this API, and provide a component instead:
@@ -38,7 +38,7 @@ guilty of building similar components within a project to do the same thing.
 
 The problem here is around user interaction, and react state. If we want to manipulate the map
 from code (say to zoom or pan it) we can update the props. However, the user can also manipulate
-the map, so we'd need event handlers for onZoom, onPan etc...
+the map, so we'd need event handlers for `onZoom`, `onPan` etc...
 
 We then find ourselves duplicating the internal state of the map as state in the react component.
 
@@ -55,7 +55,7 @@ Libraries such as [pubsub-js](https://www.npmjs.com/package/pubsub-js) make it e
 application code into components that can send and subscribe to events.
 
 In short, rather than propagating state to update the map position, if you want to move the map,
-you raise a 'map_move' event (or whatever you wish to call it) which a component that contains
+you raise a `map_move` event (or whatever you wish to call it) which a component that contains
 the map will subscribe to. It will then call the map API to adjust the map position. Likewise it
 raises events when the map is moved by the user, and any component that wishes to update in response
 to that event can subscribe.
@@ -91,13 +91,19 @@ class MapComponent extends React.Component {
 }
 {% endhighlight %}
 
-Other components can the request the map to be moved by raising the 'move_map' event:
+Other components can the request the map to be moved by raising the `move_map` event:
 
 {% highlight js %}
 PubSub.publish('map_moved', newPosition)
 {% endhighlight %}
 
-I have implemented a simple example application which display earthquake locations
+Likewise, they can subscribe to changes in the map:
+
+{% highlight js %}
+PubSub.subscribe('move_map', this.handleMoveMap)
+{% endhighlight %}
+
+I have implemented a simple example application which display earthquake locations.
 
 [Example application](https://richorama.github.io/event-driven-map/)
 
