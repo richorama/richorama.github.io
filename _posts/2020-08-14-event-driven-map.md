@@ -65,9 +65,9 @@ lower level 'common denominator' abstraction.
 Libraries such as [pubsub-js](https://www.npmjs.com/package/pubsub-js) make it easy to decouple your
 application code into components that can send and subscribe to events.
 
-In short, rather than propagating state to update the map position, if you want to move the map,
+In short, rather than propagating state to update the map position,
 you raise a `map_move` event (or whatever you wish to call it) which a component that contains
-the map will subscribe to. It will then call the map API to adjust the map position. Likewise it
+the map control will subscribe to. It will then call the map API to adjust the map position. Likewise it
 raises events when the map is moved by the user, and any component that wishes to update in response
 to that event can subscribe.
 
@@ -76,7 +76,8 @@ This removes the need to hold the value for the map centre as state.
 Likewise we can provide the same technique for zooming, adding/removing layers, displaying/hiding popups,
 etc...
 
-It means we end up with a map component that looks like this (simplified example):
+It means we end up with a map component that looks like this (simplified example) which doesn't
+require any props:
 
 {% highlight js %}
 class MapComponent extends React.Component {
@@ -105,13 +106,13 @@ class MapComponent extends React.Component {
 Other components can then request the map to be moved by raising the `move_map` event:
 
 {% highlight js %}
-PubSub.publish('map_moved', newPosition)
+PubSub.publish('move_map', newPosition)
 {% endhighlight %}
 
 Likewise, they can subscribe to changes in the map:
 
 {% highlight js %}
-PubSub.subscribe('move_map', this.handleMoveMap)
+PubSub.subscribe('map_moved', this.handleMoveMap)
 {% endhighlight %}
 
 I have implemented a simple example application which display earthquake locations.
