@@ -36,7 +36,10 @@ There are react component that wrap up this API, and provide a component instead
 There are 3rd party components that do this to varying degrees of success. I have even been
 guilty of building similar components within a project to do the same thing.
 
-The problem here is around user interaction, and react state. If we want to manipulate the map
+At first glance this looks much easier, neater and more reacty. For a simple map this is
+absolutely fine.
+
+The problems start to occur with user interaction. If we want to manipulate the map
 from code (say to zoom or pan it) we can update the props. However, the user can also manipulate
 the map, so we'd need event handlers for `onZoom`, `onPan` etc...
 
@@ -44,6 +47,10 @@ We then find ourselves duplicating the internal state of the map as state in the
 
 There can be quite a bit of state, and this grows in complexity as we start using markers/popups,
 additional layers, etc...
+
+We also have to start writing code that looks at changes in the props to figure out
+what methods to call on the map. So we update these state objects to request change to the map,
+and then have to diff them in the map component to figure how to respond.
 
 If you start duplicating lots of unnecessary code, you know that something is wrong.
 
