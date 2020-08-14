@@ -41,22 +41,26 @@ absolutely fine.
 
 The problems start to occur with user interaction. If we want to manipulate the map
 from code (say to zoom or pan it) we can update the props. However, the user can also manipulate
-the map, so we'd need event handlers for `onZoom`, `onPan` etc...
+the map, so we'd need event handlers for `onZoom`, `onPan` etc... which update the state of the
+parent component accordingly.
 
-We then find ourselves duplicating the internal state of the map as state in the react component.
+We then find ourselves duplicating the internal state of the map control as state in the react component.
 
 There can be quite a bit of state, and this grows in complexity as we start using markers/popups,
 additional layers, etc...
 
-We also have to start writing code that looks at changes in the props to figure out
-what methods to call on the map. So we update these state objects to request change to the map,
-and then have to diff them in the map component to figure how to respond.
+We also have to start writing code in the map component that looks at changes in the props to figure out
+what methods to call on the map.
 
-If you start duplicating lots of unnecessary code, you know that something is wrong.
+So we find ourselves updating state to move a map, which the map component then has to do a diff
+on to figure out what method to call on the map control.
+
+Writing lots of unnecessary code is a good sign that you're going wrong.
 
 ## The Solution
 
-I have found a simple solution to this problem by using events instead of state.
+I have found a simple solution to this problem by using events instead of state. I guess they're a
+lower level 'common denominator' abstraction.
 
 Libraries such as [pubsub-js](https://www.npmjs.com/package/pubsub-js) make it easy to decouple your
 application code into components that can send and subscribe to events.
@@ -72,7 +76,7 @@ This removes the need to hold the value for the map centre as state.
 Likewise we can provide the same technique for zooming, adding/removing layers, displaying/hiding popups,
 etc...
 
-It means we end up with a component that looks like this (simplified example):
+It means we end up with a map component that looks like this (simplified example):
 
 {% highlight js %}
 class MapComponent extends React.Component {
@@ -98,7 +102,7 @@ class MapComponent extends React.Component {
 }
 {% endhighlight %}
 
-Other components can the request the map to be moved by raising the `move_map` event:
+Other components can then request the map to be moved by raising the `move_map` event:
 
 {% highlight js %}
 PubSub.publish('map_moved', newPosition)
