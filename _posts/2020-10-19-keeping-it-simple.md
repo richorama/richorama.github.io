@@ -2,9 +2,7 @@
 layout: post
 title: Keeping it Simple
 date: 2020-10-19 09:00:00
-summary: I recently worked on an internal project with a team of grads and inexperienced developers.
-Five of us in total. It was a short project - a line-of-business application to convert spreadsheets
-into software. It was a lot of fun.
+summary: I recently worked on an internal project with a team of grads and inexperienced developers. Five of us in total. It was a short project - a line-of-business application to convert spreadsheets into software. It was a lot of fun.
 ---
 
 I recently worked on an internal project with a team of grads and inexperienced developers.
