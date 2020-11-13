@@ -20,7 +20,8 @@ Using the command pattern allows encapsulation of the logic to drive the map mak
 > All samples are provided in React.js using Typescript with the OpenLayers map control.
 
 I have found an approach that works well when building web based map applications in React.js. I've found in the past
-that map components can get very complicated very quickly making it difficult to add new features to the map control.
+that map components can get very complicated very quickly making the map control hard to maintain and hard to add new
+features to.
 
 This solution is based around the command pattern, where operations performed on the map are encapsulated in
 classes. These classes have a common interface which requires a single 'execute' method:
