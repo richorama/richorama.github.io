@@ -8,7 +8,7 @@ summary: I have found an approach that works well when building web based map ap
 ## Summary
 
 In a [previous post](/2020/08/14/event-driven-map/) I discussed a pattern for implementing maps in React based
-web applications. This post expands on this, presenting a complementary approach using the
+web applications using a pub/sub approach. This post expands on this, presenting a complementary approach using the
 [command pattern](https://en.wikipedia.org/wiki/Command_pattern).
 
 The basic problem is that the state driven approach of React.js is at odds with API approach of web map components.
