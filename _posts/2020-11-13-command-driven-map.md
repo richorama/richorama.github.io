@@ -13,17 +13,17 @@ web applications. This post expands on this, presenting a complementary approach
 
 The basic problem is that the state driven approach of React.js is at odds with API approach of web map components.
 
-Using the command pattern allows encapsulation of the logic to drive the map, and making the map component itself very simple.
+Using the command pattern allows encapsulation of the logic to drive the map making the map component itself very simple.
 
 ## Implementation
 
-> All samples are provided in React.js using Typescript.
+> All samples are provided in React.js using Typescript with the OpenLayers map control.
 
 I have found an approach that works well when building web based map applications in React.js. I've found in the past
-that map components can get very complicated very quickly, making it difficult to add new features to the map control.
+that map components can get very complicated very quickly making it difficult to add new features to the map control.
 
 This solution is based around the command pattern, where operations performed on the map are encapsulated in
-classes. These classes have a common interface:
+classes. These classes have a common interface which requires a single 'execute' method:
 
 {% highlight js %}
 // command.ts
@@ -38,9 +38,9 @@ export interface ICommand {
 }
 {% endhighlight %}
 
-> I used 'context' as I thought I would have to attach additional map objects (such as views and layers) for commands to use, but I found in practice this wasn't necessary.
+> I initially used 'context' as I thought I would have to attach additional map objects (such as views and layers) for commands to use, but I found in practice this wasn't necessary. I kept it for clarity.
 
-This allows us to have a very simple map component, which accepts an array of commands as props
+This allows us to have a very simple map component which accepts an array of commands as props
 which are executed in turn.
 
 {% highlight js %}
@@ -66,6 +66,8 @@ export default class MapComponent extends React.Component<{ commands?: ICommand[
     })
 
     const context = { map }
+
+    // the commands are executed here
     this.props.commands?.forEach(x => x.execute(context))
   }
 
@@ -79,9 +81,9 @@ export default class MapComponent extends React.Component<{ commands?: ICommand[
 }
 {% endhighlight %}
 
-So what does a command do, and what does it look like? 
+So what does a command do and what does it look like? 
 
-Well a command can contain any operation that you may wish to perform on the map, let's take adjusting the 
+Well a command can contain any operation that you may wish to perform on the map. Let's take adjusting the 
 zoom level as an initial example:
 
 {% highlight js %}
@@ -101,8 +103,8 @@ export default class ZoomCommand implements ICommand {
 }
 {% endhighlight %}
 
-In this case when the map component calls 'execute', the command keeps a reference to the map object. The command
-exposes an 'zoom' method which will then adjust the zoom level on the map accordingly.
+In this case when the map component calls 'execute' the command keeps a reference to the map object. The command
+exposes a 'zoom' method which will then adjust the zoom level on the map accordingly.
 
 This is a simple example, how about something more interesting?
 
@@ -141,7 +143,7 @@ export default class DisplayFeaturesCommand implements ICommand {
 }
 {% endhighlight %}
 
-One final example, which is to respond to map clicks and call a function back when a features is selected:
+One final example which is to respond to map clicks and call a function back when a feature is selected:
 
 {% highlight js %}
 // select-feature-command.ts
@@ -164,7 +166,7 @@ export default class SelectFeatureCommand implements ICommand {
 }
 {% endhighlight %}
 
-To add the map component to the page, you simply create the commands and pass them in as props:
+To add the map component to the page you simply create the commands and pass them in as props:
 
 {% highlight js %}
   
@@ -200,4 +202,7 @@ I have used this approach on a couple of recent projects with some complicated i
 adding/removing tile layers, and display additional controls on the map. Everything I have tried seems to have worked out easily, which is a good confirmation that the pattern is well
 suited to this task.
 
-I particularly like the encapsulation and reusability offered by this approach. Recommended.
+I particularly like the encapsulation of all the boiler plate that open layers requires when dealing with the map and exposes
+higher order 'business' functions which are reusable between different parts of your application, or different applications.
+
+Perhaps a library of these commands could be built to accelerate map projects.
