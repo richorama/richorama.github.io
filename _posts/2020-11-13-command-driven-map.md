@@ -24,7 +24,7 @@ that map components can get very complicated very quickly making the map control
 features to.
 
 This solution is based around the command pattern, where operations performed on the map are encapsulated in
-classes. These classes have a common interface which requires a single 'execute' method:
+classes. These classes have a common interface requiring a single 'execute' method:
 
 {% highlight js %}
 // command.ts
@@ -41,8 +41,8 @@ export interface ICommand {
 
 > I initially used 'context' as I thought I would have to attach additional map objects (such as views and layers) for commands to use, but I found in practice this wasn't necessary. I kept it for clarity.
 
-This allows us to have a very simple map component which accepts an array of commands as props
-which are executed in turn.
+This allows us to have a very simple map component. An array of commands are passed in as props.
+They are executed in turn once the map has been created.
 
 {% highlight js %}
 // map.tsx
@@ -120,7 +120,7 @@ import { IContext, ICommand } from './command'
 import { Circle, Fill, Style } from 'ol/style'
 
 export default class DisplayFeaturesCommand implements ICommand {
-  features: Feature[]
+  private features: Feature[]
   
   constructor(features: Feature[]) {
     this.features = features
@@ -152,7 +152,7 @@ import { FeatureLike } from 'ol/Feature'
 import { IContext, ICommand } from './command'
 
 export default class SelectFeatureCommand implements ICommand {
-  onClick: (feature: FeatureLike) => void
+  private onClick: (feature: FeatureLike) => void
 
   constructor(onClick: (feature: FeatureLike) => void) {
     this.onClick = onClick
@@ -167,7 +167,7 @@ export default class SelectFeatureCommand implements ICommand {
 }
 {% endhighlight %}
 
-To add the map component to the page you simply create the commands and pass them in as props:
+To add the map component to a page you simply create the commands and pass them in as props:
 
 {% highlight js %}
   
@@ -200,10 +200,11 @@ The command pattern seems to be a nice way to reduce the complexity of implement
 applications.
 
 I have used this approach on a couple of recent projects with some complicated interactions such as drawing geofences,
-adding/removing tile layers, and display additional controls on the map. Everything I have tried seems to have worked out easily, which is a good confirmation that the pattern is well
-suited to this task.
+adding/removing tile layers, and display additional controls on the map. Everything I have tried seems to have worked out easily, which is a good confirmation that the pattern is well suited to this task.
 
-I particularly like the encapsulation of all the boiler plate that open layers requires when dealing with the map and exposes
-higher order 'business' functions which are reusable between different parts of your application, or different applications.
+I particularly like the encapsulation of all the boiler plate that open layers requires when dealing with the map and exposing
+higher order 'business' functions to the consumer.
+
+Commands are highly reusable between different parts of your application, or different applications.
 
 Perhaps a library of these commands could be built to accelerate map projects.
