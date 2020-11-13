@@ -196,7 +196,7 @@ Methods to manipulate the map can be coupled to a pub/sub system as mentioned in
 
 ## Conclusion
 
-The command pattern seems to be a nice way to reduce the complexity of implementing maps components in web
+The command pattern seems to be a nice way to reduce the complexity of implementing map components in web
 applications.
 
 I have used this approach on a couple of recent projects with some complicated interactions such as drawing geofences,
