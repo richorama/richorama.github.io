@@ -2,13 +2,13 @@
 layout: post
 title: Command Driven Map
 date: 2020-11-13 09:00:00
-summary: I have found an approach that works well when building web based map applications in React.js. I've found in the past that map components can get very complicated very quickly, making it difficult to add new features to the map control.
+summary: I have found an approach that works well when building web based map applications in React.js. I've found in the past that map components can get very complicated very quickly making the map control hard to maintain and hard to add new features to.
 ---
 
 ## Summary
 
 In a [previous post](/2020/08/14/event-driven-map/) I discussed a pattern for implementing maps in React based
-web applications using a pub/sub approach. This post expands on this, presenting a complementary approach using the
+web applications using a pub/sub approach. This post expands on the idea, presenting a complementary approach using the
 [command pattern](https://en.wikipedia.org/wiki/Command_pattern).
 
 The basic problem is that the state driven approach of React.js is at odds with API approach of web map components.
