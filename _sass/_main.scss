@@ -241,9 +241,12 @@ pre {
 }
 
 blockquote {
-    padding: 1.33em;
+    padding: 1em;
     font-style: italic;
     border-left: 5px solid #7a7a7a;
+    background: whitesmoke;
+    border-radius: 6px;
+    padding-bottom: 0.5em;
 }
 
 blockquote footer {
