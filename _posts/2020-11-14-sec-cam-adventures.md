@@ -229,13 +229,13 @@ if (((prediction?.probability || 0) * 100) > 50) {
 
 Now I get my results filtered to those that feature humans (mostly). It's probably about 90% accurate.
 
-To begin with I just posted the probability along with the image to slack to I could keep an eye on
+To begin with I just posted the probability along with the image to slack so I could keep an eye on
 performance.
 
 ## Next Steps
 
 I might try to consume the live video feed and do my own movement detection. I'm also thinking of uploading
-this feed to blob storage and building some software to watch it back.
+this feed to blob storage and building a UI to watch it back.
 
 I'd like to improve the classification, perhaps running the model locally rather than calling out to the
 Custom Vision API (you can export the trained models).
