@@ -126,11 +126,11 @@ Nice! I now have complete, clean photos from the camera when movement is detecte
 But how do I view these images?
 
 I started writing a static web app that can be installed as an icon in iOS. It uses CORS to connect to blob storage to retrieve
-the photos. This was all very nice, but it wasn't good enough.
+the photos. This worked, but it wasn't good enough.
 
-Slack has a mobile app and easy integration points. It supports notifications and will display images. Let's do it.
+Slack has a mobile (and desktop) app and easy integration points. It supports notifications and will display images. Let's do it.
 
-You need to register a web hook, which will give you a URL you can post messages to.
+You need to register a web hook for a channel, which will give you a URL you can post messages to.
 
 How do I securely share the image to slack though? Azure Blob Storage allows you to create a Shared Access Signature, which
 gives you a URL allowing you to download files from blob storage, whilst keeping the files otherwise private.
