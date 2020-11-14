@@ -92,7 +92,7 @@ const discover = async () => {
     xaddr,
     user: USERNAME,
     pass: PASSWORD
-  });
+  })
 
   await device.init()
   return device
@@ -203,17 +203,17 @@ const postToAi = (url: string) => {
 }
 
 export interface Prediction {
-  probability: number;
-  tagId: string;
-  tagName: string;
+  probability: number
+  tagId: string
+  tagName: string
 }
 
 export interface ClassificationResponse {
-  id: string;
-  project: string;
-  iteration: string;
-  created: Date;
-  predictions: Prediction[];
+  id: string
+  project: string
+  iteration: string
+  created: Date
+  predictions: Prediction[]
 }
 
 ...
