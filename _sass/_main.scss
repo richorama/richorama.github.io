@@ -48,6 +48,7 @@ body {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    background: whitesmoke;
 }
 
 .gist,
@@ -422,7 +423,6 @@ footer {
 footer,
 footer .wrap {
     color: #7a7a7a;
-    background-color: #fafafa;
     font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: 300;
     clear: both;
@@ -490,4 +490,16 @@ Copyright (c) 2014 Daniel Eden
 .fade-in-down {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
+}
+
+.post>.measure {
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    padding: 25px;
+    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    background: #333;
 }
