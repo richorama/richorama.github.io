@@ -5,7 +5,7 @@ date: 2021-01-28 09:00:00
 summary: On a recent project we wanted to have high quality mapping, but completely offline.
 ---
 
-![](/images/osm-canberra.png)
+<img src="/images/osm-canberra.png" style="width: 100%" />
 
 On a recent project we wanted to have high quality mapping, but completely offline.
 
@@ -114,7 +114,7 @@ or vector tiles.
 
 # Rendering Raster Tiles
 
-![](/images/raster.png)
+<img src="/images/raster.png" style="width: 100%" />
 
 Rendering the raster tiles on a web page using [OpenLayers](https://openlayers.org/) is simple,
 just a matter of registering a `Tile` layer which points to our express endpoint.
