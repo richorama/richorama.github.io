@@ -39,8 +39,8 @@ is to provide an endpoint that will serve vector tiles with express.
 The [@mapbox/mbtiles](https://www.npmjs.com/package/@mapbox/mbtiles) package will open the
 mbtiles file and retrieve the vector tiles. So this just needs connecting to the http request.
 
-I wrote a simple module which wraps this up and returns a function which will load the tile data
-from the mbtiles file with a promise:
+I wrote a simple module which wraps `@mapbox/mbtiles`. It open the mbtiles file and returns a function
+to retrieve a tile using promises:
 
 {% highlight ts %}
 import MBTiles from '@mapbox/mbtiles'
@@ -107,6 +107,8 @@ app.get('/tile/:z/:x/:y', async (req, res) => {
 })
 {% endhighlight %}
 
+Note that an error is thrown when a tile doesn't exist, which is why we return a 404 in this case.
+
 This code will serve any kind of mbtiles file, regardless of whether it contains raster
 or vector tiles.
 
@@ -159,9 +161,9 @@ olms('map', `/styles.json`)
   })
 {% endhighlight %}
 
-The `styles.json` file contains the styling information for the map. Several versions of this
-file can be downloaded from the map tiler website (once you have an account) but I couldn't get these
-to work.
+The `styles.json` file is loaded at runtime, and contains the styling information for the map.
+Several versions of these file can be downloaded from the map tiler website (once you have an account)
+but I couldn't get these to work.
 
 I figured out the files I needed from reverse engineering one of the example maps. I'll save
 you this inconvencience with this zip file, which contains the styles.json file for the 'bright'
