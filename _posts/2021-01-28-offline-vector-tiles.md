@@ -161,6 +161,8 @@ olms('map', `/styles.json`)
   })
 {% endhighlight %}
 
+I don't particularly like this approach, but it seems it's the best we can do. 
+
 The `styles.json` file is loaded at runtime, and contains the styling information for the map.
 Several versions of these file can be downloaded from the map tiler website (once you have an account)
 but I couldn't get these to work.
