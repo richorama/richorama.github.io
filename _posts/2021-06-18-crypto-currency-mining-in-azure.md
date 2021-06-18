@@ -21,9 +21,10 @@ There are a few VM options in Azure which have GPUs installed, I tried
 * Standard NV6 (6 vcpus, 56 GiB memory) - £783.47 /month
 * Standard NC6 (6 vcpus, 56 GiB memory) - £365.62 /month (promotion)
 
-It turns out the NC6 is an older model and uses the NVIDIA Tesla K80, and many of the crypto algorithms no longer support it. If you're looking for optimal mining we'd better go with the latest...
+It turns out the NC6 is an older model and uses the NVIDIA Tesla K80, and many of the crypto algorithms no longer support it.
+I pulled out all the stops and went for the NV6 at £783.47 a month.
 
-The NV6 has an NVIDIA Tesla M60 installed, which the algorithms seemed quite happy with.
+The NV6 has an NVIDIA Tesla M60 graphics card installed (pictured above), which the algorithms seemed quite happy with.
 
 For anyone interested in the benchmarks:
 
@@ -45,12 +46,12 @@ getting in the way of my money making hackery.
 # Software Installation
 
 1. Install the NVIDIA driver, from the [NVIDIA website](https://www.nvidia.com/Download/index.aspx).
-1. I went for the [Kryptex Miner](https://www.kryptex.org/en/). It was extremely easy to use.
-1. I ran the benchmarks on Kryptex, and I was away.
+1. I went for the [Kryptex Miner](https://www.kryptex.org/en/). It was extremely easy to use. It mines whatever crypto currency is the most profitable for you at that point in time (I think). I installed it, logged in, and ran the benchmarks to start it off.
+1. Profit.
 
 # Revenue
 
-The next step was to sit back and what the money roll in. Fortunately the software
+The next step was to sit back and what the money roll in. Conveniently the software
 provides you with an idea of your expected earnings.
 
 ![Tesla M60](/images/crypto-earnings.png)
@@ -61,15 +62,17 @@ That's £13.00 /month.
 
 We're losing £770.47 /month, or a -5926% profit margin.
 
+I ran the machine for over 10 days, and the numbers are fairly accurate.
+
 # Energy
 
 Microsoft is a [carbon neutral company](https://azure.microsoft.com/en-gb/global-infrastructure/sustainability/) but we're still burning unnecessary energy.
 
 The Kryptex software reports that the GPU uses 100W or power, I can't get a precise
-figure for the CPU consumption, so let's say that's around the same, totally 200W.
+figure for the CPU consumption, so let's say that's around the same, totalling 200W.
 
 The PUE (Power Usage Effectiveness) for Azure, which is a measure of the energy efficiency
-of the data centre is 1.125, so multiplying 200W by 1.125 gives us 225W of energy required
+of the data centre, is 1.125. So multiplying 200W by 1.125 gives us 225W of energy required
 to power the server.
 
 That's 162 kWh /month.
@@ -79,7 +82,7 @@ The average cost of electricity in the UK in 2020 was 17.2p/kWh.
 That's an electricity bill of £27.86 /month.
 
 I'm sure Microsoft pay less for their electricity, but it looks like mining can't even
-pay for it's own power.
+pay for it's own power, never mind the cost of the hardware. The GPU alone costs around £1000.
 
 # How do the pros do it?
 
