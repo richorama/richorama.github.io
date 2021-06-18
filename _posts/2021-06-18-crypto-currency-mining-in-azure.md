@@ -5,7 +5,7 @@ date: 2021-06-18 09:00:00
 summary: I thought I would try my hand at mining crypto in the cloud. After all, who wouldn't want to be a bitcoin billionaire?
 ---
 
-![Tesla M60](images/tesla-m60.png)
+![Tesla M60](/images/tesla-m60.png)
 
 # TL;DR
 
@@ -25,6 +25,18 @@ It turns out the NC6 is an older model and uses the NVIDIA Tesla K80, and many o
 
 The NV6 has an NVIDIA Tesla M60 installed, which the algorithms seemed quite happy with.
 
+For anyone interested in the benchmarks:
+
+{% highlight text %}
+DaggerHashimoto ETH - 2.63 MH/s
+DaggerHashimoto EXP - 9.01 MH/s
+RandomX (CPU) - 2305.57 H/s
+RandomX - 284.32 H/s
+KawPow - 3.78 MH/s
+BeamHashIII - 6.90 H/s
+Ubqhash - 17.80 MH/s
+{% endhighlight %}
+
 # OS Selection
 
 I went with Windows 10 Preview. I didn't want any of that Windows Server security lockdown
@@ -41,7 +53,7 @@ getting in the way of my money making hackery.
 The next step was to sit back and what the money roll in. Fortunately the software
 provides you with an idea of your expected earnings.
 
-![Tesla M60](images/crypto-earnings.png)
+![Tesla M60](/images/crypto-earnings.png)
 
 Oh dear.
 
@@ -80,7 +92,6 @@ option to use these machines directly at the moment though.
 # Conclusion
 
 It's not financially viable to mine crypto in the cloud, don't bother.
-
 
 
 
