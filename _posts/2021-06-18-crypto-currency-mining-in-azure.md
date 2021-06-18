@@ -86,7 +86,7 @@ pay for it's own power, never mind the cost of the hardware. The GPU alone costs
 
 # How do the pros do it?
 
-Crypto is only profitably mined in countries with low power costs, using [custom hardware](https://www.buybitcoinworldwide.com/mining/hardware/).
+Crypto is only profitably mined in countries with low power costs using [custom hardware](https://www.buybitcoinworldwide.com/mining/hardware/).
 
 Interestingly, Microsoft have [experimented with 
 ASIC hardware](https://azure.microsoft.com/en-gb/blog/improved-cloud-service-performance-through-asic-acceleration/), to improve compression performance in their storage systems. There's no
