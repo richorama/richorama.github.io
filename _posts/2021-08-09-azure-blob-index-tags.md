@@ -50,9 +50,7 @@ Index Tags have some interesting features:
 
 Tags are queried using a simple query language:
 
-```
-"Animal" = 'panda' AND Age >= "10"
-```
+`"Animal" = 'panda' AND Age >= "10"`
 
 Key names should be wrapped in double quotes (this isn't strictly necessary, but it will escape spaces).
 Values should be wrapped in single quotes.
@@ -61,11 +59,9 @@ Conditions can be joined using `AND`, but no other logical operators (such as `O
 
 To limit queries to a single container a special `@container` key can be supplied.
 
-```
-@container = "animals" AND "Animal" = 'panda'
-```
+`@container = "animals" AND "Animal" = 'panda'`
 
-The supported equality operators are: `=` `>` `>=` `<` `<=`
+The supported equality operators are: `=  >  >=  <  <=`
 
 
 There are some constraints on querying:
