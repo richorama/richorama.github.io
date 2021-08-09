@@ -107,7 +107,7 @@ using (var stream = new MemoryStream())
 }
 {% endhighlight %}
 
-To query blobs use `FindBlobsByTagAsync()`.
+To query blobs use `FindBlobsByTagsAsync()`.
 
 {% highlight c# %}
 var client = new BlobServiceClient("XXX");
