@@ -114,17 +114,12 @@ using (var stream = new MemoryStream())
 To query blobs use `FindBlobsByTagAsync()`.
 
 {% highlight c# %}
-var blob = new BlobServiceClient("XXX");
-  .GetBlobContainerClient("animals")
-  .GetBlockBlobClient("panda");
+var client = new BlobServiceClient("XXX");
 
-var allQueryItems = query.ToList();
-allQueryItems.Add(new KeyValuePair<string, string>("@container", "animals"));
-
-var queryString = string.Join(" AND ", allQueryItems.Select(x => $@"{(x.Key[0] == '@' ? x.Key : $@"""{x.Key}""")} = '{x.Value}'"));
+var queryString = @"@container = 'animals' AND ""name"" = 'Rambo'";
 
 var blobs = new List<TaggedBlobItem>();
-await foreach (var taggedBlobItem in this.client.FindBlobsByTagsAsync(queryString))
+await foreach (var taggedBlobItem in client.FindBlobsByTagsAsync(queryString))
 {
   blobs.Add(taggedBlobItem);
 }
