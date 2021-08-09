@@ -18,15 +18,17 @@ used/abused to make querying easier if you want to get a range of entities.
 Blobs can be retrieved by a prefix of their key, table entities
 can be retrieved a partition at a time (up to 1000 entities), and bounds can be set on the key range.
 
-But if you want to index it by a second property you need to store a second entity. There are no transactions in Storage. You can store multiple table entities in a single operation,
-but they have to share the same partition key.
+But if you want to index it by a second property you need to store a second entity.
+There are no transactions in Storage so you run the risk of having corrupt data in the event of a
+transient error. You can store multiple table entities in a single operation,
+but they have to share the same partition key, making it hard to use as a secondary index.
 
 The other option is to use a secondary service, such as Azure Search, but that's more complexity
 and cost.
 
 # Index Tags
 
-In Just 2021 Index Tags were made generally available for Azure Blob Storage.
+In June 2021 Index Tags were made generally available for Azure Blob Storage.
 
 Index tags allow you to provide up to 10 key-value pairs for a blob. These tags
 are outside of the blob data, and are specified when you create or update a blob.
@@ -37,9 +39,9 @@ Index Tags have some interesting features:
 
 * Maximum to 10 tags per blob.
 * Maximum of 768 bytes per tag.
-* Maximum of 5k results per page.
+* Maximum of 5000 results per page when querying.
 * Tags have eventual-consistency (other blob operations have immediate consistency).
-* Tags are exposed in the Portal, including searching for blobs.
+* Tags are exposed in the Portal, including the ability to search for blobs.
 * All blob types are supports (page, block and append).
 * By default searches span all containers in the storage account.
 * Tags are case-sensitive.
@@ -50,7 +52,7 @@ Index Tags have some interesting features:
 
 Tags are queried using a simple query language:
 
-`"Animal" = 'panda' AND Age >= "10"`
+`"Animal" = 'panda' AND "Age" >= '10'`
 
 Key names should be wrapped in double quotes (this isn't strictly necessary, but it will escape spaces).
 Values should be wrapped in single quotes.
@@ -59,26 +61,26 @@ Conditions can be joined using `AND`, but no other logical operators (such as `O
 
 To limit queries to a single container a special `@container` key can be supplied.
 
-`@container = "animals" AND "Animal" = 'panda'`
+`@container = 'animals' AND "Animal" = 'panda'`
 
 The supported equality operators are: `=  >  >=  <  <=`
 
 
 There are some constraints on querying:
 
-* Queries than include a range condition (such as `'Age' > "10"`) can
+* Queries than include a range condition (such as `"Age" > '10'`) can
   only apply range constraints to a single tag.
 
-  This is an __invalid__ query: `'Age' > "10" AND 'Length' < "200"`
+  This is an __invalid__ query: `"Age" > '10' AND "Length" < '200'`
 
-  This is a __valid__ query:  `'Age' > "10" AND 'Age' <= "40"`
+  This is a __valid__ query:  `"Age" > '10' AND "Age" <= '40'`
 
 * Queries that constrain the results to a single container cannot include
   range constraints.
 
-  This is an __invalid__ query: `@container = "animals" AND 'Age' > "10"`
+  This is an __invalid__ query: `@container = 'animals' AND "Age" > '10'`
 
-  This is a __valid__ query:  `@container = "animals" AND 'name' = "Rambo"`
+  This is a __valid__ query:  `@container = 'animals' AND "name" = 'Rambo'`
 
 # Using Index Tags from C#
 
@@ -140,3 +142,10 @@ Whilst there are some constraints
 with Index Tags, discussed in this post, the added querying capability is
 an interesting development, and provides
 a flexibility that wasn't previously available.
+
+# External Links
+
+https://azure.microsoft.com/en-gb/blog/manage-and-find-data-with-blob-index-for-azure-storage-now-in-preview/
+
+https://docs.microsoft.com/en-gb/azure/storage/blobs/storage-manage-find-blobs
+
