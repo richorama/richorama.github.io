@@ -145,7 +145,7 @@ a flexibility that wasn't previously available.
 
 # External Links
 
-https://azure.microsoft.com/en-gb/blog/manage-and-find-data-with-blob-index-for-azure-storage-now-in-preview/
+[https://azure.microsoft.com/en-gb/blog/manage-and-find-data-with-blob-index-for-azure-storage-now-in-preview/](https://azure.microsoft.com/en-gb/blog/manage-and-find-data-with-blob-index-for-azure-storage-now-in-preview/)
 
-https://docs.microsoft.com/en-gb/azure/storage/blobs/storage-manage-find-blobs
+[https://docs.microsoft.com/en-gb/azure/storage/blobs/storage-manage-find-blobs](https://docs.microsoft.com/en-gb/azure/storage/blobs/storage-manage-find-blobs)
 
