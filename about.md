@@ -6,13 +6,13 @@ permalink: /about/
 
 ![](/images/me.jpg)
 
-Hi, my name is Richard Astbury, senior consultant at [Two10degrees](http://www.two10degrees.com) – a consultancy specialising in cloud computing. I'm a [Puralsight author](http://www.pluralsight.com/courses/microsoft-orleans-introduction) and a [Microsoft MVP for Azure](http://mvp.microsoft.com/en-us/mvp/richard%20astbury-4039939).
+Hi, my name is Richard Astbury, I work at Microsoft helping developers to succeed using the Azure cloud. I'm a [Puralsight author](http://www.pluralsight.com/courses/microsoft-orleans-introduction) and a [Microsoft MVP for Azure](http://mvp.microsoft.com/en-us/mvp/richard%20astbury-4039939).
 
-I'm interested in programming in JavaScript (node.js), C#, Python and playing with F#, Julia, Elixir, Clojure, etc... In real life I like running, mountain biking, snowboarding and drum and bass. I don't like marmite.
+I'm interested in programming in TypeScript, C#, Python and playing around with many more. In real life I like cycling, paddle boarding, snowboarding and drum and bass. I don't like marmite.
 
-I live in rural Suffolk, in the UK.
+I live in Woodbridge, Suffolk, UK.
 
-The opinions expressed on this site are my own and do not necessarily represent those of Two10degrees.
+The opinions expressed on this site are my own and do not necessarily represent those of my employer.
 
 ## Social
 
