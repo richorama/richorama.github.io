@@ -6,7 +6,7 @@ permalink: /about/
 
 ![](/images/me.jpg)
 
-Hi, my name is Richard Astbury, I work at Microsoft helping developers to succeed using the Azure cloud. I'm a [Puralsight author](http://www.pluralsight.com/courses/microsoft-orleans-introduction) and a [Microsoft MVP for Azure](http://mvp.microsoft.com/en-us/mvp/richard%20astbury-4039939).
+Hi, my name is Richard Astbury, I work at Microsoft helping developers to succeed using the Azure cloud. I'm a [Puralsight author](http://www.pluralsight.com/courses/microsoft-orleans-introduction) and an ex Microsoft MVP.
 
 I'm interested in programming in TypeScript, C#, Python and playing around with many more. In real life I like cycling, paddle boarding, snowboarding and drum and bass. I don't like marmite.
 
