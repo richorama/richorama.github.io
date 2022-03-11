@@ -5,6 +5,14 @@ date: 2021-11-29 09:00:00
 summary: ***
 ---
 
+* operational efficiency
+  cost control, scalability, security
+
+* unlock new value
+ autonomy, collabotation, data sharing agility 
+ 
+* reduce technical debt
+
 # History
 
 In the early days of Azure (circa 2008) there was only PaaS (Platform as a Service) in the form of Web Roles and Worker Roles.
