@@ -5,6 +5,8 @@ date: 2021-11-29 09:00:00
 summary: ***
 ---
 
+![](../images/dark-side-cloud.png)
+
 * operational efficiency
   cost control, scalability, security
 
