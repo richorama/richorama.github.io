@@ -71,12 +71,15 @@ Username: `STORAGE_ACCOUNT.CONTAINER.USER`
 
 Server: `STORAGE_ACCOUNT.blob.core.windows.net`
 
-From there you can can `get` and `put` files.
-
 {% highlight text %}
 $ sftp STORAGE_ACCOUNT.CONTAINER.USER@STORAGE_ACCOUNT.blob.core.windows.net
 {% endhighlight %}
 
+From there you can can `get` and `put` files.
+
+In full:
+
+{% highlight text %}
 STORAGE_ACCOUNT.CONTAINER.USER@STORAGE_ACCOUNT.blob.core.windows.net's password:
 Connected to STORAGE_ACCOUNT.blob.core.windows.net.
 sftp> put example.jpg
