@@ -5,7 +5,7 @@ date: 2023-05-22 09:00:00
 summary: Modernisation is a journey. It's the continuous acknowledgement that technical debt should be paid down, and that we should be constantly looking for ways to improve our software, and opportunities to make the team more efficient. This could include refactoring, rearchitecting, or rewriting, but it could also include improving the way we work, or the tools we use.
 ---
 
-![](../images/dark-side-cloud.png)
+![](/images/dark-side-cloud.png)
 
 # History
 
@@ -50,7 +50,7 @@ Whilst a [decision tree](https://learn.microsoft.com/en-us/azure/architecture/gu
 
 This graph illustrates the balance between control and responsibility. On the left hand side you have total control, but also a high level of repsponsibility. This translates to a high operation cost. The further right you go, the more you take advantage of the automation and management offered by the cloud, thus reducing you operational burden. However, not all workloads are able to to be hosted in a serverless environment, so the strategy should be to move as far right as possible, and work to shift right over time.
 
-![](../images/cloud-continuum.png)
+![](/images/cloud-continuum.png)
 
 # How to Modernise?
 
