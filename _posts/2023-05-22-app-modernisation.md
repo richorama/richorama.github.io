@@ -12,7 +12,7 @@ summary: Modernisation is a journey. It's the continuous acknowledgement that te
 In the early days of Azure (circa 2008) the only compute option was PaaS (Platform as a Service) in the form of Web Roles and Worker Roles.
 
 It was often a challenge to get software running in this environment, but the effort
-often resulted in a system that was stateless, scalable, it might have used the native queues and blobs, and was probably connected into the health monitoring and events raised by the cloud fabric. The apps were modernised and cloud-native.
+often was often rewarded with a system that was stateless, scalable, it might have used the native queues and blobs, and was probably connected into the health monitoring and events raised by the cloud fabric. The apps were modernised and cloud-native.
 
 When general purpose Virtual Machines (IaaS) were later made available, many kinds of workloads that were previously hard or impossible
 to deploy as PaaS could then be deployed to the cloud. This started a 'lift and shift' mindset, whereby entire data centres could just
@@ -20,16 +20,12 @@ be duplicated in a cloud environment.
 
 This made cloud migration easy, quick and low risk.
 
-There was less investment made in software to modernise it for PaaS environments.
-
-The app modernisation winter had begun.
-
-However, during this bleak time several advancements had been made in PaaS.
+However, in the meantime, a couple of major advances were made to PaaS.
 
 1. Containerisation and the rise of Kubernetes meant you could run your own PaaS on IaaS and move between clouds or support hybrid deployments.
 1. Serverless computing took off with a pricing structure where you only pay for the compute resources you need, without having to think about scaling. It was an extreme PaaS.
 
-We are now emerging to a new dawn of application modernisation. Microsoft is investing customers wanting to modernise applications, and there are some exciting new options 
+We are now emerging to a new dawn of application modernisation. Microsoft is investing, customers want to modernise applications, and there are some exciting new options. There is also some interesting stuff on the horizon.
 
 # Why Modernise?
 
@@ -66,7 +62,11 @@ I would suggest that the first step is to understand the current state of the ap
 
 # Modernising the Team
 
- Often with modernisation programmes focus is given to the software, but the structure, processes and culture of the team is often overlooked. Modernising the team is just as important as modernising the software. Given that one of the greatest advantages to modernising is increased agility, if you don't have a team that's geared to releasing software frequently, you won't be able to take advantage of this.
+Often with modernisation programmes focus is given to the software, but the structure, processes and culture of the team is often overlooked. Modernising the team is just as important as modernising the software. Given that one of the greatest advantages to modernising is increased agility, if you don't have a team that's geared to releasing software frequently, you won't be able to take advantage of this.
+
+We're also seeing productivity shifts, with tools like GitHub Copilot accelerating programming. DevOps is now DevSecOps, and we're seeing fusion teams being assembled, using telemetry and data collected from users to drive business decisions using the scientific method (AIOps).
+
+Microsoft's own journey is documented in the [DevOps Dojo blog series](https://devblogs.microsoft.com/devops/intro-of-devops-dojo/).
 
 # Future PaaS
 
