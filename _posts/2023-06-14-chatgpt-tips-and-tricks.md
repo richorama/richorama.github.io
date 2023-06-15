@@ -11,7 +11,7 @@ The ChatGPT interface is much more flexible than the chat, text generation and s
 
 Question:
 
-    from the question below, extract the relevant search terms as  comma separated list  
+    from the question below, extract the relevant search terms as a comma separated list  
     ---   
     what is the correct treatment of a migrane?
 
