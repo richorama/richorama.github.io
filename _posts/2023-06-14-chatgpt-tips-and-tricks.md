@@ -2,8 +2,10 @@
 layout: post
 title: ChatGPT Copilot Tips and Tricks
 date: 2023-06-14 09:00:00
-summary: A few example use cases of the ChatGPT API for programmers.
+summary: The ChatGPT interface is much more flexible than the chat, text generation and summarisation examples often cited. As a developer there are a few interesting use cases I have played with briefly. Here are a few examples.
 ---
+
+The ChatGPT interface is much more flexible than the chat, text generation and summarisation examples often cited. As a developer there are a few interesting use cases I have played with briefly. Here are a few examples. If you have any more, let me know!
 
 ## Extracting search terms from a question
 
@@ -126,3 +128,105 @@ Response:
 صباح الخير
 {% endhighlight %}
 
+## Redacting Sensitive Information
+
+Question:
+
+{% highlight text %}
+replace any name or personal identifiable information with the word "[REDACTED]". Return only the sentence.       
+---        
+Kevin Jones emailed david.smith@gmail.com before he drove to Nevada.
+{% endhighlight %}
+
+Response:
+
+{% highlight text %}
+"[REDACTED] emailed [REDACTED] before driving to Nevada."
+{% endhighlight %}
+
+## Profanity Detection
+
+Question:
+
+{% highlight text %}
+Score this statement for profanity from 1 to 10. Return only the number.
+---            
+All this AI stuff is total bullshit.
+{% endhighlight %}
+
+Response:
+
+{% highlight text %}
+8
+{% endhighlight %}  
+
+## Validation / Completion
+
+Question:
+
+{% highlight text %}
+Which country is Redmond in?      
+Respond with only the name of the country
+{% endhighlight %}
+
+Response:
+
+{% highlight text %}
+United States
+{% endhighlight %}
+
+## Fuzzy Matching
+
+Question:
+
+{% highlight text %}
+Which option most closely matches the input:  
+---  
+INPUT  
+Kubernetes  
+---  
+OPTION 1  
+Wild flowers of Great Britain  
+---  
+OPTION 2  
+Cloud Native Computing  
+---  
+OPTION 3  
+Bicycle Maintenance Guide
+{% endhighlight %}
+
+Response:
+
+{% highlight text %}
+OPTION 2 - Cloud Native Computing
+{% endhighlight %}
+
+
+# Getting Started
+
+Calling the Azure OpenAI service is simple. You can use any programming language that supports HTTP requests. Here is an example in Python using the OpenAI Python SDK:
+
+{% highlight python %}
+import os
+import openai
+import sys
+
+openai.api_type = "azure"
+openai.api_base = "https://XXX.openai.azure.com/"
+openai.api_version = "2023-03-15-preview"
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+prompt = "What colour is a banana?"
+
+response = openai.ChatCompletion.create(
+  engine="YOUR_ENGINE_ID",
+  messages = [{"role": "user", "content": prompt}],
+  temperature=0.7,
+  max_tokens=800,
+  top_p=0.95,
+  frequency_penalty=0,
+  presence_penalty=0,
+  stop=None)
+
+print(response)
+{% endhighlight %}
