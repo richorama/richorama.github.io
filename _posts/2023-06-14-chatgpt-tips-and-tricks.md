@@ -11,15 +11,13 @@ The ChatGPT interface is much more flexible than the chat, text generation and s
 
 Question:
 
-> from the question below, extract the relevant search terms as  comma separated list  
-> ---   
-> what is the correct treatment of a migrane?
+    from the question below, extract the relevant search terms as  comma separated list  
+    ---   
+    what is the correct treatment of a migrane?
 
 Response:
 
-```
-migraine, treatment, correct
-```
+    migraine, treatment, correct
 
 Notice it corrects the spelling mistake.
 
@@ -33,170 +31,135 @@ Question:
 
 Response:
 
-{% highlight text %}
-9
-{% endhighlight %}
+    9
 
 ## Feature extraction, JSON formatting
 
 Question:
 
-{% highlight text %}
-List the animals in this statement as a JSON array  
----  
-The quick brown fox jumped over the lazy dog
-{% endhighlight %}
+    List the animals in this statement as a JSON array  
+    ---  
+    The quick brown fox jumped over the lazy dog
 
 Response:
 
-{% highlight text %}
-["fox","dog"]
-{% endhighlight %}
+    ["fox","dog"]
 
 ## Spelling Correction
 
 Question:
 
-{% highlight text %}
-correct the spelling of this text  
----  
-Munday is my leest favorite day of the weak.
-{% endhighlight %}
+    correct the spelling of this text  
+    ---  
+    Munday is my leest favorite day of the weak.
 
 Response:
 
-{% highlight text %}
-Monday is my least favorite day of the week.
-{% endhighlight %}
+    Monday is my least favorite day of the week.
 
 ## Test Data Generation
 
 Question:
 
-{% highlight text %}
-generate some test data for a person in JSON format with keys for firstName, lastName, cellNumber, address, dateOfBirth
-{% endhighlight %}
+    generate some test data for a person in JSON format with keys for firstName, lastName, cellNumber, address, dateOfBirth
 
 Response:
 
-{% highlight text %}
-Sure, here's an example of test data for a person in JSON format:
-{  
-  "firstName": "Alice",  
-  "lastName": "Smith",  
-  "cellNumber": "+1-555-123-4567",  
-  "address": {  
-    "street": "456 Oak St",  
-    "city": "Springfield",  
-    "state": "IL",  
-    "zipCode": "62704"  
-  },  
-  "dateOfBirth": "1990-05-20"  
-}  
-{% endhighlight %}
+    Sure, here's an example of test data for a person in JSON format:
+    {  
+    "firstName": "Alice",  
+    "lastName": "Smith",  
+    "cellNumber": "+1-555-123-4567",  
+    "address": {  
+        "street": "456 Oak St",  
+        "city": "Springfield",  
+        "state": "IL",  
+        "zipCode": "62704"  
+    },  
+    "dateOfBirth": "1990-05-20"  
+    }  
 
-{% highlight text %}
-invent 100 email addresses
-{% endhighlight %}
+Request:
+
+    invent 100 email addresses
 
 Response:
 
-{% highlight text %}
-Sure, here are 100 invented email addresses:
-johndoe123@gmail.com
-sarahjones456@yahoo.com
-bob.smith789@hotmail.com
-emilybrown234@gmail.com
-...
-{% endhighlight %}
+    Sure, here are 100 invented email addresses:
+    johndoe123@gmail.com
+    sarahjones456@yahoo.com
+    bob.smith789@hotmail.com
+    emilybrown234@gmail.com
+    ...
 
 ## Translation
 
 Question:
 
-{% highlight text %}
-Say good morning in arabic. Just return the arabic response.
-{% endhighlight %}
+    Say good morning in arabic. Just return the arabic response.
 
 Response:
 
-{% highlight text %}
+```
 صباح الخير
-{% endhighlight %}
+```
 
 ## Redacting Sensitive Information
 
 Question:
 
-{% highlight text %}
-replace any name or personal identifiable information with the word "[REDACTED]". Return only the sentence.       
----        
-Kevin Jones emailed david.smith@gmail.com before he drove to Nevada.
-{% endhighlight %}
+    replace any name or personal identifiable information with the word "[REDACTED]". Return only the sentence.       
+    ---        
+    Kevin Jones emailed david.smith@gmail.com before he drove to Nevada.
 
 Response:
 
-{% highlight text %}
-"[REDACTED] emailed [REDACTED] before driving to Nevada."
-{% endhighlight %}
+    "[REDACTED] emailed [REDACTED] before driving to Nevada."
 
 ## Profanity Detection
 
 Question:
 
-{% highlight text %}
-Score this statement for profanity from 1 to 10. Return only the number.
----            
-All this AI stuff is total bullshit.
-{% endhighlight %}
+    Score this statement for profanity from 1 to 10. Return only the number.
+    ---            
+    All this AI stuff is total bullshit.
 
 Response:
 
-{% highlight text %}
-8
-{% endhighlight %}  
+    8
 
 ## Validation / Completion
 
 Question:
 
-{% highlight text %}
-Which country is Redmond in?      
-Respond with only the name of the country
-{% endhighlight %}
+    Which country is Redmond in?      
+    Respond with only the name of the country
 
 Response:
 
-{% highlight text %}
-United States
-{% endhighlight %}
+    United States
 
 ## Fuzzy Matching
 
 Question:
 
-{% highlight text %}
-Which option most closely matches the input:  
----  
-INPUT  
-Kubernetes  
----  
-OPTION 1  
-Wild flowers of Great Britain  
----  
-OPTION 2  
-Cloud Native Computing  
----  
-OPTION 3  
-Bicycle Maintenance Guide
-{% endhighlight %}
+    Which option most closely matches the input:  
+    ---  
+    INPUT  
+    Kubernetes  
+    ---  
+    OPTION 1  
+    Wild flowers of Great Britain  
+    ---  
+    OPTION 2  
+    Cloud Native Computing  
+    ---  
+    OPTION 3  
+    Bicycle Maintenance Guide
 
 Response:
 
-{% highlight text %}
-OPTION 2 - Cloud Native Computing
-{% endhighlight %}
-
+    OPTION 2 - Cloud Native Computing
 
 # Getting Started
 
