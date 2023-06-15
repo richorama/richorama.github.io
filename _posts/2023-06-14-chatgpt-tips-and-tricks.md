@@ -231,3 +231,5 @@ This is a contrived example, but it illustrates the point. The best way to avoid
 # More Information
 
 The [Microsoft Documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions) has more suggestions for prompt engineering.
+
+The [quick start guide](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?tabs=command-line&pivots=programming-language-studio) is also useful for getting started.
