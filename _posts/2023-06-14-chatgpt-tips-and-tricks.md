@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ChatGPT Copilot Tips and Tricks
+title: ChatGPT Tips and Tricks
 date: 2023-06-14 09:00:00
 summary: The ChatGPT interface is much more flexible than the chat, text generation and summarisation examples often cited. As a developer there are a few interesting use cases I have played with briefly. Here are a few examples.
 ---
@@ -11,17 +11,15 @@ The ChatGPT interface is much more flexible than the chat, text generation and s
 
 Question:
 
-{% highlight text %}
-from the question below, extract the relevant search terms as a comma separated list  
----   
-what is the correct treatment of a migrane?
-{% endhighlight %}
+> from the question below, extract the relevant search terms as  comma separated list  
+> ---   
+> what is the correct treatment of a migrane?
 
 Response:
 
-{% highlight text %}
+```
 migraine, treatment, correct
-{% endhighlight %}
+```
 
 Notice it corrects the spelling mistake.
 
@@ -29,11 +27,9 @@ Notice it corrects the spelling mistake.
 
 Question:
 
-{% highlight text %}
-Rate the sentiment of this statement from 1 to 10. Return only the numerical value.  
----    
-I was really happy to receive a new puppy on my birthday.
-{% endhighlight %}
+    Rate the sentiment of this statement from 1 to 10. Return only the numerical value.  
+    ---    
+    I was really happy to receive a new puppy on my birthday.
 
 Response:
 
