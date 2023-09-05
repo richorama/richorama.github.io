@@ -31,7 +31,7 @@ to include data from your own knowledge base.
 For example you could include a list of today's football scores in the system message, and 
 the AI could answer questions about the results.
 
-You can see an example of this here: https://github.com/richorama/approved-services-copilot
+You can see an example of this here: [https://github.com/richorama/approved-services-copilot](https://github.com/richorama/approved-services-copilot)
 
 However, you are limited in the number of tokens you can include in a request (16k at time of writing) so you need to be selective about what data is included with the prompt. You probably have a much larger knowledge base that you want to draw knowledge from.
 
@@ -55,7 +55,7 @@ Functions can be used to execute actions; such as creating a support ticket, sen
 
 Functions bring to life the Copilot experience to make it more than just a chatbot, it can become an agent which can perform actions on behalf of the user.
 
-You can see an example of this here: https://github.com/richorama/etch-a-sketch-copilot
+You can see an example of this here: [https://github.com/richorama/etch-a-sketch-copilot](https://github.com/richorama/etch-a-sketch-copilot)
 
 ## Copilot Level 5 - Extensibility in the Enterprise
 
