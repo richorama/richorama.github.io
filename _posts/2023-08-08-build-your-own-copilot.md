@@ -5,7 +5,7 @@ date: 2023-09-05 09:00:00
 summary: There are many use cases for generative AI, but one that many people have been excited about is the ability to build a chatbot that can answer questions about any topic. In this post I cover the different levels of sophistication you can build into your chatbot, and how you can use the Azure OpenAI API to build your own Copilot.
 ---
 
-![](/images/OIG.jpeg)
+<img src="/images/OIG.jpeg)" style="width:100%" />
 
 _An AI generated image of "constructing a large language model"._
 
