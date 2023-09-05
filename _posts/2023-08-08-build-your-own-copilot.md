@@ -6,7 +6,8 @@ summary: There are many use cases for generative AI, but one that many people ha
 ---
 
 ![](/images/OIG.jpeg)
-An AI generated image of "constructing a large language model".
+
+_An AI generated image of "constructing a large language model"._
 
 There are many use cases for generative AI, but one that many people have been excited about is the ability to build a chatbot that can answer questions about any topic.
 
