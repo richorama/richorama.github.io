@@ -163,6 +163,18 @@ Response:
 
     OPTION 2 - Cloud Native Computing
 
+## Output Formatting
+
+Question:
+
+    convert names into bold. output must be in markdown.  
+    ---  
+    James and Kevin love a day out at the beach.
+
+Response:
+
+    **James** and **Kevin** love a day out at the beach.
+
 # Getting Started
 
 Calling the Azure OpenAI service is simple. You can use any programming language that supports HTTP requests. Here is an example in Python using the OpenAI Python SDK:
