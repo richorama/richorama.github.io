@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Notification Page</title>
+  </head>
+  <body>
+    <script>
+      // Request permission to display notifications
+      Notification.requestPermission().then(function (result) {
+        console.log(result);
+      });
+
+      // Function to display a notification
+      function showNotification() {
+        var notification = new Notification("Hello!", {
+          body: "20 Minute Reminder!",
+          icon: "https://example.com/icon.png",
+        });
+      }
+
+      // Show a notification every 20 minutes
+      setInterval(showNotification, 20 * 60 * 1000);
+    </script>
+  </body>
+</html>
