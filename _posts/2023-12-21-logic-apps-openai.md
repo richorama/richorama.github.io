@@ -63,7 +63,7 @@ Although a simple use case, this acts as a reference for how Logic Apps can be u
 
 A Microsoft blob post which demonstrates how the native OpenAI connectors can be used to build worklows. These are currently in a private preview.
 
-https://techcommunity.microsoft.com/t5/azure-integration-services-blog/use-logic-apps-to-build-intelligent-openai-applications/ba-p/4014121
+[https://techcommunity.microsoft.com/t5/azure-integration-services-blog/use-logic-apps-to-build-intelligent-openai-applications/ba-p/4014121](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/use-logic-apps-to-build-intelligent-openai-applications/ba-p/4014121)
 
 ## JSON schema for OpenAI response
 
