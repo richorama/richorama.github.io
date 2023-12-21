@@ -15,7 +15,7 @@ However GenAI can also be used in a variety of ways to support 'back end' proces
 
 Azure Logic Apps provides a great way to implement business process, with it's rich set of connectors and visual workflow designer.
 
-At the time of writing, there is a connector to the OpenAI API, but there isn't one for the Azure OpenAI API.
+At the time of writing, the native connectors for Azure OpenAI are in private preview, so this post describes how to call the OpenAI API from a Logic App using the HTTP action.
 
 In this post I'll show how you can call the Azure OpenAI API from Logic Apps to build a simple integration. The Logic App described will trigger when a blob is added to an Azure Storage Container. The contents of the blob will then be submitted to the OpenAI API, which will summarise the contents and write another blob containing the summary.
 
