@@ -1,26 +1,75 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ site.author }}">
-    {% if page.categories %}<meta name="keywords" content="{{ page.categories | join: ', ' }}">{% endif %}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="{{ site.author }}" />
+  {% if page.categories %}
+  <meta name="keywords" content="{{ page.categories | join: ', ' }}" />
+  {% endif %}
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/pixyll.css" | prepend: site.baseurl }}" type="text/css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ "/css/pixyll.css" | prepend: site.baseurl }}"
+  type="text/css">
 
-    <!-- Fonts -->
-    <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Fira+Code' rel='stylesheet' type='text/css'>
-    {% if site.show_social_icons %}
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    {% endif %}
+  <!-- Fonts -->
+  <link
+    href="//fonts.googleapis.com/css?family=Lato"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Fira+Code"
+    rel="stylesheet"
+    type="text/css"
+  />
+  {% if site.show_social_icons %}
+  <link
+    href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+  {% endif %}
 
-    <!-- Open Graph -->
-    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
-    <meta property="og:locale" content="en_US">
-    <link rel="alternate" type="application/rss+xml" title="RSS feed for richorama.github.com" href="/rss.xml" />
-    <link rel="alternate" type="application/atom+xml" title="Atom feed for richorama.github.com" href="/atom.xml" />
+  <!-- Open Graph -->
+  <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+  <meta property="og:locale" content="en_US" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS feed for richorama.github.com"
+    href="/rss.xml"
+  />
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom feed for richorama.github.com"
+    href="/atom.xml"
+  />
 
-    <!-- SEO -->
-    {% seo %}
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: whitesmoke;
+    }
+  </style>
+
+  <!-- SEO -->
+  {% seo %}
 </head>
