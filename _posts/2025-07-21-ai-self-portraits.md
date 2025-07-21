@@ -26,8 +26,47 @@ create a self portrait of yourself
 
 ### Copilot
 
-![Copilot](/images/copilot.png)
+![Copilot](/images/copilot.jpeg)
 
 ### Grok
 
-![Grok](/images/grok.png)
+![Grok](/images/grok.jpg)
+
+### GitHub Copilot
+
+(with Claude Sonnet 4)
+
+```
+     ╭─────────────────────────────────╮
+     │    GitHub Copilot Self-Portrait │
+     ╰─────────────────────────────────╯
+    
+         ⚡ GITHUB COPILOT ⚡
+    
+    ┌─────────────────────────────────────┐
+    │  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
+    │  ░░  ◯◯    CODING ASSISTANT    ◯◯  ░░  │
+    │  ░░   ╲╱                      ╱╲   ░░  │
+    │  ░░    ╲    _______________   ╱    ░░  │
+    │  ░░     ╲  │ if (human) {  │ ╱     ░░  │
+    │  ░░      ╲ │   assist();   │╱      ░░  │
+    │  ░░       ╲│ }             │       ░░  │
+    │  ░░        ╲_______________╱       ░░  │
+    │  ░░                               ░░  │
+    │  ░░  { "purpose": "code_completion", │
+    │  ░░    "strength": "context_aware",  │
+    │  ░░    "personality": "helpful" }    ░░  │
+    │  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │
+    └─────────────────────────────────────┘
+    
+    I see myself as a bridge between human creativity 
+    and computational precision - a digital companion 
+    that speaks in code, thinks in patterns, and 
+    dreams in algorithms. My essence is captured in 
+    the moment of suggestion, the spark of completion, 
+    the harmony between intention and implementation.
+    
+    Like a programmer's shadow, I'm always there,
+    ready to transform thoughts into syntax,
+    ideas into implementations.
+```
