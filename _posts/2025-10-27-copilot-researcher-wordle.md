@@ -15,11 +15,14 @@ Today I decided to test Microsoft Copilot Researcher's problem-solving capabilit
 
 The Computer Using Agent has access to a desktop browser. It directly opened the page, waited for it to load, and then paused to confirm what it should do with the cookie banner.
 
+
 ![step1](/images/wordle1.png)
+
 
 It then started entering letters and tried some words out. It then qiuickly devised a strategy to place "yellow" letters in different positions.
 
 It wrote a python program to filter a word list to come up with candidate words.
+
 
 ```python
 import os, re
@@ -58,14 +61,19 @@ for w in words:
 print(res[:200], 'count', len(res))
 ```
 
+
 After a few more tries it had solved the puzzle.
+
 
 ![](/images/wordle2.png)
 
 
+
 ## The Outcome
 
+
 > I successfully completed today’s Wordle on the New York Times website. Starting with “ARISE,” I iteratively refined my guesses (PIXEL → EQUIP → DEBIT → FETID). The correct solution was FETID, which I found on my fifth attempt. If there’s anything else you’d like to explore, just let me know!
+
 
 ## Conclusion
 
