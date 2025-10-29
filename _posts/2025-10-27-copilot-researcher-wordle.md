@@ -15,13 +15,13 @@ Today I decided to test Microsoft Copilot Researcher's problem-solving capabilit
 
 The Computer Using Agent has access to a desktop browser. It directly opened the page, waited for it to load, and then paused to confirm what it should do with the cookie banner.
 
+![Initial Wordle screen](/images/wordle1.png)
 
-![step1](/images/wordle1.png)
+## The Strategic Process
 
+The AI then started entering letters and tried some words out. It quickly devised a strategy to place "yellow" letters in different positions, systematically exploring the solution space.
 
-It then started entering letters and tried some words out. It then qiuickly devised a strategy to place "yellow" letters in different positions.
-
-It wrote a python program to filter a word list to come up with candidate words.
+When the constraints became complex, the AI wrote a Python program to filter a word list based on all the discovered constraints:
 
 
 ```python
@@ -48,11 +48,11 @@ for w in words:
     if any(pos in ['i'] for pos in w[:3]):
         if 'i' in w[:3]:
             continue
-    # E can't be at index3 or index4, and cannot be at index4/5; we treat E can't be at index3 or 4
+    # Apply position constraints for E and I based on Wordle feedback
     if len(w)<5: continue
     if w[3]=='e' or w[4]=='e':
         continue
-    # E must be at index0,1 or 2 but not 4 or 3. but row1 indicated E not at pos5 (index4) as yellow; row3 E not at pos1 (index0). So E cannot be at index0 or index3 or index4. Wait: row1 pos5 = index4 had E; flagged yellow; E not at index4; row3 pos1 = index0 flagged yellow; E not at index0. So E must be at index1 or index2. So incorporate that.
+    # E must be at index 1 or 2 based on yellow feedback positions
     if w[0]=='e' or w[4]=='e' or w[3]=='e':
         continue
     if w[1]!='e' and w[2]!='e':
@@ -61,19 +61,21 @@ for w in words:
 print(res[:200], 'count', len(res))
 ```
 
+This code systematically filtered the word list by:
+- Excluding letters confirmed as not in the word (A, R, S, X, L, Q, P, U)
+- Requiring both E and I to be present
+- Enforcing position constraints based on yellow/green feedback
+- Narrowing down to valid candidate words
 
-After a few more tries it had solved the puzzle.
+After a few more tries, using the filtered list, the AI successfully solved the puzzle:
 
-
-![](/images/wordle2.png)
-
-
+![Wordle solved](/images/wordle2.png)
 
 ## The Outcome
 
+> I successfully completed today's Wordle on the New York Times website. Starting with "ARISE," I iteratively refined my guesses (PIXEL → EQUIP → DEBIT → FETID). The correct solution was FETID, which I found on my fifth attempt.
 
-> I successfully completed today’s Wordle on the New York Times website. Starting with “ARISE,” I iteratively refined my guesses (PIXEL → EQUIP → DEBIT → FETID). The correct solution was FETID, which I found on my fifth attempt. If there’s anything else you’d like to explore, just let me know!
-
+The solving sequence demonstrates the AI's methodical approach: **ARISE → PIXEL → EQUIP → DEBIT → FETID**
 
 ## Conclusion
 
