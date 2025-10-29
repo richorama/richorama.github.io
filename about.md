@@ -48,10 +48,6 @@ The opinions expressed on this site are my own and do not necessarily represent 
 
 [Package Management for Windows Azure](http://www.infoq.com/presentations/Package-Management-Windows-Azure)
 
-[Building Internet of Things applications with Azure and Orleans - Channel 9](http://channel9.msdn.com/Events/cloudday/Microsoft-Cloud-Day-2014/Building-Internet-of-Things-applications-with-Azure-and-Orleans)
-
-[Meet the Users: Richard Astbury](http://channel9.msdn.com/Events/cloudday/Microsoft-Cloud-Day-2014-Meet-the-Users/Meet-the-Users-Richard-Astbury-Azure-MVP-Sr-Consultant-Two10Degrees)
-
 [A Node.js app to Azure from the Raspberry Pi in 3 minutes](http://www.youtube.com/watch?v=eg4DXSvl2Us)
 
 [Node.js Hello World in Windows Azure Web Sites in 1:30](https://www.youtube.com/watch?v=UlG-mGSqkaI)
