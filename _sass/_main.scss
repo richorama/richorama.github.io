@@ -32,12 +32,6 @@ img {
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin: 1.5em 0;
-    transition: all 0.3s ease;
-}
-
-.post-content img:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    transform: scale(1.01);
 }
 
 .site-wrap {
@@ -60,7 +54,7 @@ body {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    background: linear-gradient(to bottom, #fafafa 0%, #f5f5f5 100%);
+    background: whitesmoke;
 }
 
 .gist,
@@ -75,33 +69,17 @@ body {
 .site-header a {
     color: #333;
     font-weight: 300;
-    transition: color 0.2s ease;
 }
 
 .site-header nav a {
     font-size: 1rem;
     color: #666;
-    position: relative;
 }
 
 .site-header nav a:hover {
     color: #444;
     opacity: 1;
-}
-
-.site-header nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background: linear-gradient(to right, #477dca, #5a9de5);
-    transition: width 0.3s ease;
-}
-
-.site-header nav a:hover::after {
-    width: 100%;
+    border-bottom: 2px solid #444;
 }
 
 .site-nav a+a {
@@ -144,11 +122,6 @@ body {
     margin-top: 0;
     font-weight: 600;
     color: #333;
-    transition: color 0.3s ease;
-}
-
-.post-link:hover .post-title {
-    color: #477dca;
 }
 
 .post-footer {
@@ -176,7 +149,7 @@ body {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    background: #fafafa;
     border-radius: 0.1875em;
     border: 1px solid #f3f3f3;
     color: #333333;
@@ -189,10 +162,8 @@ body {
 
 .pagination a:hover,
 .pagination a:focus {
-    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    background: white;
     color: #477dca;
-    box-shadow: 0 2px 8px rgba(71, 125, 202, 0.15);
-    transform: translateY(-1px);
 }
 
 .pagination a:active {
@@ -212,12 +183,6 @@ body {
     padding: .25em 0;
     color: #7a7a7a;
     font-style: italic;
-    opacity: 0.9;
-    transition: opacity 0.2s ease;
-}
-
-.post:hover .post-meta {
-    opacity: 1;
 }
 
 .pagination .button {
@@ -323,22 +288,6 @@ h6,
     font-weight: 900;
     line-height: 1.2;
     margin: 1em 0 0.5em;
-    color: #2a2a2a;
-    position: relative;
-}
-
-h1::before,
-h2::before {
-    content: '';
-    position: absolute;
-    left: -25px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 4px;
-    height: 60%;
-    background: linear-gradient(to bottom, #477dca, #5a9de5);
-    border-radius: 2px;
-    opacity: 0.6;
 }
 
 .social-icons {
@@ -553,19 +502,17 @@ footer:after {
 }
 
 .post>.measure {
-    background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+    background: white;
     border-radius: 6px;
     padding: 25px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
 }
 
 .post>.measure:hover {
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
 }
 
 .footer {
-    background: linear-gradient(to bottom, #2a2a2a 0%, #1a1a1a 100%);
+    background: #333;
 }
