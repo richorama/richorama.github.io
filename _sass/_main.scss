@@ -28,6 +28,12 @@ img {
     max-width: 100%;
 }
 
+.post-content img {
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 1.5em 0;
+}
+
 .site-wrap {
     min-height: 100%;
     margin-bottom: -120px;
@@ -218,6 +224,10 @@ abbr {
     cursor: help;
 }
 
+a {
+    transition: all 0.3s ease;
+}
+
 pre,
 code {
     font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace
@@ -233,6 +243,10 @@ pre {
     line-height: 1.11;
     overflow-x: auto;
     margin-bottom: 0.88em;
+    background: #f8f8f8;
+    border: 1px solid #e1e1e1;
+    border-left: 3px solid #477dca;
+    border-radius: 4px;
 }
 
 .highlight .p {
@@ -243,10 +257,11 @@ pre {
 blockquote {
     padding: 1em;
     font-style: italic;
-    border-left: 5px solid #7a7a7a;
-    background: whitesmoke;
+    border-left: 4px solid #477dca;
+    background: #f9f9f9;
     border-radius: 4px;
     padding-bottom: 0.5em;
+    margin: 1.5em 0;
 }
 
 blockquote footer {
@@ -490,7 +505,12 @@ footer:after {
     background: white;
     border-radius: 6px;
     padding: 25px;
-    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.post>.measure:hover {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .footer {
