@@ -227,7 +227,7 @@ This isn't a failure of previous work—it's the nature of big data astronomy. E
 
 ## Next Steps: Community Validation
 
-We've prepared a scientific report for community review (see [FORUM_SUBMISSION_KIC_8554498.txt](FORUM_SUBMISSION_KIC_8554498.txt)). The next phase requires:
+We've prepared a scientific report for community review. The next phase requires:
 
 1. **Independent verification**: Other astronomers analyzing the same data
 2. **Stellar characterization**: Understanding the host star better
