@@ -5,10 +5,6 @@ date: 2026-01-05 09:00:00
 summary: How we used Python, NASA's Kepler data, and systematic validation to detect KIC 8554498 b—a potential new exoplanet with an extraordinarily strong signal that may have been overlooked. A story of open science, technical challenges, and the power of accessible astronomy tools.
 ---
 
-# Finding New Worlds: How We Used Python and Open Data to Discover an Exoplanet Candidate
-
-*January 5, 2026*
-
 ![](/images/VALIDATION_KIC_8554498.png)
 
 ## The Spark: From Conversation to Code
