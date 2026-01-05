@@ -324,21 +324,6 @@ For KIC 8554498 b:
 
 This puts it in the "super-Earth" or "mini-Neptune" category—bigger than Earth, smaller than Neptune. These planets are common in the galaxy but absent from our solar system, making them particularly interesting for comparative planetology.
 
-## Code and Reproducibility
-
-All code is available in our repository:
-- `validate_kic_8554498.py`: Full validation script
-- `check_all_candidates.py`: Cross-matching and validation tools
-- `batch_hunt.py`: Multi-target survey pipeline
-
-All data is public via NASA MAST. Anyone can reproduce our results with:
-
-```bash
-pip install lightkurve astropy astroquery matplotlib numpy scipy
-python validate_kic_8554498.py
-```
-
-This is open science at its best.
 
 ## Reflections: AI as Scientific Assistant
 
@@ -379,11 +364,6 @@ The universe is full of planets waiting to be found. The data is public. The too
 ---
 
 ## Resources
-
-**Our Analysis**:
-- Forum submission: [FORUM_SUBMISSION_KIC_8554498.txt](FORUM_SUBMISSION_KIC_8554498.txt)
-- Validation plot: [results/VALIDATION_KIC_8554498.png](results/VALIDATION_KIC_8554498.png)
-- Complete project: `/home/rich/Code/kep`
 
 **Key Libraries**:
 - Lightkurve: https://docs.lightkurve.org/
