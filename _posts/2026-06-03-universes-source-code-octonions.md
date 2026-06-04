@@ -15,7 +15,7 @@ This project began as a question: *what happens if you point a generative AI at 
 
 I'm not a professional physicist. I have a background in software and mathematics, and a long-standing obsession with the question of *why* the Standard Model has the structure it does — why three generations, why these masses, why these mixing angles. These are questions that decades of conventional research have failed to answer.
 
-Over several hours, I worked with Claude (Anthropic's AI) in an unusual collaboration.
+Over several hours, I worked with GitHub Copilot in an unusual collaboration.
 
 I brought the guiding question:
 
