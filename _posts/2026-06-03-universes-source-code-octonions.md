@@ -19,7 +19,7 @@ Over several hours, I worked with Claude (Anthropic's AI) in an unusual collabor
 
 I brought the guiding question:
 
-> ok, let's think about some theories for finding a theory of everything that unites quantum mechanics and particle physics. We need an approach that tries some new marths, new ideas, and is based on all current observations and data. Make a plan (PLAN.MD) on how we're going to solve this.
+> ok, let's think about some theories for finding a theory of everything that unites quantum mechanics and particle physics. We need an approach that tries some new maths, new ideas, and is based on all current observations and data. Make a plan (PLAN.MD) on how we're going to solve this.
 
 The AI brought the ability to rapidly compute, cross-check against experimental data, explore algebraic identities, spot errors in derivations, and maintain consistency across a growing web of interconnected predictions.
 
