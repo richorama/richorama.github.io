@@ -17,23 +17,25 @@ I'm not a professional physicist. I have a background in software and mathematic
 
 Over several hours, I worked with GitHub Copilot in an unusual collaboration.
 
-I brought the guiding question:
+I brought the original, overambitious guiding question:
 
-> ok, let's think about some theories for finding a theory of everything that unites quantum mechanics and particle physics. We need an approach that tries some new maths, new ideas, and is based on all current observations and data. Make a plan (PLAN.MD) on how we're going to solve this.
+> ok, let's think about some theories for finding a theory of everything that unites quantum mechanics and particle physics. We need an approach that tries some new marths, new ideas, and is based on all current observations and data. Make a plan (PLAN.MD) on how we're going to solve this.
+
+The project has since been deliberately down-scoped: the current claim is a Standard Model parameter framework, not a completed theory of everything.
 
 The AI brought the ability to rapidly compute, cross-check against experimental data, explore algebraic identities, spot errors in derivations, and maintain consistency across a growing web of interconnected predictions.
 
-The result surprised me. What started as exploratory numerology gradually locked into a rigid structure with zero free parameters and 23 quantitative predictions — all matching experiment to 0.1–7%. The AI didn't hallucinate these agreements; it computed them from explicit algebraic formulas and checked them against published PDG and NuFit data. When a prediction was wrong, we found out immediately and either fixed the derivation or acknowledged the discrepancy.
+The result surprised me. What started as exploratory numerology gradually locked into a rigid few-input structure with 23 grouped quantitative relations — all matching known experimental values to 0.1–7%. These are mostly postdictions, not historical predictions: the constants were already known. The AI didn't hallucinate these agreements; it computed them from explicit algebraic formulas and checked them against published PDG and NuFit data. When a relation was wrong, we found out immediately and either fixed the derivation or acknowledged the discrepancy.
 
-**What the AI contributed:** Rapid symbolic computation, error-checking, consistency enforcement across papers, literature cross-referencing, and the sheer throughput to explore hundreds of algebraic possibilities in the time it would take a human to check one.
+**What the AI contributed:** Rapid symbolic computation, error-checking, consistency enforcement across the code and notes, literature cross-referencing, and the sheer throughput to explore hundreds of algebraic possibilities in the time it would take a human to check one.
 
-**Is this real physics?** That's for the community to judge. The numbers work. The framework is falsifiable (several experiments in the next 2–4 years will directly test it). The three companion papers lay out every derivation in detail. If this is wrong, it will be proven wrong soon. If it's right, it's perhaps the first major result in theoretical physics to emerge from human–AI collaboration.
+**Is this real physics?** That's for the community to judge. The numbers are intriguing, but the continuum/RG derivation and several algebra-to-physics bridge rules still need hardening. The framework is falsifiable (several experiments in the next decade will test parts of it), and the markdown audit documents lay out what is derived, what is assumed, and what remains open.
 
 Either way, it's a story about what becomes possible when you combine human intuition with AI capability.
 
 ---
 
-## What if every constant of nature — from the mass of the Higgs boson to the strength of gravity — came from a single piece of mathematics?
+## What if many constants of the Standard Model came from a single piece of mathematics?
 
 ---
 
@@ -114,19 +116,19 @@ This is why the framework predicts exactly the Standard Model particle content �
 
 ---
 
-## Three Generations: A Theorem, Not an Assumption
+## Three Generations: Count and Chirality, Without the Usual Obstruction
 
 Every matter particle comes in three copies. The electron has heavier twins (muon, tau). The up quark has heavier twins (charm, top). The Standard Model accommodates this but doesn't explain it.
 
-In the CHO framework, three generations is a *mathematical theorem* — provable from three independent directions:
+In the CHO framework, *three* is structural — but the honest status is sharper than "it's a theorem," and getting it right took some care:
 
-**1. Triality.** The group Spin(8), which acts on octonions, has a unique property called triality: an S₃ outer automorphism that permutes three 8-dimensional representations. This gives exactly three inequivalent "slots" for matter. No other Spin(n) group has this property.
+**1. The tempting route — and why it's blocked.** The group Spin(8) that acts on octonions has a famous property called triality: an *outer* S₃ symmetry permuting three 8-dimensional representations. It is tempting to call those three the generations. But this is exactly the route closed by the Distler–Garibaldi no-go theorem: outer triality permutes three *inequivalent* modules (8_v, 8_s, 8_c) of mixed chirality, so it cannot deliver three *same-chirality* copies of one fermion. "Three from triality" does not work as stated.
 
-**2. The exceptional Jordan algebra.** You can build a 3×3 matrix algebra over the octonions (J₃(𝕆), dimension 27). Try 4×4? It provably fails. The algebraic identity that makes the Jordan structure work breaks down for matrices larger than 3×3.
+**2. The route that survives.** Read the three generations instead as the three primitive idempotents of a Jordan frame in the exceptional Jordan algebra J₃(𝕆). The S₃ permuting them is *inner* — it lives inside the connected automorphism group F₄ — so it carries each idempotent to a congruent copy carrying the *same* self-conjugate spinor, and the obstruction above cannot even be posed. This makes the **count** (three) and the **chirality** (all alike) obstruction-free. What it does *not* yet deliver is the mass spectrum: the precise map from idempotents to fermion content remains an open bridge.
 
-**3. The Cayley-Dickson tower collapses.** The construction that builds ℝ→ℂ→ℍ→𝕆 can be applied one more time to produce 16-dimensional "sedenions" — but these contain zero divisors (nonzero numbers whose product is zero). No consistent physics can be built on them.
+**3. Why not a fourth.** You can build a 3×3 Hermitian matrix algebra over the octonions (J₃(𝕆), dimension 27), but 4×4 provably fails — the identity that makes the Jordan structure work breaks down past 3×3 — and one further Cayley–Dickson step beyond the octonions produces the 16-dimensional "sedenions," which contain zero divisors. The algebra has no room for a fourth like-chirality family.
 
-Three theorems. Three branches of mathematics. Same answer: *exactly three generations*.
+So: the **count and chirality** of three generations rest on solid algebra (stated as standalone theorems, decoupled from any physics, in the project's Jordan-theorems note); the **spectrum** — why these three carry the masses they do — is still an open derivation, not a settled result.
 
 ---
 
@@ -136,13 +138,13 @@ The algebra doesn't just explain *what* exists — it *calculates* the propertie
 
 ### A single parameter controls everything
 
-The framework derives one key number from the algebra:
+The framework is organized around one key bridge target from the algebra:
 
 $$\varepsilon_0^2 = \frac{\pi}{432} = \frac{\pi}{16 \times 27}$$
 
-where 16 = dim_ℂ(𝒜) (the complex dimension of the algebra) and 27 = dim(J₃(𝕆)) (the dimension of the exceptional Jordan algebra).
+where 16 = dim 𝕆P² (the real dimension of the Cayley projective plane F₄/Spin(9), equivalently the real Spin(9) spinor Δ₉) and 27 = dim(J₃(𝕆)) (the dimension of the exceptional Jordan algebra). Both factors are dimensions of specific geometric objects the framework derives, not numbers chosen by hand.
 
-This gives ε₀ ≈ 0.0853. From this single derived quantity — not a free parameter, but a *calculable number* — the entire mass hierarchy and mixing pattern follows.
+This gives ε₀ ≈ 0.0853. From this single algebraic bridge target — not treated as a fitted free parameter, but still awaiting its operator proof — the mass hierarchy and mixing pattern are audited.
 
 ### The mass hierarchy
 
@@ -156,9 +158,9 @@ Each sector gets a different multiplicity factor from the algebra:
 
 The factors 1, 3, 8 aren't arbitrary — they're the dimensions of the three "layers" of the algebra accessible to each particle type.
 
-### Predictions vs experiment
+### Relations vs experiment
 
-With zero free parameters (the only input is the Planck mass G_N), the framework produces **23 quantitative predictions**:
+With a few explicit inputs and bridge assumptions, and no row-by-row fitted low-energy parameters, the framework produces **23 grouped quantitative relations**:
 
 | What | Formula | Predicted | Measured | Error |
 |---|---|---|---|---|
@@ -171,18 +173,25 @@ With zero free parameters (the only input is the Planck mass G_N), the framework
 | Bottom quark mass | (7/3)·m_τ | 4.144 GeV | 4.18 GeV | 0.9% |
 | Cabibbo angle (\|V_us\|) | √7·ε₀ | 0.2256 | 0.2243 | 0.6% |
 | \|V_cb\| | ε₀/2 | 0.0426 | 0.0422 | 1.0% |
-| PMNS θ₂₃ | 4/7 | 0.5714 | 0.572 | 0.1% |
+| PMNS θ₂₃ *(forward bet — see below)* | 4/7 | 0.5714 | octant unresolved | — |
 | PMNS θ₁₃ | 3ε₀² | 0.0218 | 0.0220 | 1.0% |
 | Neutrino Δm² ratio | 4ε₀² | 0.0291 | 0.0295 | 1.4% |
 | CP violation (J_CKM) | NNI + arccos(1/3) | 3.01×10⁻⁵ | 3.08×10⁻⁵ | 2.3% |
 | Cosmological constant | 3⁻²⁵⁶ suppression | ~2.3 meV | ~2.3 meV | ~3% |
 | + 9 more | — | — | — | 0.2–7% |
 
-**Median error: 1.0%. All within 3σ experimental uncertainty** (for the 16 predictions where experimental precision allows a meaningful test).
+**Median descriptive error: 1.0%. All within 3σ experimental uncertainty** for the 16 audit rows where experimental precision allows a meaningful pull calculation. These rows are correlated, so this is not a global independent-observable fit.
+
+> **One of these is a forward prediction, not a postdiction.** The PMNS angle
+> θ₂₃ = 4/7 (upper octant) is *not* yet settled: the octant is experimentally
+> unresolved (current T2K/NOvA results are in tension), so this row is a
+> pre-registered bet that DUNE and Hyper-Kamiokande will decide — not a fit to a
+> known value. It is the framework's single sharpest falsifiable claim; the other
+> rows are postdictions of already-measured quantities.
 
 ---
 
-## The Strong CP Problem: Solved Without an Axion
+## The Strong CP Problem: A Symmetry Argument, Not an Axion
 
 One of the outstanding puzzles of particle physics: why does the strong force respect CP symmetry to such extraordinary precision? The parameter θ̄ that controls this is measured to be less than 10⁻¹⁰ — effectively zero. The Standard Model offers no explanation for this.
 
@@ -197,7 +206,9 @@ In the CHO framework, θ̄ = 0 is a *symmetry*, not a coincidence:
 
 Meanwhile, the CKM phase that gives *weak* CP violation is preserved — it comes from a geometric angle between different Fano plane lines, which is unaffected by the Z₂.
 
-**Prediction: No axion exists.** All axion search experiments should yield null results.
+This is a discrete-symmetry argument, and the project logs it as a *derived bridge with an open obligation*: showing that Fano parity is a genuine symmetry of the QCD *path-integral measure* (not merely the classical Lagrangian) has not yet been done. Treat it as a promising mechanism, not a closed proof.
+
+**Null target: no QCD axion.** Axion searches should keep returning null results in the mass-coupling windows they cover; no single experiment covers the entire axion parameter space.
 
 ---
 
@@ -219,11 +230,13 @@ This gives a Jarlskog invariant J = 3.01 × 10⁻⁵ (measured: 3.08 × 10⁻⁵
 
 Quantum field theory predicts that empty space should contain enormously more energy than it actually does — off by a factor of roughly 10¹²². This "cosmological constant problem" has resisted solution for decades.
 
-The CHO framework offers a resolution: the vacuum energy is suppressed by 3⁻⁴ˣ⁶⁴ = 3⁻²⁵⁶ ≈ 10⁻¹²². Each of the 64 algebraic dimensions contributes a factor of 1/3 to the fourth power of the energy scale. The predicted dark energy density matches observation to ~3%.
+The CHO framework offers a candidate resolution: the vacuum energy is suppressed by 3⁻⁴ˣ⁶⁴ = 3⁻²⁵⁶ ≈ 10⁻¹²². Each of the 64 algebraic dimensions contributes a factor of 1/3 to the fourth power of the energy scale. The predicted dark energy density matches observation to ~3%.
+
+Of all the framework's numerical hits this is the **least constrained**: the exponent carries an extra O(1) prefactor that isn't yet derived, and a look-elsewhere analysis shows that a simple "prefactor × power" form covers most of the available range — so this match carries less evidential weight than the dimensionless relations. Treat it as suggestive, not as a solution to the cosmological-constant problem.
 
 ---
 
-## Dark Matter: A Sharp Negative Prediction
+## Dark Matter: A Null Exclusion Target
 
 The algebra is saturated — all 64 dimensions map to known particles. There is no algebraic "slot" for a new particle that carries Standard Model charges. Therefore:
 
@@ -231,7 +244,7 @@ The algebra is saturated — all 64 dimensions map to known particles. There is 
 - **Dark matter is not a new particle in the usual sense**
 - It may be topological defects in the causal lattice structure — gravitationally interacting but otherwise invisible
 
-This explains 40 years of null results from direct detection experiments (LUX, XENON, PandaX, LZ). The framework predicts these will *continue* to find nothing.
+This is consistent with 40 years of null results from direct detection experiments (LUX, XENON, PandaX, LZ). The useful future test is more specific: no confirmed WIMP-like recoil in the usual weak-scale mass window above next-generation experimental reach.
 
 ---
 
@@ -244,34 +257,34 @@ Right-handed neutrinos fill the last empty slot in the 64-dimensional algebra. T
 Via the see-saw mechanism, this gives:
 - m_ν₃ ≈ 49 meV (heaviest neutrino)
 - Normal mass ordering (m₁ < m₂ < m₃)
-- Sum of neutrino masses Σmᵢ ≈ 57 meV — testable by the Euclid satellite
+- Sum of neutrino masses Σmᵢ ≈ 60 meV (frozen band 57–62 meV) — testable by the Euclid satellite
 
-The large neutrino mixing angles (unlike the small CKM angles) arise because the Majorana sector preserves the full Z₃ triality symmetry, giving nearly-democratic mixing as a zeroth-order pattern. The small corrections from ε₀ bring all three angles to sub-percent agreement with experiment.
+The large neutrino mixing angles (unlike the small CKM angles) are modeled by residual TBM symmetries in the Majorana sector, with broken-triality corrections from ε₀ bringing all three angles to sub-percent agreement with experiment. The exact residual symmetry still needs the operator-level derivation.
 
 ---
 
 ## Spacetime from Information
 
-The deepest implication: spacetime itself is not fundamental. The framework posits a *causal lattice* — a discrete network of events, each carrying an algebraic label from ℂ⊗ℍ⊗𝕆. Smooth spacetime, Einstein's equations, and gravitational dynamics all emerge in the continuum limit.
+The most speculative implication concerns spacetime. The framework posits a *causal lattice* — a discrete network of events, each carrying an algebraic label from ℂ⊗ℍ⊗𝕆. This is not yet a derivation of smooth spacetime, Einstein's equations, or gravitational dynamics.
 
-The non-associativity of the octonions plays a key structural role. In associative algebras, (a×b)×c = a×(b×c) always — there's no "curvature" in how elements combine. Octonionic non-associativity means the order of combination matters. This mismatch (the *associator*) manifests, in the large-scale limit, as the curvature of spacetime.
+The non-associativity of the octonions plays a key structural role. In associative algebras, (a×b)×c = a×(b×c) always — there's no "curvature" in how elements combine. Octonionic non-associativity means the order of combination matters. The current concrete result is a kinematic internal `G2`-covariant metric brick from the associator, not a 4D spacetime metric.
 
-Gravity isn't a force to be quantised — it's what octonionic non-associativity looks like at macroscopic scales.
+The Phase 5 audit keeps gravity outside the present framework: no canonical 4D Lorentzian reduction, field equation, or Newton constant has been derived.
 
 ---
 
 ## What Would Falsify This Framework
 
-Good theories make sharp predictions. This framework is vulnerable to:
+Good theories expose themselves to clear failure modes. This framework is vulnerable to:
 
 1. **Discovery of a 4th-generation particle** (the algebra can't support it)
 2. **Proton decay observed** (baryon number is algebraically exact)
 3. **WIMP dark matter detected** (no slot in the algebra)
 4. **Inverted neutrino mass ordering** (JUNO/DUNE, ~2028)
-5. **Axion detected** (strong CP is already solved by Fano parity)
+5. **Axion detected** (the framework's Fano-parity mechanism would be undercut)
 6. **Higgs self-coupling far from λ = π/24** (HL-LHC, ~2030s)
 
-Several of these directly contradict other popular theories: supersymmetry predicts superpartners; grand unification predicts proton decay; the axion hypothesis predicts an axion. This framework says none of these exist.
+Several of these directly contradict other popular theories: supersymmetry predicts superpartners; grand unification predicts proton decay; the axion hypothesis predicts an axion. These null claims are useful, but weaker than a positive quantitative prediction unless tied to explicit experimental reach.
 
 ---
 
@@ -279,7 +292,7 @@ Several of these directly contradict other popular theories: supersymmetry predi
 
 - Normal neutrino mass ordering confirmed (JUNO, expected ~2028)
 - Continued null results from WIMP and axion searches
-- Neutrino mass sum Σmᵢ ≈ 57 meV (Euclid/DESI, ~2027–2030)
+- Neutrino mass sum Σmᵢ ≈ 60 meV (band 57–62 meV) (Euclid/DESI, ~2027–2030)
 - Higgs self-coupling consistent with λ = π/24 (HL-LHC)
 - Top quark mass measurements converging toward 174.1 GeV
 
@@ -287,11 +300,12 @@ Several of these directly contradict other popular theories: supersymmetry predi
 
 ## Honest Caveats
 
-This is a framework with extraordinary initial results, not a finished theory:
+This is a framework with intriguing initial results, not a finished theory:
 
+- It is on **probation, by its own scoreboard.** Charged the full Occam price for every constant it *chooses* and credited only for those it *derives*, the project's model-comparison Bayes factor currently sits at ln B ≈ −3 on closed results — i.e. *mildly disfavoured* — and only turns positive (≈ +6) **if** the geometric origin of ε₀² = π/432 is granted. The whole verdict hinges on one still-unbuilt derivation: an F₄-breaking action whose flux produces π/432. Until that exists, this is a hard-to-vary parametrization with strong structure, not an established theory.
 - The **continuum limit** (showing smooth spacetime emerges from the discrete lattice) hasn't been proven rigorously. This is a hard mathematical problem.
-- The **gravitational sector** is conceptual rather than calculational. Claiming gravity = emergent non-associativity is compelling but not yet at the level of, say, computing graviton scattering amplitudes.
-- All predictions are at **tree level** (lowest order). The 0.1–6% discrepancies should shrink when 1-loop corrections are computed from within the framework. This work hasn't been done yet.
+- The **gravitational sector** is explicitly out of scope for the present framework. There is a kinematic internal metric from octonionic non-associativity, but no 4D Lorentzian metric, Einstein equation, or Newton constant.
+- The numerical relations are mostly **tree level** (lowest order). The 0.1–6% discrepancies should shrink when 1-loop corrections are computed from within the framework. This work hasn't been done yet.
 - The **dark matter story** is more "what it isn't" than "what it is." The algebraic-defect picture needs quantitative development.
 - The **m_e prediction** (electron mass from 1st-gen formula) has the largest error at ~6%, suggesting the lepton NNI factor needs refinement or a proper loop calculation.
 
@@ -303,16 +317,13 @@ For decades, attempts to go beyond the Standard Model have generally added struc
 
 The CHO framework goes in the opposite direction. It asks: *what is the minimal mathematical structure from which the Standard Model must emerge?* The answer turns out to be three division algebras combined in the only way they can be.
 
-The result is a theory with *fewer* moving parts than the Standard Model (zero free parameters vs 19), yet it reproduces — and in some cases extends — all the Standard Model's successful predictions. The 64 dimensions of ℂ⊗ℍ⊗𝕆 aren't extra spatial dimensions to be hidden or compactified. They're the internal quantum numbers of the particles we already know, organised by the deepest structure that mathematics allows.
+The result is a theory with *fewer* moving parts than the Standard Model (few explicit inputs rather than 19 fitted low-energy parameters), yet it reproduces — and in some cases extends — many of the Standard Model's successful numerical relations. The 64 dimensions of ℂ⊗ℍ⊗𝕆 aren't extra spatial dimensions to be hidden or compactified. They're the internal quantum numbers of the particles we already know, organised by the deepest structure that mathematics allows.
 
 ---
 
----
+*Technical details live in the markdown foundation notes and executable audit
+scripts. The older LaTeX paper drafts have been removed; the authoritative form
+of the project is now code plus markdown.*
 
-*Technical details are available in three companion papers:*
-
-- *[Three Generations from Octonion Triality: Three Independent Proofs](/files/three_generations.pdf)*
-- *[Electroweak Parameters from ℂ⊗ℍ⊗𝕆: Twenty-Three Predictions with Zero Free Parameters](/files/electroweak_parameters.pdf)*
-- *[The Cosmological Constant from ℂ⊗ℍ⊗𝕆: Resolution of the Hierarchy](/files/cosmological_constant.pdf)*
-
-*This work was produced in collaboration with Claude (Anthropic). All calculations, numerical checks, LaTeX sources, and derivation code are available on [GitHub](https://github.com/richorama/cho).*
+*This work was produced in collaboration with GitHub Copilot (ChatGPT 5.5 & Opus 4.8). The calculations,
+numerical checks, markdown notes, and derivation code are available on [GitHub](https://github.com/richorama/cho).*
