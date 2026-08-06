@@ -12,7 +12,7 @@ code {
     font-size: 0.88em;
 }
 
-.highlighter-rouge {
+div.highlighter-rouge {
     position: relative;
     margin: 1.75rem 0;
     overflow: hidden;
@@ -22,7 +22,7 @@ code {
     box-shadow: 0 8px 24px rgba(16, 24, 40, 0.14);
 }
 
-.highlighter-rouge::before {
+div.highlighter-rouge::before {
     content: "Code";
     display: block;
     padding: 0.55rem 1rem;
@@ -36,30 +36,30 @@ code {
     text-transform: uppercase;
 }
 
-.language-python.highlighter-rouge::before {
+div.language-python.highlighter-rouge::before {
     content: "Python";
 }
 
-.language-json.highlighter-rouge::before {
+div.language-json.highlighter-rouge::before {
     content: "JSON";
 }
 
-.language-bash.highlighter-rouge::before,
-.language-shell.highlighter-rouge::before {
+div.language-bash.highlighter-rouge::before,
+div.language-shell.highlighter-rouge::before {
     content: "Terminal";
 }
 
-.language-text.highlighter-rouge::before {
+div.language-text.highlighter-rouge::before {
     content: "Text";
 }
 
-.highlighter-rouge .highlight {
+div.highlighter-rouge .highlight {
     margin: 0;
     background: #101828;
     border-radius: 0;
 }
 
-.highlighter-rouge pre.highlight,
+div.highlighter-rouge pre.highlight,
 pre {
     margin: 0;
     padding: 1.25rem;
@@ -126,7 +126,7 @@ pre {
 }
 
 @media screen and (max-width: 48em) {
-    .highlighter-rouge pre.highlight,
+    div.highlighter-rouge pre.highlight,
     pre {
         padding: 1rem;
         font-size: 0.82rem;
