@@ -1,0 +1,134 @@
+pre,
+code {
+    font-family: "Fira Code", "SFMono-Regular", Consolas, monospace;
+}
+
+.post-content :not(pre)>code {
+    color: #9f1239;
+    background: #fff1f2;
+    border: 1px solid #ffe4e6;
+    border-radius: 4px;
+    padding: 0.12em 0.35em;
+    font-size: 0.88em;
+}
+
+.highlighter-rouge {
+    position: relative;
+    margin: 1.75rem 0;
+    overflow: hidden;
+    background: #101828;
+    border: 1px solid #27364d;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.14);
+}
+
+.highlighter-rouge::before {
+    content: "Code";
+    display: block;
+    padding: 0.55rem 1rem;
+    color: #98a2b3;
+    background: #172033;
+    border-bottom: 1px solid #27364d;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.language-python.highlighter-rouge::before {
+    content: "Python";
+}
+
+.language-json.highlighter-rouge::before {
+    content: "JSON";
+}
+
+.language-bash.highlighter-rouge::before,
+.language-shell.highlighter-rouge::before {
+    content: "Terminal";
+}
+
+.language-text.highlighter-rouge::before {
+    content: "Text";
+}
+
+.highlighter-rouge .highlight {
+    margin: 0;
+    background: #101828;
+    border-radius: 0;
+}
+
+.highlighter-rouge pre.highlight,
+pre {
+    margin: 0;
+    padding: 1.25rem;
+    overflow-x: auto;
+    color: #d0d5dd;
+    background: #101828;
+    border: 0;
+    border-radius: 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    tab-size: 4;
+    white-space: pre;
+}
+
+.highlight .p {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.highlight .c,
+.highlight .c1,
+.highlight .cm {
+    color: #7f8ea3;
+}
+
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr {
+    color: #c084fc;
+}
+
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .se {
+    color: #86efac;
+}
+
+.highlight .m,
+.highlight .mi,
+.highlight .mf {
+    color: #fbbf24;
+}
+
+.highlight .n,
+.highlight .na,
+.highlight .nb,
+.highlight .nc,
+.highlight .nd,
+.highlight .ne,
+.highlight .nf,
+.highlight .nn,
+.highlight .nv,
+.highlight .nx,
+.highlight .p {
+    color: #d0d5dd;
+}
+
+.highlight .o,
+.highlight .ow {
+    color: #67e8f9;
+}
+
+@media screen and (max-width: 48em) {
+    .highlighter-rouge pre.highlight,
+    pre {
+        padding: 1rem;
+        font-size: 0.82rem;
+    }
+}
