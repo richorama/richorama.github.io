@@ -7,6 +7,8 @@ summary: A practical walkthrough for connecting an Alexa custom skill to a Micro
 
 What happens if you give Alexa a modern AI agent?
 
+![An Alexa speaker visualising a network of connected AI signals](/images/alexa.png)
+
 Alexa already provides a microphone, a speaker, and a natural place for a
 conversation, but it has not traditionally been backed by a particularly
 powerful or stateful AI. Microsoft Foundry agents offer reasoning, tools, and
