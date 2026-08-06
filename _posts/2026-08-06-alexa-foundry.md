@@ -5,13 +5,22 @@ date: 2026-08-06 09:00:00
 summary: A practical walkthrough for connecting an Alexa custom skill to a Microsoft Foundry agent using Azure Functions, managed identity, conversational context, and a latency-safe fallback.
 ---
 
-Alexa and Microsoft Foundry make a useful combination, but they have very
-different runtime contracts.
+What happens if you give Alexa a modern AI agent?
 
-Alexa expects a signed HTTPS request to produce a complete spoken response
-within a few seconds. Foundry agents can reason, call tools, and preserve
-context, but those capabilities can make a response too slow for a voice
-assistant.
+Alexa already provides a microphone, a speaker, and a natural place for a
+conversation, but it has not traditionally been backed by a particularly
+powerful or stateful AI. Microsoft Foundry agents offer reasoning, tools, and
+conversation context, but they do not come with a ready-made consumer
+interface.
+
+Combining the two seemed like an interesting science project: Alexa could
+provide the voice interface, while Foundry supplied the intelligence.
+
+The idea is simple, but the integration is not. Alexa expects a signed HTTPS
+request to produce a complete spoken response within a few seconds. A Foundry
+agent can take longer while it reasons or calls tools. Connecting them means
+designing around that mismatch rather than simply sending prompts between two
+APIs.
 
 This walkthrough builds an Alexa custom skill backed by a Microsoft Foundry
 prompt agent. Along the way, we will:
