@@ -2,9 +2,11 @@
 title:       Richard Astbury's Blog
 email:       richard.astbury@gmail.com
 author:      Richard Astbury
-description: "Richard Astbury's Blog"
+description: "Richard Astbury writes about software engineering, cloud architecture, AI, mapping, Microsoft Azure, and developer tools."
 baseurl:     ""
 url:         "https://richorama.github.io"
+lang:        en-GB
+repository:  richorama/richorama.github.io
 
 # Google analytics
 google_analytics:
@@ -30,7 +32,15 @@ permalink:    pretty
 paginate:     20
 sass:
   compressed: true
+relative_links:
+  enabled: false
+defaults:
+  - scope:
+      path: "markdown"
+    values:
+      sitemap: false
 
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-sitemap

@@ -1,0 +1,22 @@
+name: Agent content
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+      - run: ruby scripts/generate-agent-content.rb --check
+      - run: bundle exec jekyll build --strict_front_matter
